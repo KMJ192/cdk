@@ -1,0 +1,10 @@
+@import './variable/color.module.scss';
+@import './variable/size.module.scss';
+
+.header {
+  width: inherit;
+  background: $cdk-color-header-bg;
+  color: $cdk-color-header-text;
+  min-height: $cdk-size-header-min-height;
+  max-height: $cdk-size-header-max-height;
+}

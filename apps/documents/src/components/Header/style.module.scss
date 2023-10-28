@@ -1,0 +1,64 @@
+@import '@src/styles/color/color.module.scss';
+@import '@src/styles/utils.module.scss';
+
+@mixin mobile-nav {
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  padding-top: 0;
+  max-height: 0;
+  @include transition(
+    max-height 0.3s cubic-bezier(0, 1, 0, 1),
+    padding-top 0.3s cubic-bezier(0, 1, 0, 1)
+  );
+  will-change: opacity, max-height, padding-top;
+  &.openNav {
+    padding-top: 32px;
+    opacity: 1;
+    max-height: 100vh;
+    row-gap: 32px;
+    transition:
+      max-height 0.3s ease-in-out,
+      padding-top 0.3s ease-in-out;
+    @media screen and (max-width: #{$resolution_width_360}px) {
+      padding-top: 24px;
+    }
+  }
+}
+
+.header {
+  position: fixed;
+  flex-direction: column;
+  padding: 24px 20%;
+  height: fit-content !important;
+  min-height: 64px;
+  width: 100%;
+  box-sizing: border-box;
+  background: $light-primary200;
+  color: $light-text;
+  z-index: 900;
+  box-shadow: $light-shadow;
+  @include colorTransition;
+  &.dark {
+    background: $dark-primary000;
+    color: $dark-text;
+    box-shadow: $dark-shadow;
+  }
+  .contents {
+    justify-content: space-between;
+    position: relative;
+    .left {
+      column-gap: 32px;
+      min-height: 20px;
+    }
+    .theme-icon {
+      user-select: none;
+    }
+  }
+  @media screen and (max-width: #{$resolution_width_360}px) {
+    padding: 24px;
+  }
+  .nav {
+    @include mobile-nav();
+  }
+}

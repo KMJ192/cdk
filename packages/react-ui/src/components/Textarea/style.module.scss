@@ -1,0 +1,55 @@
+@import './variable/color.module.scss';
+
+@mixin color-set {
+  border-color: $cdk-color-textarea-border;
+  background: $cdk-color-textarea-bg;
+  color: $cdk-color-textarea-text;
+  &::placeholder {
+    color: $cdk-color-textarea-placeholder;
+  }
+
+  &:disabled {
+    border-color: $cdk-color-textarea-border-disabled;
+    background: $cdk-color-textarea-bg-disabled;
+    color: $cdk-color-textarea-text-disabled;
+    &::placeholder {
+      color: $cdk-color-textarea-placeholder-disabled;
+    }
+  }
+
+  &.error {
+    border-color: $cdk-color-textarea-border-error;
+    background: $cdk-color-textarea-bg-error;
+    color: $cdk-color-textarea-text-error;
+  }
+
+  &:hover:not(:disabled):not(.error) {
+    border-color: $cdk-color-textarea-border-hover;
+    background: $cdk-color-textarea-bg-hover;
+    color: $cdk-color-textarea-text-hover;
+  }
+
+  &:not(:disabled):not(.error):focus {
+    border-color: $cdk-color-textarea-border-focus;
+    background: $cdk-color-textarea-bg-focus;
+    color: $cdk-color-textarea-text-focus;
+  }
+}
+
+@mixin textarea {
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.textarea {
+  @include textarea;
+  @include color-set;
+}

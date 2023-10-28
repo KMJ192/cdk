@@ -1,0 +1,105 @@
+@import 'src/styles/color/color.module.scss';
+
+$cdk-color-data-table-bg: var(--cdk-color-data-table-bg, $light-background);
+
+$cdk-color-data-table-border: var(
+  --cdk-color-data-table-border,
+  $light-primary600
+);
+
+$cdk-color-data-table-caption-text: var(
+  --cdk-color-data-table-caption-text,
+  $light-text
+);
+
+$cdk-color-data-table-header-bg: var(
+  --cdk-color-data-table-header-bg,
+  $light-primary200
+);
+$cdk-color-data-table-header-text: var(
+  --cdk-color-data-table-header-text,
+  $light-text
+);
+
+$cdk-color-data-table-footer-bg: var(
+  --cdk-color-data-table-footer-bg,
+  $light-primary000
+);
+$cdk-color-data-table-footer-text: var(
+  --cdk-color-data-table-footer-text,
+  $light-text
+);
+
+$cdk-color-data-table-divide-line: var(
+  --cdk-color-data-table-divide-line,
+  $light-primary500
+);
+
+$cdk-color-data-table-row-bg: var(
+  --cdk-color-data-table-row-bg,
+  $light-background
+);
+$cdk-color-data-table-row-bg-hover: var(
+  --cdk-color-data-table-row-bg-hover,
+  $light-primary000
+);
+$cdk-color-data-table-row-bg-disabled: var(
+  --cdk-color-data-table-row-bg-disabled,
+  $light-gray000
+);
+
+$cdk-color-data-table-row-text: var(
+  --cdk-color-data-table-row-text,
+  $light-text
+);
+$cdk-color-data-table-row-text-hover: var(
+  --cdk-color-data-table-row-text-hover,
+  $light-text
+);
+$cdk-color-data-table-row-text-disabled: var(
+  --cdk-color-data-table-row-text-disabled,
+  $light-gray200
+);
+
+$cdk-color-data-table-pagination-index-bg: var(
+  --cdk-color-data-table-pagination-index-bg,
+  $light-background
+);
+$cdk-color-data-table-pagination-index-bg-selected: var(
+  --cdk-color-data-table-pagination-index-bg-selected,
+  $light-blue500
+);
+$cdk-color-data-table-pagination-index-bg-disabled: var(
+  --cdk-color-data-table-pagination-index-bg-disabled,
+  $light-background
+);
+$cdk-color-data-table-pagination-index-bg-hover: var(
+  --cdk-color-data-table-pagination-index-bg-hover,
+  $light-blue100
+);
+
+$cdk-color-data-table-pagination-index-text: var(
+  --cdk-color-data-table-pagination-index-text,
+  $light-text
+);
+$cdk-color-data-table-pagination-index-text-selected: var(
+  --cdk-color-data-table-pagination-index-text-selected,
+  $light-primary000
+);
+$cdk-color-data-table-pagination-index-text-disabled: var(
+  --cdk-color-data-table-pagination-index-text-disabled,
+  $light-gray100
+);
+$cdk-color-data-table-pagination-index-text-hover: var(
+  --cdk-color-data-table-pagination-index-text-hover,
+  $light-text
+);
+
+$cdk-color-data-table-pagination-arrow: var(
+  --cdk-color-data-table-pagination-arrow,
+  $light-gray200
+);
+$cdk-color-data-table-pagination-arrow-disabled: var(
+  --cdk-color-data-table-pagination-arrow-disabled,
+  $light-gray000
+);

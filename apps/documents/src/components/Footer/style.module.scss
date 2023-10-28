@@ -1,0 +1,23 @@
+@import '@src/styles/color/color.module.scss';
+@import '@src/styles/utils.module.scss';
+
+.footer {
+  margin-top: auto;
+  height: 64px !important;
+  padding: 0 16px;
+  background: $light-background;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  @include colorTransition;
+  .update {
+    color: $light-gray700;
+    font-style: italic;
+    font-size: 13px;
+  }
+  &.dark {
+    background: $dark-background;
+    .update {
+      color: $dark-gray500;
+    }
+  }
+}

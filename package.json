@@ -1,0 +1,40 @@
+{
+  "name": "@cdk/workspace",
+  "private": true,
+  "keywords": [],
+  "version": "0.0.1",
+  "author": {
+    "name": "MyeongJunKim",
+    "email": "myeongjun222@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "prettier": "^2.7.1",
+    "typescript": "^5.1.6"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/**",
+      "apps/**"
+    ]
+  },
+  "scripts": {
+    "wk:docs": "yarn workspace @cdk/documents",
+    "wk:rui": "yarn workspace @cdk/react-ui",
+    "wk:rmo": "yarn workspace @cdk/react-modules",
+    "clear:all": "sh ./scripts/clearDependencies.sh",
+    "postinstall": "husky install"
+  },
+  "packageManager": "yarn@4.0.0"
+}

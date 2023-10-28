@@ -1,0 +1,35 @@
+@import '../variable/color.module.scss';
+
+@mixin color-set {
+  background: $cdk-color-select-option-bg;
+  color: $cdk-color-select-option-text;
+
+  &.disabled {
+    background: $cdk-color-select-option-bg-disabled;
+    color: $cdk-color-select-option-text-disabled;
+  }
+  &.selected:not(.disabled) {
+    background: $cdk-color-select-option-bg-selected;
+    color: $cdk-color-select-option-text-selected;
+  }
+  &.reserved:not(.disabled) {
+    background: $cdk-color-select-option-bg-reserved;
+    color: $cdk-color-select-option-text-reserved;
+  }
+  &:hover:not(.disabled) {
+    background: $cdk-color-select-option-bg-hover;
+    color: $cdk-color-select-option-text-hover;
+  }
+}
+
+@mixin select-option {
+  padding: 10px;
+  &.disabled {
+    cursor: not-allowed;
+  }
+}
+
+.select-option {
+  @include select-option;
+  @include color-set;
+}

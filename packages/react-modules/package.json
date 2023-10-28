@@ -1,0 +1,55 @@
+{
+  "name": "@cdk/react-modules",
+  "version": "0.0.1",
+  "description": "",
+  "author": {
+    "name": "MyeongJunKim",
+    "email": "myeongjun222@gmail.com"
+  },
+  "files": [
+    "build"
+  ],
+  "main": "./build/index.js",
+  "module": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "type": "module",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KMJ192/cdk"
+  },
+  "scripts": {
+    "build": "rm -rf build && rollup -c --bundleConfigAsCjs && tsc-alias",
+    "pub": "yarn build && yarn npm publish"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^5.0.0",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/rollup-plugin-peer-deps-external": "^2",
+    "autoprefixer": "^10.4.15",
+    "classnames": "^2.3.2",
+    "postcss": "^8.4.28",
+    "rollup": "^3.28.1",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.66.1",
+    "tsc-alias": "^1.8.7",
+    "tslib": "^2.6.2",
+    "typescript": "^5.1.6"
+  }
+}

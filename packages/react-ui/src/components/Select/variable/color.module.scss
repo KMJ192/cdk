@@ -1,0 +1,125 @@
+@import 'src/styles/color/color.module.scss';
+
+// ====== box ======
+// background
+$cdk-color-select-box-bg: var(--cdk-color-select-box-bg, $light-background);
+$cdk-color-select-box-bg-focus: var(
+  --cdk-color-select-box-bg-focus,
+  $light-background
+);
+$cdk-color-select-box-bg-error: var(
+  --cdk-color-select-box-bg-error,
+  $light-background
+);
+$cdk-color-select-box-bg-disabled: var(
+  --cdk-color-select-box-bg-disabled,
+  $light-gray000
+);
+$cdk-color-select-box-bg-hover: var(
+  --cdk-color-select-box-bg-hover,
+  $light-background
+);
+// text
+$cdk-color-select-box-text: var(--cdk-color-select-box-text, $light-text);
+$cdk-color-select-box-text-focus: var(
+  --cdk-color-select-box-text-focus,
+  $light-text
+);
+$cdk-color-select-box-text-error: var(
+  --cdk-color-select-box-text-error,
+  $light-text
+);
+$cdk-color-select-box-text-disabled: var(
+  --cdk-color-select-box-text-disabled,
+  $light-gray200
+);
+$cdk-color-select-box-text-hover: var(
+  --cdk-color-select-box-text-hover,
+  $light-text
+);
+// border
+$cdk-color-select-box-border: var(
+  --cdk-color-select-box-border,
+  $light-primary600
+);
+$cdk-color-select-box-border-focus: var(
+  --cdk-color-select-box-border-focus,
+  $light-blue500
+);
+$cdk-color-select-box-border-error: var(
+  --cdk-color-select-box-border-error,
+  $light-danger
+);
+$cdk-color-select-box-border-disabled: var(
+  --cdk-color-select-box-border-disabled,
+  $light-gray100
+);
+$cdk-color-select-box-border-hover: var(
+  --cdk-color-select-box-border-hover,
+  $light-blue300
+);
+
+// placeholder
+$cdk-color-select-box-placeholder: var(
+  --cdk-color-select-box-placeholder,
+  $light-gray100
+);
+$cdk-color-select-box-placeholder-disabled: var(
+  --cdk-color-select-box-placeholder-disabled,
+  $light-gray100
+);
+// ====== box ======
+
+// ====== dropbox ======
+$cdk-color-select-dropbox-bg: var(
+  --cdk-color-select-dropbox-bg,
+  $light-background
+);
+$cdk-color-select-dropbox-box-shadow: var(
+  --cdk-color-select-dropbox-box-shadow,
+  0px 3px 6px rgba(0, 0, 0, 0.2)
+);
+// ====== dropbox ======
+
+// ====== option ======
+// background
+$cdk-color-select-option-bg: var(
+  --cdk-color-select-option-bg,
+  $light-background
+);
+$cdk-color-select-option-bg-selected: var(
+  --cdk-color-select-option-bg-selected,
+  $light-primary100
+);
+$cdk-color-select-option-bg-reserved: var(
+  --cdk-color-select-option-bg-reserved,
+  $light-primary200
+);
+$cdk-color-select-option-bg-disabled: var(
+  --cdk-color-select-option-bg-disabled,
+  $light-gray000
+);
+$cdk-color-select-option-bg-hover: var(
+  --cdk-color-select-option-bg-hover,
+  $light-primary200
+);
+
+// text
+$cdk-color-select-option-text: var(--cdk-color-select-option-text, $light-text);
+$cdk-color-select-option-text-selected: var(
+  --cdk-color-select-option-text-selected,
+  $light-text
+);
+$cdk-color-select-option-text-reserved: var(
+  --cdk-color-select-option-text-reserved,
+  $light-text
+);
+$cdk-color-select-option-text-disabled: var(
+  --cdk-color-select-option-text-disabled,
+  $light-gray200
+);
+$cdk-color-select-option-text-hover: var(
+  --cdk-color-select-option-text-hover,
+  $light-text
+);
+// ====== option ======

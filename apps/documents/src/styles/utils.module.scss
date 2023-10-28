@@ -1,0 +1,36 @@
+@mixin transition($option...) {
+  transition: $option;
+  -o-transition: $option;
+  -moz-transition: $option;
+  -webkit-transition: $option;
+}
+
+@mixin colorTransition($t: 0.14s) {
+  @include transition(background-color $t ease-in-out, color $t ease-in-out);
+}
+
+$resolution_width_360: 360;
+$resolution_width_480: 480;
+$resolution_width_608: 608;
+$resolution_width_768: 768;
+$resolution_width_800: 800;
+
+$resolution_height_267: 267;
+$resolution_height_340: 340;
+$resolution_height_480: 480;
+$resolution_height_600: 600;
+$resolution_height_780: 780;
+
+:export {
+  resolution_width_360: $resolution_width_360;
+  resolution_width_480: $resolution_width_480;
+  resolution_width_608: $resolution_width_608;
+  resolution_width_768: $resolution_width_768;
+  resolution_width_800: $resolution_width_800;
+
+  resolution_height_267: $resolution_height_267;
+  resolution_height_340: $resolution_height_340;
+  resolution_height_480: $resolution_height_480;
+  resolution_height_600: $resolution_height_600;
+  resolution_height_780: $resolution_height_780;
+}

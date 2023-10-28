@@ -1,0 +1,15 @@
+@import '@src/styles/color/color.module.scss';
+
+.scroll-progress {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: $light-primary300;
+  transition: width 0.1s ease;
+  will-change: width;
+  &.dark {
+    opacity: 0.2;
+    background: $dark-primary100;
+  }
+}

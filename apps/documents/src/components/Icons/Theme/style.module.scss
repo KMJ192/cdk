@@ -1,0 +1,24 @@
+@import '@src/styles/color/color.module.scss';
+
+.theme-icon {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  transform: translate(-24px, -50%);
+  opacity: 1;
+  transition: opacity 0.15s ease-in-out;
+  cursor: pointer;
+  border-radius: 50%;
+  &.light-icon {
+    fill: $light-text;
+  }
+  &.dark {
+    fill: $dark-gray500;
+  }
+  &.light-icon.dark {
+    opacity: 0;
+  }
+  &.dark-icon.light {
+    opacity: 0;
+  }
+}

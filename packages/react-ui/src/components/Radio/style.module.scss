@@ -1,0 +1,115 @@
+@import './variable/color.module.scss';
+@import './variable/size.module.scss';
+
+@mixin color-set {
+  .mark {
+    border-color: $cdk-color-radio-border;
+    background: $cdk-color-radio-bg;
+  }
+
+  .mark.checked {
+    border-color: $cdk-color-radio-border-checked;
+    background: $cdk-color-radio-bg-checked;
+  }
+
+  .mark.disabled {
+    border-color: $cdk-color-radio-border-disabled;
+    background: $cdk-color-radio-bg-disabled;
+  }
+
+  .mark.checked.disabled {
+    border-color: $cdk-color-radio-border-checked-disabled;
+    background: $cdk-color-radio-bg-checked-disabled;
+  }
+
+  .mark > .pupil {
+    background: $cdk-color-radio-pupil;
+  }
+
+  .mark > .pupil.disabled {
+    background: $cdk-color-radio-pupil-disabled;
+  }
+
+  .children {
+    color: $cdk-color-radio-text;
+  }
+
+  .children.disabled {
+    color: $cdk-color-radio-text-disabled;
+  }
+
+  &:hover:not(.disabled) {
+    .mark {
+      background: $cdk-color-radio-bg-checked-hover;
+      border-color: $cdk-color-radio-border-checked-hover;
+    }
+    .mark > .pupil {
+      background: $cdk-color-radio-pupil-hover;
+      border-color: $cdk-color-radio-pupil-hover;
+    }
+    .children {
+      color: $cdk-color-radio-text-hover;
+    }
+  }
+
+  &:hover:not(.disabled):not(.checked) {
+    .mark {
+      background: $cdk-color-radio-bg-hover;
+      border-color: $cdk-color-radio-border-hover;
+    }
+    .children {
+      color: $cdk-color-radio-text-hover;
+    }
+  }
+}
+
+@mixin pupil {
+  .pupil {
+    width: $cdk-size-radio-pupil;
+    height: $cdk-size-radio-pupil;
+    border-radius: 50%;
+    place-content: center;
+    transform: scale(0);
+    transition: transform 0.1s ease, background-color 0.1s ease;
+    &.checked {
+      transform: scale(1);
+    }
+  }
+}
+
+@mixin mark {
+  width: $cdk-size-radio;
+  height: $cdk-size-radio;
+  border: 2px solid;
+  border-radius: 50%;
+  transition: border-color 0.1s ease;
+}
+
+@mixin radio {
+  align-items: center;
+  -webkit-box-align: center;
+  cursor: pointer;
+  width: fit-content;
+  &.is-children {
+    column-gap: 8px;
+  }
+  &.disabled {
+    cursor: not-allowed;
+  }
+}
+
+@mixin children {
+  .children {
+    transition: color 0.1s ease;
+  }
+}
+
+.radio {
+  @include radio;
+  @include children;
+  .mark {
+    @include mark;
+    @include pupil;
+  }
+  @include color-set;
+}

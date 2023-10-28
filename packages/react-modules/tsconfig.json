@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "build",
+    "paths": {
+      "@src/*": ["src/*"]
+    },
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationDir": "build"
+  },
+  "include": ["src", "./typings", "src/**/*.scss"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,60 @@
+@import '../variable/color.module.scss';
+
+@mixin color-set {
+  --cdk-color-input-border: #{$cdk-color-select-box-border};
+  --cdk-color-input-border-focus: #{$cdk-color-select-box-border-focus};
+  --cdk-color-input-border-error: #{$cdk-color-select-box-border-error};
+  --cdk-color-input-border-disabled: #{$cdk-color-select-box-border-disabled};
+  --cdk-color-input-border-hover: #{$cdk-color-select-box-border-hover};
+
+  --cdk-color-input-bg: #{$cdk-color-select-box-bg};
+  --cdk-color-input-bg-focus: #{$cdk-color-select-box-bg-focus};
+  --cdk-color-input-bg-error: #{$cdk-color-select-box-bg-error};
+  --cdk-color-input-bg-disabled: #{$cdk-color-select-box-bg-disabled};
+  --cdk-color-input-bg-hover: #{$cdk-color-select-box-bg-hover};
+
+  --cdk-color-input-text: #{$cdk-color-select-box-text};
+  --cdk-color-input-text-focus: #{$cdk-color-select-box-text-focus};
+  --cdk-color-input-text-error: #{$cdk-color-select-box-text-error};
+  --cdk-color-input-text-disabled: #{$cdk-color-select-box-text-disabled};
+  --cdk-color-input-text-hover: #{$cdk-color-select-box-text-hover};
+
+  --cdk-color-input-placeholder: #{$cdk-color-select-box-placeholder};
+  --cdk-color-input-placeholder-disabled: #{$cdk-color-select-box-placeholder-disabled};
+
+  .input-box.open:not(.error) {
+    border-color: $cdk-color-select-box-border-focus;
+    background: $cdk-color-select-box-bg-focus;
+    color: $cdk-color-select-box-text-focus;
+  }
+}
+
+@mixin container {
+  position: relative;
+  width: 100%;
+}
+
+@mixin input-box {
+  .input-box {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 32px 10px 10px;
+  }
+}
+
+@mixin icon {
+  .icon {
+    top: 50%;
+    transform: translateY(-55%) rotate(0deg);
+    &.open {
+      transform: translateY(-55%) rotate(-180deg);
+    }
+  }
+}
+
+.container {
+  @include container;
+  @include input-box;
+  @include icon;
+  @include color-set;
+}
