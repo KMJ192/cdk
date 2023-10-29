@@ -36,4 +36,40 @@ const URL: { [key: string]: string } = {
   infiniteScroll: '/modules/components/infinite-scroll',
 };
 
+type PAGE_LAYOUT =
+  | 'center'
+  | 'flex'
+  | 'float'
+  | 'grid'
+  | 'row'
+  | 'spacing'
+  | 'stack';
+
+type PAGE_UI_COMPONENTS =
+  | 'typo'
+  | 'badge'
+  | 'button'
+  | 'input'
+  | 'checkbox'
+  | 'popup'
+  | 'progress-bar'
+  | 'radio'
+  | 'radio-group'
+  | 'spinner'
+  | 'switch'
+  | 'select'
+  | 'tab'
+  | 'data-table'
+  | 'textarea';
+
+type PAGE_HOOKS = 'use-trie' | 'use-click-away' | 'use-component-did-mount';
+
+type PAGE_MODULE_COMPONENTS = 'infinite-scroll';
+
+export type {
+  PAGE_LAYOUT,
+  PAGE_UI_COMPONENTS,
+  PAGE_HOOKS,
+  PAGE_MODULE_COMPONENTS,
+};
 export { URL };

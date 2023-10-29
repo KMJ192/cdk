@@ -11,7 +11,7 @@ const cx = classNames.bind(style);
 type BaseProps = {
   selected?: boolean;
   disabled?: boolean;
-  children?: React.ReactNode;
+  children?: React.JSX.Element;
 };
 
 const DEFAULT_ELEMENT = 'div';
