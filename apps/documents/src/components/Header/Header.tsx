@@ -1,19 +1,15 @@
 import { useEffect, useState } from 'react';
-
 import { Center, Flex } from '@cdkit/react-ui';
 import { When } from '@cdkit/react-modules';
 
 import { useWindowSize } from '@src/store/windowSize';
-import useAppState from '@src/store/AppProvider/hooks/useAppState';
+
+import useToggleTheme from '@src/hooks/useToggleTheme';
 
 import Light from '../Icons/Theme/Light';
 import Dark from '../Icons/Theme/Dark';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import GNB from '../GNB/GNB';
-
-import { FETCHER, METHOD } from '@src/network/api';
-
-import type { THEME } from '@src/types/types';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
@@ -24,30 +20,13 @@ type Props = {
 };
 
 function Header({ navPosition }: Props) {
-  const [{ theme }, setAppState] = useAppState();
   const { width } = useWindowSize();
+  const { toggleTheme } = useToggleTheme();
 
   const [openNav, setOpenNav] = useState(false);
 
-  const onToggleTheme = async () => {
-    const nextTheme = theme === 'light' ? 'dark' : 'light';
-
-    const response = await FETCHER<{
-      theme: THEME;
-    }>({
-      method: METHOD.GET,
-      url: `${window.location.origin}/api/theme`,
-      params: {
-        theme: nextTheme,
-      },
-    });
-
-    document.body.dataset.theme = nextTheme;
-
-    setAppState((appState) => ({
-      ...appState,
-      theme: response.data?.theme as THEME,
-    }));
+  const onToggleTheme = () => {
+    toggleTheme();
   };
 
   const onToggleNav = () => {
