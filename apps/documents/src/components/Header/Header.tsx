@@ -54,6 +54,10 @@ function Header({ navPosition }: Props) {
     setOpenNav(!openNav);
   };
 
+  const onClose = () => {
+    setOpenNav(false);
+  };
+
   useEffect(() => {
     if (navPosition === 'header') {
       setOpenNav(false);
@@ -81,7 +85,11 @@ function Header({ navPosition }: Props) {
         </Center>
       </Flex>
       {navPosition === 'header' && (
-        <GNB position={navPosition} className={cx('nav', { openNav })} />
+        <GNB
+          position={navPosition}
+          onClose={onClose}
+          className={cx('nav', { openNav })}
+        />
       )}
     </>
   );

@@ -27,9 +27,10 @@ const cx = classNames.bind(style);
 type Props = {
   position: 'header' | 'side';
   className?: string;
+  onClose?: () => void;
 };
 
-function GNB({ position, className }: Props) {
+function GNB({ position, className, onClose }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const [selected, setSelected] = useState(cloneDeep(initSelectedList));
@@ -48,6 +49,7 @@ function GNB({ position, className }: Props) {
       [URL.hooks]: false,
       [URL.moduleComponents]: false,
     });
+    if (onClose) onClose();
   };
 
   const onClickModules = () => {
@@ -58,6 +60,7 @@ function GNB({ position, className }: Props) {
       [URL.layout]: false,
       [URL.uiComponents]: false,
     });
+    if (onClose) onClose();
   };
 
   const onClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -71,8 +74,8 @@ function GNB({ position, className }: Props) {
 
     if (!groupName) {
       router.push(dataKey);
-    }
-    if (groupName) {
+      if (onClose) onClose();
+    } else {
       setShow({
         ...show,
         [groupName]: !show[groupName],
