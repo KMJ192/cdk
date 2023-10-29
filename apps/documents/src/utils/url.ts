@@ -11,6 +11,7 @@ const URL: { [key: string]: string } = {
   spacing: '/ui/layout/spacing',
   stack: '/ui/layout/stack',
   uiComponents: '/ui/components',
+  typo: '/ui/components/typo',
   badge: '/ui/components/badge',
   button: '/ui/components/button',
   input: '/ui/components/input',

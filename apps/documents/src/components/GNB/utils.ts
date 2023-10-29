@@ -38,6 +38,10 @@ const layoutGroup: Array<NavGroup> = [
 
 const uiComponentGroup: Array<NavGroup> = [
   {
+    url: URL.typo,
+    contents: 'Typo',
+  },
+  {
     url: URL.button,
     contents: 'Button',
   },

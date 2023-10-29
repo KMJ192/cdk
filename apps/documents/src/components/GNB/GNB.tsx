@@ -64,64 +64,76 @@ function GNB({ position, className }: Props) {
     const element = e.target as HTMLElement;
     const dataKey = element.dataset.key;
 
-    if (dataKey && isURL(dataKey)) {
-      if (
-        dataKey !== URL.uiComponents &&
-        dataKey !== URL.layout &&
-        dataKey !== URL.hooks &&
-        dataKey !== URL.moduleComponents
-      ) {
-        router.push(dataKey);
-      }
-      setSelected({
-        ...initSelectedList,
-        [dataKey]: true,
-      });
+    if (!dataKey) return;
+    if (!isURL(dataKey)) return;
 
-      const groupName = validNavGroup(dataKey);
-      if (groupName) {
-        setShow({
-          ...show,
-          [groupName]: !show[groupName],
-        });
-      }
+    const groupName = validNavGroup(dataKey);
+
+    if (!groupName) {
+      router.push(dataKey);
     }
+    if (groupName) {
+      setShow({
+        ...show,
+        [groupName]: !show[groupName],
+      });
+    }
+
+    setSelected({
+      ...initSelectedList,
+      [dataKey]: true,
+    });
   };
 
   useEffect(() => {
     const group = pathname.split('/');
 
-    if (group.length === 4) {
-      const c = group[2];
-      if (c === category.layout) {
-        setShow({
-          ...show,
-          [URL.layout]: true,
-        });
-      } else if (c === category.uiComponents && group[1] === 'ui') {
-        setShow({
-          ...show,
-          [URL.uiComponents]: true,
-        });
-      } else if (c === category.moduleComponents && group[1] === 'modules') {
-        setShow({
-          ...show,
-          [URL.moduleComponents]: true,
-        });
-      } else if (c === category.hooks) {
-        setShow({
-          ...show,
-          [URL.hooks]: true,
-        });
-      }
+    if (group.length !== 4) return;
 
-      if (urlDictionary.has(pathname)) {
-        setSelected({
-          ...initSelectedList,
-          [pathname]: true,
-        });
-      }
+    const groupName = group[1];
+    const groupCategory = group[2];
+
+    if (urlDictionary.has(pathname)) {
+      setSelected({
+        ...initSelectedList,
+        [pathname]: true,
+      });
     }
+
+    if (groupName === 'ui' && groupCategory === category.layout) {
+      setShow({
+        ...show,
+        [URL.layout]: true,
+      });
+      return;
+    }
+
+    if (groupName === 'ui' && groupCategory === category.uiComponents) {
+      setShow({
+        ...show,
+        [URL.uiComponents]: true,
+      });
+      return;
+    }
+
+    if (groupName === 'modules' && groupCategory === category.hooks) {
+      setShow({
+        ...show,
+        [URL.hooks]: true,
+      });
+      return;
+    }
+
+    if (
+      groupName === 'modules' &&
+      groupCategory === category.moduleComponents
+    ) {
+      setShow({
+        ...show,
+        [URL.moduleComponents]: true,
+      });
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 

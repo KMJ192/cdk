@@ -1,5 +1,5 @@
 function Page() {
-  return <div>UI Page</div>;
+  return <div>Modules Page</div>;
 }
 
 export default Page;
