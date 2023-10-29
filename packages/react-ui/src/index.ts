@@ -84,14 +84,3 @@ export type {
 //   SelectOption,
 //   InputSelectOption,
 // } from './components/Select';
-
-// export { default as HamburgerMenu } from './components/HamburgerMenu/HamburgerMenu';
-// export type { HamburgerMenuProps } from './components/HamburgerMenu/HamburgerMenu';
-
-// 페이지 템플릿 요소
-// export { default as Header } from './components/Header/Header';
-// export type { HeaderProps } from './components/Header/Header';
-// export { default as Footer } from './components/Footer/Footer';
-// export type { FooterProps } from './components/Footer/Footer';
-// export { default as PageTemplate } from './components/PageTemplate/PageTemplate';
-// export type { PageTemplateProps } from './components/PageTemplate/PageTemplate';
