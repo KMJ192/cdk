@@ -1,11 +1,12 @@
 @import '../variable/color.module.scss';
 
 @mixin color-set {
-  background: $cdkit-color-select-dropbox-bg;
-  box-shadow: $cdkit-color-select-dropbox-box-shadow;
+  background: $cdk-color-select-dropbox-bg;
+  box-shadow: $cdk-color-select-dropbox-box-shadow;
 }
 
 @mixin select-dropbox {
+  position: absolute;
   flex-direction: column;
   overflow: auto;
   border-radius: 4px;
