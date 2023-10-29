@@ -8,7 +8,7 @@ import './globals.css';
 import './theme.scss';
 
 export const metadata: Metadata = {
-  title: 'Common DevelopKit - Documents',
+  title: 'Component DevelopKit - Documents',
   description: '',
 };
 

@@ -1,4 +1,4 @@
-# common-develop-kit 패키지 워크스페이스
+# component-develop-kit 패키지 워크스페이스
 
 - UI 라이브러리
 - UI Documents 페이지
