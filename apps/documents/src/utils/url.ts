@@ -1,5 +1,6 @@
 const URL: { [key: string]: string } = {
   root: '/',
+  // UI
   ui: '/ui',
   layout: '/ui/layout',
   center: '/ui/layout/center',
@@ -24,6 +25,7 @@ const URL: { [key: string]: string } = {
   tab: '/ui/components/tab',
   dataTable: '/ui/components/data-table',
   textarea: '/ui/components/textarea',
+  // Modules
   modules: '/modules',
   hooks: '/modules/hooks',
   useTrie: '/modules/hooks/use-trie',

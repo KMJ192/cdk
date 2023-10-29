@@ -36,7 +36,7 @@ function ContentsLayout({ theme, device, children }: Props) {
   );
 
   useEffect(() => {
-    setNavPosition(width <= RESOLUTION_WIDTH['608'] ? 'header' : 'side');
+    setNavPosition(width <= RESOLUTION_WIDTH['768'] ? 'header' : 'side');
   }, [width]);
 
   return (

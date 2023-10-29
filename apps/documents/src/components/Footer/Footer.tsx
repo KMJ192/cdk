@@ -1,5 +1,3 @@
-'use client';
-
 import { Center } from '@cdkit/react-ui';
 
 import { today } from '@src/utils/date';
