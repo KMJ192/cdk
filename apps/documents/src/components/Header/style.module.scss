@@ -10,7 +10,7 @@
   will-change: height, padding;
   @include transition(height 0.3s ease-in-out, padding 0.3s ease-in-out);
   &.openNav {
-    padding: 16px;
+    padding: 16px 16px 106px 16px;
     height: 100%;
   }
 }
