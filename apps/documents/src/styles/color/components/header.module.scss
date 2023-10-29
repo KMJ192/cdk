@@ -1,0 +1,13 @@
+@import '../color.module.scss';
+
+@mixin header-light {
+  --header-bg: #{$light-primary200};
+  --header-text: #{$light-text};
+  --header-borderBottom: #{2px solid $light-primary500};
+}
+
+@mixin header-dark {
+  --header-bg: #{$dark-primary000};
+  --header-text: #{$dark-text};
+  --header-borderBottom: #{2px solid $dark-primary100};
+}

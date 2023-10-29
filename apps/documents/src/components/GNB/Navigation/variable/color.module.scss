@@ -1,0 +1,33 @@
+@import '@src/styles/color/color.module.scss';
+
+$cdkit-color-nav-bg: var(--cdkit-color-nav-bg, #{$light-primary200});
+
+$cdkit-color-nav-menu-bg: var(--cdkit-color-nav-menu-bg);
+$cdkit-color-nav-menu-bg-selected: var(
+  --cdkit-color-nav-menu-bg-selected,
+  $light-primary000
+);
+$cdkit-color-nav-menu-bg-disabled: var(
+  --cdkit-color-nav-menu-bg-disabled,
+  $light-gray300
+);
+
+$cdkit-color-nav-menu-text: var(--cdkit-color-nav-menu-text, $light-text);
+$cdkit-color-nav-menu-text-selected: var(
+  --cdkit-color-nav-menu-text-selected,
+  $light-text
+);
+$cdkit-color-nav-menu-text-hover: var(
+  --cdkit-color-nav-menu-text-hover,
+  $light-text
+);
+$cdkit-color-nav-menu-text-disabled: var(
+  --cdkit-color-nav-menu-text-disabled,
+  $light-gray100
+);
+
+$cdkit-color-nav-menu-box-shadow: var(--cdkit-color-nav-menu-box-shadow);
+$cdkit-color-nav-menu-box-shadow-selected: var(
+  --cdkit-color-nav-menu-box-shadow-selected,
+  #{$light-shadow}
+);

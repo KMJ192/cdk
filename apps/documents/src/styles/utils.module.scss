@@ -6,7 +6,14 @@
 }
 
 @mixin colorTransition($t: 0.14s) {
-  @include transition(background-color $t ease-in-out, color $t ease-in-out);
+  @include transition(background-color $t ease-in-out, color $t ease-in);
+}
+
+@mixin transform($option...) {
+  transform: $option;
+  -o-transform: $option;
+  -ms-transform: $option;
+  -moz-transform: $option;
 }
 
 $resolution_width_360: 360;

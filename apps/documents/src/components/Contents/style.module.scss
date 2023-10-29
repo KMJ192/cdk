@@ -1,20 +1,10 @@
 @import '@src/styles/color/color.module.scss';
 @import '@src/styles/utils.module.scss';
-@import './theme.scss';
 
-.layout {
+.contents {
   width: 100%;
-  min-height: calc(100% - 128px);
   box-sizing: border-box;
-  background: $light-background;
-  color: $light-text;
-  padding: 4rem 20%;
-  @include colorTransition;
-  @include theme;
-  &.dark {
-    background: $dark-background;
-    color: $dark-text;
-  }
+  padding: 4rem 3rem;
   @media screen and (max-width: #{$resolution_width_360}px) {
     padding: 48px 12%;
   }

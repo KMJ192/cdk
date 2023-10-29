@@ -10,3 +10,11 @@ export async function getTheme(): Promise<THEME> {
 
   return theme;
 }
+
+export async function getDevice(): Promise<string> {
+  const nextCookie = cookies();
+
+  const device = nextCookie.get('device')?.value ?? 'pc';
+
+  return device;
+}

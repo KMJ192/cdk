@@ -1,0 +1,11 @@
+@import '../color.module.scss';
+
+@mixin spinner-light {
+  --cdkit-color-spinner-color1: #{$light-gray200};
+  --cdkit-color-spinner-color2: #{$light-gray400};
+}
+
+@mixin spinner-dark {
+  --cdkit-color-spinner-color1: #{$dark-gray100};
+  --cdkit-color-spinner-color2: #{$dark-gray400};
+}

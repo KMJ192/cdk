@@ -1,0 +1,11 @@
+@import '../color.module.scss';
+
+@mixin badge-light {
+  --cdkit-color-badge-text: #{$light-primary100};
+  --cdkit-color-badge-bg: #{$light-primary700};
+}
+
+@mixin badge-dark {
+  --cdkit-color-badge-text: #{$dark-text};
+  --cdkit-color-badge-bg: #{$dark-primary100};
+}

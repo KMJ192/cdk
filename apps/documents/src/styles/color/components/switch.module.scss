@@ -1,0 +1,43 @@
+@import '../color.module.scss';
+
+@mixin switch-light {
+  --cdkit-color-switch-bg: #{$light-primary300};
+  --cdkit-color-switch-bg-checked: #{$light-blue300};
+  --cdkit-color-switch-bg-disabled: #{$light-gray000};
+  --cdkit-color-switch-bg-checked-disabled: #{$light-gray200};
+  --cdkit-color-switch-bg-hover: #{$light-blue200};
+  --cdkit-color-switch-bg-checked-hover: #{$light-blue500};
+
+  --cdkit-color-switch-bullet: #{$light-primary000};
+  --cdkit-color-switch-bullet-disabled: #{$light-gray200};
+  --cdkit-color-switch-bullet-checked: #{$light-primary000};
+  --cdkit-color-switch-bullet-checked-disabled: #{$light-gray400};
+  --cdkit-color-switch-bullet-hover: #{$light-primary000};
+  --cdkit-color-switch-bullet-checked-hover: #{$light-primary000};
+  --cdkit-color-switch-bullet-box-shadow: 0px 3px 6px rgba(63, 63, 63, 0.3);
+
+  --cdkit-color-switch-text: #{$light-text};
+  --cdkit-color-switch-text-hover: #{$light-text};
+  --cdkit-color-switch-text-disabled: #{$light-gray200};
+}
+
+@mixin switch-dark {
+  --cdkit-color-switch-bg: #{$dark-primary400};
+  --cdkit-color-switch-bg-checked: #{$dark-blue200};
+  --cdkit-color-switch-bg-disabled: #{$dark-primary200};
+  --cdkit-color-switch-bg-checked-disabled: #{$dark-primary100};
+  --cdkit-color-switch-bg-hover: #{$dark-blue300};
+  --cdkit-color-switch-bg-checked-hover: #{$dark-blue100};
+
+  --cdkit-color-switch-bullet: #{$dark-primary700};
+  --cdkit-color-switch-bullet-checked: #{$dark-primary700};
+  --cdkit-color-switch-bullet-disabled: #{$dark-primary100};
+  --cdkit-color-switch-bullet-checked-disabled: #{$dark-primary000};
+  --cdkit-color-switch-bullet-hover: #{$dark-primary700};
+  --cdkit-color-switch-bullet-checked-hover: #{$dark-primary700};
+  --cdkit-color-switch-bullet-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+
+  --cdkit-color-switch-text: #{$dark-text};
+  --cdkit-color-switch-text-hover: #{$dark-text};
+  --cdkit-color-switch-text-disabled: #{$dark-gray000};
+}

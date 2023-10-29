@@ -17,9 +17,11 @@ function GlobalState({ theme }: Props) {
   const { setScrollPosition } = useScrollPosition();
 
   useEffect(() => {
-    setAppState({
+    setAppState((appState) => ({
+      ...appState,
       theme,
-    });
+    }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [theme]);
 
   useEffect(() => {
@@ -33,6 +35,7 @@ function GlobalState({ theme }: Props) {
     return () => {
       window.removeEventListener('resize', resize);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -48,9 +51,10 @@ function GlobalState({ theme }: Props) {
     return () => {
       window.removeEventListener('scroll', onScroll);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <></>;
+  return null;
 }
 
 export default GlobalState;

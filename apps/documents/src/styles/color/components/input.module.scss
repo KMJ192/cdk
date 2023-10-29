@@ -1,0 +1,47 @@
+@import '../color.module.scss';
+
+@mixin input-light {
+  --cdkit-color-input-border: #{$light-primary600};
+  --cdkit-color-input-border-focus: #{$light-blue500};
+  --cdkit-color-input-border-error: #{$light-danger};
+  --cdkit-color-input-border-disabled: #{$light-gray100};
+  --cdkit-color-input-border-hover: #{$light-blue300};
+
+  --cdkit-color-input-bg: #{$light-background};
+  --cdkit-color-input-bg-focus: #{$light-background};
+  --cdkit-color-input-bg-error: #{$light-background};
+  --cdkit-color-input-bg-disabled: #{$light-gray000};
+  --cdkit-color-input-bg-hover: #{$light-background};
+
+  --cdkit-color-input-text: #{$light-text};
+  --cdkit-color-input-text-focus: #{$light-text};
+  --cdkit-color-input-text-error: #{$light-text};
+  --cdkit-color-input-text-disabled: #{$light-gray200};
+  --cdkit-color-input-text-hover: #{$light-text};
+
+  --cdkit-color-input-placeholder: #{$light-gray100};
+  --cdkit-color-input-placeholder-disabled: #{$light-gray100};
+}
+
+@mixin input-dark {
+  --cdkit-color-input-border: #{$dark-primary300};
+  --cdkit-color-input-border-focus: #{$dark-blue300};
+  --cdkit-color-input-border-error: #{$dark-danger};
+  --cdkit-color-input-border-disabled: #{$dark-primary100};
+  --cdkit-color-input-border-hover: #{$dark-primary300};
+
+  --cdkit-color-input-bg: #{$dark-primary100};
+  --cdkit-color-input-bg-focus: #{$dark-primary100};
+  --cdkit-color-input-bg-error: #{$dark-primary100};
+  --cdkit-color-input-bg-disabled: #{$dark-primary200};
+  --cdkit-color-input-bg-hover: #{$dark-primary100};
+
+  --cdkit-color-input-text: #{$dark-text};
+  --cdkit-color-input-text-focus: #{$dark-text};
+  --cdkit-color-input-text-error: #{$dark-text};
+  --cdkit-color-input-text-disabled: #{$dark-primary100};
+  --cdkit-color-input-text-hover: #{$dark-text};
+
+  --cdkit-color-input-placeholder: #{$dark-primary300};
+  --cdkit-color-input-placeholder-disabled: #{$dark-primary100};
+}

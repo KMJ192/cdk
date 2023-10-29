@@ -1,0 +1,43 @@
+@import './variable/color.module.scss';
+@import './variable/size.module.scss';
+
+@mixin scrollbar(
+  $width: 16px,
+  $height: 16px,
+  $color: $light-gray100,
+  $hoverColor: $light-gray200
+) {
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $height;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    background-clip: content-box;
+    border: 4px solid transparent;
+    border-radius: 16px;
+    &:hover {
+      background-color: $hoverColor;
+    }
+  }
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
+
+@mixin color-set {
+  background: $cdkit-color-nav-bg;
+}
+
+@mixin navigation {
+  width: $cdkit-size-nav-width;
+  height: inherit;
+  overflow: auto;
+  padding: 16px;
+}
+
+.navigation {
+  @include navigation;
+  @include color-set;
+  @include scrollbar(16px, 16px);
+}

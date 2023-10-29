@@ -1,5 +1,5 @@
 {
-  "name": "@cdk/react-modules",
+  "name": "@cdkit/react-modules",
   "version": "0.0.1",
   "description": "",
   "author": {
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KMJ192/cdk"
+    "url": "git+https://github.com/KMJ192/cdkit"
   },
   "scripts": {
     "build": "rm -rf build && rollup -c --bundleConfigAsCjs && tsc-alias",

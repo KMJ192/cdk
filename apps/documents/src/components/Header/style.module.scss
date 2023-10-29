@@ -1,49 +1,35 @@
 @import '@src/styles/color/color.module.scss';
 @import '@src/styles/utils.module.scss';
+@import '../ContentsLayout/layout.module.scss';
 
-@mixin mobile-nav {
-  flex-direction: column;
-  overflow: hidden;
-  opacity: 0;
-  padding-top: 0;
-  max-height: 0;
-  @include transition(
-    max-height 0.3s cubic-bezier(0, 1, 0, 1),
-    padding-top 0.3s cubic-bezier(0, 1, 0, 1)
-  );
-  will-change: opacity, max-height, padding-top;
+@mixin header-nav {
+  padding: 0;
+  height: 0;
+  box-sizing: border-box;
+  margin-top: $header-height;
+  will-change: height, padding;
+  @include transition(height 0.3s ease-in-out, padding 0.3s ease-in-out);
   &.openNav {
-    padding-top: 32px;
-    opacity: 1;
-    max-height: 100vh;
-    row-gap: 32px;
-    transition:
-      max-height 0.3s ease-in-out,
-      padding-top 0.3s ease-in-out;
-    @media screen and (max-width: #{$resolution_width_360}px) {
-      padding-top: 24px;
-    }
+    padding: 16px;
+    height: 100%;
   }
+}
+
+@mixin color-set {
+  background: var(--header-bg);
+  color: var(--header-text);
+  border-bottom: var(--header-borderBottom);
 }
 
 .header {
   position: fixed;
   flex-direction: column;
-  padding: 24px 20%;
-  height: fit-content !important;
-  min-height: 64px;
+  padding: 24px 48px;
+  height: $header-height !important;
   width: 100%;
   box-sizing: border-box;
-  background: $light-primary200;
-  color: $light-text;
-  z-index: 900;
-  box-shadow: $light-shadow;
-  @include colorTransition;
-  &.dark {
-    background: $dark-primary000;
-    color: $dark-text;
-    box-shadow: $dark-shadow;
-  }
+  z-index: 999;
+  @include color-set;
   .contents {
     justify-content: space-between;
     position: relative;
@@ -51,14 +37,16 @@
       column-gap: 32px;
       min-height: 20px;
     }
-    .theme-icon {
-      user-select: none;
+    .right {
+      &.theme-icon {
+        user-select: none;
+      }
     }
   }
   @media screen and (max-width: #{$resolution_width_360}px) {
     padding: 24px;
   }
-  .nav {
-    @include mobile-nav();
-  }
+}
+.nav {
+  @include header-nav();
 }

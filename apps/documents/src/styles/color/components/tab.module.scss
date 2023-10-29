@@ -1,0 +1,25 @@
+@import '../color.module.scss';
+
+@mixin tab-light {
+  --cdkit-color-tab-bg: #{$light-primary000};
+  --cdkit-color-tab-bg-hover: #{$light-primary200};
+  --cdkit-color-tab-bg-disabled: #{$light-gray100};
+
+  --cdkit-color-tab-select-line: #{$light-blue300};
+
+  --cdkit-color-tab-text: #{$light-text};
+  --cdkit-color-tab-text-hover: #{$light-text};
+  --cdkit-color-tab-text-disabled: #{$light-blue000};
+}
+
+@mixin tab-dark {
+  --cdkit-color-tab-bg: #{$dark-primary200};
+  --cdkit-color-tab-bg-hover: #{$dark-primary300};
+  --cdkit-color-tab-bg-disabled: #{$dark-primary100};
+
+  --cdkit-color-tab-select-line: #{$dark-blue300};
+
+  --cdkit-color-tab-text: #{$dark-text};
+  --cdkit-color-tab-text-hover: #{$dark-primary700};
+  --cdkit-color-tab-text-disabled: #{$dark-primary300};
+}

@@ -59,10 +59,7 @@
   &,
   & > span {
     display: inline-block;
-    transition:
-      transform 0.4s,
-      opacity 0.4s,
-      background-color 0.14s ease-in-out,
+    transition: transform 0.4s, opacity 0.4s, background-color 0.14s ease-in-out,
       color 0.14s ease-in-out;
     box-sizing: border-box;
   }
@@ -70,10 +67,7 @@
 
 @mixin color-set {
   & > span {
-    background: $light-text;
-  }
-  &.dark > span {
-    background: $dark-text;
+    background: var(--hamburger-color);
   }
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "@cdk/workspace",
+  "name": "@cdkit/workspace",
   "private": true,
   "keywords": [],
   "version": "0.0.1",
@@ -30,9 +30,9 @@
     ]
   },
   "scripts": {
-    "wk:docs": "yarn workspace @cdk/documents",
-    "wk:rui": "yarn workspace @cdk/react-ui",
-    "wk:rmo": "yarn workspace @cdk/react-modules",
+    "wk:docs": "yarn workspace @cdkit/documents",
+    "wk:rui": "yarn workspace @cdkit/react-ui",
+    "wk:rmo": "yarn workspace @cdkit/react-modules",
     "clear:all": "sh ./scripts/clearDependencies.sh",
     "postinstall": "husky install"
   },

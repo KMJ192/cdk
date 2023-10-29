@@ -1,0 +1,37 @@
+@import '../color.module.scss';
+
+@mixin button-light {
+  --cdkit-color-button-bg: #{$light-primary000};
+  --cdkit-color-button-bg-hover: #{$light-primary100};
+  --cdkit-color-button-bg-disabled: #{$light-gray000};
+  --cdkit-color-button-bg-active: #{$light-primary300};
+
+  --cdkit-color-button-bg-ripple: #{$light-primary200};
+
+  --cdkit-color-button-text: #{$light-text};
+  --cdkit-color-button-text-hover: #{$light-text};
+  --cdkit-color-button-text-disabled: #{$light-gray200};
+  --cdkit-color-button-text-active: #{$black};
+
+  --cdkit-color-button-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --cdkit-color-button-outline: #{$light-primary300};
+  --cdkit-color-button-outline-disabled: #{$light-gray300};
+}
+
+@mixin button-dark {
+  --cdkit-color-button-bg: #{$dark-primary100};
+  --cdkit-color-button-bg-hover: #{$dark-primary200};
+  --cdkit-color-button-bg-disabled: #{$dark-primary100};
+  --cdkit-color-button-bg-active: rgba(53, 53, 53, 0.6);
+
+  --cdkit-color-button-bg-ripple: rgba(50, 50, 70, 0.6);
+
+  --cdkit-color-button-text: #{$dark-text};
+  --cdkit-color-button-text-hover: #{$dark-text};
+  --cdkit-color-button-text-disabled: #{$dark-gray000};
+  --cdkit-color-button-text-active: #{$dark-primary700};
+
+  --cdkit-color-button-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  --cdkit-color-button-outline: #{$dark-primary100};
+  --cdkit-color-button-outline-disabled: #{$dark-gray000};
+}

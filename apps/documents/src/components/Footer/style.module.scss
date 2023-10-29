@@ -1,23 +1,22 @@
 @import '@src/styles/color/color.module.scss';
-@import '@src/styles/utils.module.scss';
+@import '../ContentsLayout/layout.module.scss';
+
+@mixin color-set {
+  background: var(--footer-bg);
+  .update {
+    color: var(--footer-update);
+  }
+}
 
 .footer {
   margin-top: auto;
-  height: 64px !important;
+  height: $footer-height !important;
   padding: 0 16px;
-  background: $light-background;
   justify-content: flex-end;
   box-sizing: border-box;
-  @include colorTransition;
+  @include color-set;
   .update {
-    color: $light-gray700;
     font-style: italic;
     font-size: 13px;
-  }
-  &.dark {
-    background: $dark-background;
-    .update {
-      color: $dark-gray500;
-    }
   }
 }

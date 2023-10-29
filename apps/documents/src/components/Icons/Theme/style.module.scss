@@ -1,24 +1,30 @@
 @import '@src/styles/color/color.module.scss';
+@import '@src/styles/utils.module.scss';
+
+@mixin color-set {
+  fill: var(--theme-icon-fill);
+}
 
 .theme-icon {
   width: 32px;
   height: 32px;
   position: absolute;
-  transform: translate(-24px, -50%);
   opacity: 1;
-  transition: opacity 0.15s ease-in-out;
   cursor: pointer;
   border-radius: 50%;
-  &.light-icon {
-    fill: $light-text;
-  }
-  &.dark {
-    fill: $dark-gray500;
-  }
+  @include transform(translate(-24px, -50%) rotate(0deg));
+  @include color-set;
+  @include transition(
+    opacity 0.15s ease-in-out,
+    background-color 0.14s ease-in-out,
+    transform 0.35s ease
+  );
   &.light-icon.dark {
     opacity: 0;
+    @include transform(translate(-24px, -50%) rotate(180deg));
   }
   &.dark-icon.light {
     opacity: 0;
+    @include transform(translate(-24px, -50%) rotate(180deg));
   }
 }

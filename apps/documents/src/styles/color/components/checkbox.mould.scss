@@ -1,0 +1,45 @@
+@import '../color.module.scss';
+
+@mixin checkbox-light {
+  --cdkit-color-checkbox-border: #{$light-primary700};
+  --cdkit-color-checkbox-border-hover: #{$light-blue300};
+  --cdkit-color-checkbox-border-disabled: #{$light-gray200};
+  --cdkit-color-checkbox-border-checked: #{$light-blue400};
+  --cdkit-color-checkbox-border-checked-hover: #{$light-blue500};
+  --cdkit-color-checkbox-border-checked-disabled: #{$light-gray300};
+
+  --cdkit-color-checkbox-bg: #{$light-blue400};
+  --cdkit-color-checkbox-bg-hover: #{$light-blue500};
+  --cdkit-color-checkbox-bg-disabled: #{$light-gray100};
+  --cdkit-color-checkbox-bg-checked-disabled: #{$light-gray300};
+
+  --cdkit-color-checkbox-text: #{$light-text};
+  --cdkit-color-checkbox-text-hover: #{$light-text};
+  --cdkit-color-checkbox-text-disabled: #{$light-gray300};
+
+  --cdkit-color-checkbox-mark: #{$light-primary000};
+  --cdkit-color-checkbox-mark-hover: #{$light-primary000};
+  --cdkit-color-checkbox-mark-disabled: #{$light-gray000};
+}
+
+@mixin checkbox-dark {
+  --cdkit-color-checkbox-border: #{$dark-primary300};
+  --cdkit-color-checkbox-border-hover: #{$dark-blue200};
+  --cdkit-color-checkbox-border-disabled: #{$dark-gray400};
+  --cdkit-color-checkbox-border-checked: #{$dark-blue200};
+  --cdkit-color-checkbox-border-checked-hover: #{$dark-blue100};
+  --cdkit-color-checkbox-border-checked-disabled: #{$dark-gray200};
+
+  --cdkit-color-checkbox-bg: #{$dark-blue200};
+  --cdkit-color-checkbox-bg-hover: #{$dark-blue100};
+  --cdkit-color-checkbox-bg-disabled: #{$dark-gray200};
+  --cdkit-color-checkbox-bg-checked-disabled: #{$dark-gray200};
+
+  --cdkit-color-checkbox-text: #{$dark-text};
+  --cdkit-color-checkbox-text-hover: #{$dark-text};
+  --cdkit-color-checkbox-text-disabled: #{$dark-primary200};
+
+  --cdkit-color-checkbox-mark-checked: #{$dark-primary700};
+  --cdkit-color-checkbox-mark-checked-hover: #{$dark-primary700};
+  --cdkit-color-checkbox-mark-checked-disabled: #{$dark-primary600};
+}

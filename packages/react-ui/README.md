@@ -1,9 +1,9 @@
-# @cdk/react-ui
+# @cdkit/react-ui
 
 ### Getting start
 
 ```
-yarn add @cdk/react-ui
+yarn add @cdkit/react-ui
 ```
 
 ### Components

@@ -1,0 +1,33 @@
+@import '../color.module.scss';
+
+@mixin navigation-light {
+  --cdkit-color-nav-bg: #{$light-primary200};
+
+  --cdkit-color-nav-menu-bg-selected: #{$light-primary000};
+  --cdkit-color-nav-menu-bg-disabled: #{$light-gray300};
+
+  --cdkit-color-nav-menu-text: #{$light-text};
+  --cdkit-color-nav-menu-text-selected: #{$light-text};
+  --cdkit-color-nav-menu-text-hover: #{$light-text};
+  --cdkit-color-nav-menu-text-disabled: #{$light-gray100};
+
+  --cdkit-color-nav-menu-box-shadow-selected: 0px 1px 3px rgba(8, 104, 99, 0.2);
+
+  --sideNav-borderRight: 2px solid #{$light-primary400};
+}
+
+@mixin navigation-dark {
+  --cdkit-color-nav-bg: #{$dark-primary000};
+
+  --cdkit-color-nav-menu-bg-selected: #{$dark-primary200};
+  --cdkit-color-nav-menu-bg-disabled: #{$dark-primary300};
+
+  --cdkit-color-nav-menu-text: #{$dark-text};
+  --cdkit-color-nav-menu-text-selected: #{$dark-primary700};
+  --cdkit-color-nav-menu-text-hover: #{dark-text};
+  --cdkit-color-nav-menu-text-disabled: #{$dark-primary500};
+
+  --cdkit-color-nav-menu-box-shadow-selected: 0px 3px 6px rgba(0, 0, 0, 0.2);
+
+  --sideNav-borderRight: 2px solid #{$dark-primary100};
+}

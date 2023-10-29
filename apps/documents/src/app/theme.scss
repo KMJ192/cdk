@@ -1,0 +1,55 @@
+@import '../styles/color/components/theme.module.scss';
+@import '../styles/utils.module.scss';
+
+body[data-theme='light'] {
+  background: $light-background;
+  color: $light-text;
+
+  @include navigation-light;
+  @include header-light;
+  @include footer-light;
+  @include h-menu-light;
+  @include themeIcon-light;
+  @include line-light;
+
+  @include tab-light;
+  @include button-light;
+  @include data-table-light;
+  @include radio-light;
+  @include badge-light;
+  @include checkbox-light;
+  @include input-light;
+  @include popup-light;
+  @include progressbar-light;
+  @include spinner-light;
+  @include switch-light;
+  @include row-light;
+  @include textarea-light;
+  @include select-light;
+}
+body[data-theme='dark'] {
+  background: $dark-background;
+  color: $dark-text;
+
+  @include navigation-dark;
+  @include header-dark;
+  @include footer-dark;
+  @include h-menu-dark;
+  @include themeIcon-dark;
+  @include line-dark;
+
+  @include tab-dark;
+  @include button-dark;
+  @include data-table-dark;
+  @include radio-dark;
+  @include badge-dark;
+  @include checkbox-dark;
+  @include input-dark;
+  @include popup-dark;
+  @include progressbar-dark;
+  @include spinner-dark;
+  @include switch-dark;
+  @include row-dark;
+  @include textarea-dark;
+  @include select-dark;
+}

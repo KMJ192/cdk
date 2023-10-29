@@ -1,0 +1,49 @@
+@import '../color.module.scss';
+
+@mixin radio-light {
+  --cdkit-color-radio-border: #{$light-primary300};
+  --cdkit-color-radio-border-checked: #{$light-blue300};
+  --cdkit-color-radio-border-disabled: #{$light-gray100};
+  --cdkit-color-radio-border-checked-disabled: #{$light-gray100};
+  --cdkit-color-radio-border-hover: #{$light-blue400};
+  --cdkit-color-radio-border-checked-hover: #{$light-blue500};
+
+  --cdkit-color-radio-bg: #{$light-background};
+  --cdkit-color-radio-bg-checked: #{$light-background};
+  --cdkit-color-radio-bg-checked-hover: #{$light-background};
+  --cdkit-color-radio-bg-checked-disabled: #{$light-gray000};
+  --cdkit-color-radio-bg-hover: #{$light-background};
+  --cdkit-color-radio-bg-disabled: #{$light-gray000};
+
+  --cdkit-color-radio-text: #{$light-text};
+  --cdkit-color-radio-text-disabled: #{$light-gray200};
+  --cdkit-color-radio-text-hover: #{$light-text};
+
+  --cdkit-color-radio-pupil: #{$light-blue300};
+  --cdkit-color-radio-pupil-disabled: #{$light-gray100};
+  --cdkit-color-radio-pupil-hover: #{$light-blue500};
+}
+
+@mixin radio-dark {
+  --cdkit-color-radio-border: #{$dark-primary300};
+  --cdkit-color-radio-border-checked: #{$dark-blue200};
+  --cdkit-color-radio-border-disabled: #{$dark-primary500};
+  --cdkit-color-radio-border-checked-disabled: #{$dark-primary500};
+  --cdkit-color-radio-border-hover: #{$dark-blue100};
+  --cdkit-color-radio-border-checked-hover: #{$dark-blue100};
+
+  --cdkit-color-radio-bg: #{$dark-background};
+  --cdkit-color-radio-bg-checked: #{$dark-background};
+  --cdkit-color-radio-bg-checked-hover: #{$dark-background};
+  --cdkit-color-radio-bg-checked-disabled: #{$dark-primary400};
+  --cdkit-color-radio-bg-hover: #{$dark-background};
+  --cdkit-color-radio-bg-disabled: #{$dark-primary400};
+
+  --cdkit-color-radio-text: #{$dark-text};
+  --cdkit-color-radio-text-hover: #{$dark-text};
+  --cdkit-color-radio-text-disabled: #{$dark-primary600};
+
+  --cdkit-color-radio-pupil: #{$dark-blue200};
+  --cdkit-color-radio-pupil-disabled: #{$dark-primary600};
+  --cdkit-color-radio-pupil-hover: #{$dark-blue100};
+}

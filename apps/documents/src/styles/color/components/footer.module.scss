@@ -1,0 +1,11 @@
+@import '../color.module.scss';
+
+@mixin footer-light {
+  --footer-bg: #{$light-background};
+  --footer-update: #{$light-gray700};
+}
+
+@mixin footer-dark {
+  --footer-bg: #{$dark-background};
+  --footer-update: #{$dark-gray500};
+}

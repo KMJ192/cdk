@@ -93,13 +93,5 @@ export type {
 // export type { HeaderProps } from './components/Header/Header';
 // export { default as Footer } from './components/Footer/Footer';
 // export type { FooterProps } from './components/Footer/Footer';
-// export { SideNav, SideNavTemplate } from './components/SideNav';
-// export type {
-//   SideNavProps,
-//   SideNavMenuProps,
-//   SideNavMenuGroupProps,
-//   SideNavItem,
-//   SideNavKey,
-// } from './components/SideNav';
 // export { default as PageTemplate } from './components/PageTemplate/PageTemplate';
 // export type { PageTemplateProps } from './components/PageTemplate/PageTemplate';

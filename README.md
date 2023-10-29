@@ -1,4 +1,4 @@
-# compare-develop-kit 패키지 워크스페이스
+# common-develop-kit 패키지 워크스페이스
 
 - UI 라이브러리
 - UI Documents 페이지
@@ -9,13 +9,13 @@
 - UI
 
 ```
-yarn add @cdk/react-ui
+yarn add @cdkit/react-ui
 ```
 
 - Modules
 
 ```
-yarn add @cdk/react-modules
+yarn add @cdkit/react-modules
 ```
 
 ### Library Package build
@@ -23,22 +23,22 @@ yarn add @cdk/react-modules
 - Modules
 
 ```
-yarn workspace @cdk/react-modules build
+yarn workspace @cdkit/react-modules build
 ```
 
 - UI
 
 ```
-yarn workspace @cdk/react-ui build
+yarn workspace @cdkit/react-ui build
 ```
 
 ### App start
 
 - Documents
-  - @cdk/react-modules와 @cdk/react-ui를 순서대로 빌드해주세요.
+  - @cdkit/react-modules와 @cdkit/react-ui를 순서대로 빌드해주세요.
 
 ```
-yarn workspace @cdk/documents start
+yarn workspace @cdkit/documents start
 ```
 
 ### dev

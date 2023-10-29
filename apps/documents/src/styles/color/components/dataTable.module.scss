@@ -1,0 +1,76 @@
+@import '../color.module.scss';
+
+@mixin data-table-light {
+  --cdkit-color-data-table-bg: #{$light-background};
+
+  --cdkit-color-data-table-border: #{$light-primary600};
+
+  --cdkit-color-data-table-caption-text: #{$light-text};
+
+  --cdkit-color-data-table-header-bg: #{$light-primary200};
+  --cdkit-color-data-table-header-text: #{$light-text};
+
+  --cdkit-color-data-table-footer-bg: #{$light-primary000};
+  --cdkit-color-data-table-footer-text: #{$light-text};
+
+  --cdkit-color-data-table-divide-line: #{$light-primary500};
+
+  --cdkit-color-data-table-row-bg: #{$light-background};
+  --cdkit-color-data-table-row-bg-hover: #{$light-primary000};
+  --cdkit-color-data-table-row-bg-disabled: #{$light-gray000};
+
+  --cdkit-color-data-table-row-text: #{$light-text};
+  --cdkit-color-data-table-row-text-hover: #{$light-text};
+  --cdkit-color-data-table-row-text-disabled: #{$light-gray200};
+
+  --cdkit-color-data-table-pagination-index-bg: #{$light-background};
+  --cdkit-color-data-table-pagination-index-bg-selected: #{$light-blue500};
+  --cdkit-color-data-table-pagination-index-bg-disabled: #{$light-background};
+  --cdkit-color-data-table-pagination-index-bg-hover: #{$light-blue100};
+
+  --cdkit-color-data-table-pagination-index-text: #{$light-text};
+  --cdkit-color-data-table-pagination-index-text-selected: #{$light-primary000};
+  --cdkit-color-data-table-pagination-index-text-disabled: #{$light-gray100};
+  --cdkit-color-data-table-pagination-index-text-hover: #{$light-text};
+
+  --cdkit-color-data-table-pagination-arrow: #{$light-gray200};
+  --cdkit-color-data-table-pagination-arrow-disabled: #{$light-gray000};
+}
+
+@mixin data-table-dark {
+  --cdkit-color-data-table-bg: #{$dark-background};
+
+  --cdkit-color-data-table-caption-text: #{$dark-text};
+
+  --cdkit-color-data-table-border: #{$dark-primary400};
+
+  --cdkit-color-data-table-header-bg: #{$dark-primary200};
+  --cdkit-color-data-table-header-text: #{$dark-text};
+
+  --cdkit-color-data-table-footer-bg: #{$dark-primary100};
+  --cdkit-color-data-table-footer-text: #{$dark-text};
+
+  --cdkit-color-data-table-divide-line: #{$dark-primary300};
+
+  --cdkit-color-data-table-row-bg: #{$dark-background};
+  --cdkit-color-data-table-row-bg-hover: #{$dark-primary100};
+  --cdkit-color-data-table-row-bg-disabled: #{$dark-gray000};
+
+  --cdkit-color-data-table-row-text: #{$dark-text};
+  --cdkit-color-data-table-row-text-hover: #{$dark-text};
+  --cdkit-color-data-table-row-text-disabled: #{$dark-gray200};
+
+  --cdkit-color-data-table-pagination-index-bg: #{$dark-background};
+  --cdkit-color-data-table-pagination-index-bg-selected: #{$dark-blue000};
+  --cdkit-color-data-table-pagination-index-bg-disabled: #{$dark-background};
+  --cdkit-color-data-table-pagination-index-bg-hover: #{$dark-blue400};
+
+  --cdkit-color-data-table-pagination-index-text: #{$dark-text};
+  --cdkit-color-data-table-pagination-index-text-selected: #{$dark-text};
+  --cdkit-color-data-table-pagination-index-text-disabled: #{$dark-gray000};
+  --cdkit-color-data-table-pagination-index-text-hover: #{$dark-primary000};
+
+  --cdkit-color-data-table-pagination-arrow: #{$dark-gray400};
+  --cdkit-color-data-table-pagination-arrow: #{$dark-gray400};
+  --cdkit-color-data-table-pagination-arrow-disabled: #{$dark-gray000};
+}

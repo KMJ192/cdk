@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  type SideNavItem,
+  type NavigationItem,
   SideNavTemplate,
-  SideNavKey,
+  NavigationKey,
 } from '@src/components/SideNav';
 import Flex from '@src/layout/Flex/Flex';
 import Header from '@src/components/Header/Header';
@@ -15,10 +15,10 @@ import style from './style.module.scss';
 const cx = classNames.bind(style);
 
 type BaseProps = {
-  menu?: Array<SideNavItem>;
+  menu?: Array<NavigationItem>;
   children?: React.ReactNode;
   isHide?: boolean;
-  onClickItem?: (key: SideNavKey) => void;
+  onClickItem?: (key: NavigationKey) => void;
 };
 
 const DEFAULT_ELEMENT = 'div';

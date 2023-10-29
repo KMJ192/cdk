@@ -1,0 +1,50 @@
+@import '../color.module.scss';
+
+@mixin textarea-light {
+  --cdkit-color-textarea-border: #{$light-primary600};
+  --cdkit-color-textarea-border-focus: #{$light-blue500};
+  --cdkit-color-textarea-border-error: #{$light-danger};
+  --cdkit-color-textarea-border-disabled: #{$light-gray100};
+  --cdkit-color-textarea-border-hover: #{$light-blue300};
+
+  --cdkit-color-textarea-bg: #{$light-background};
+  --cdkit-color-textarea-bg-focus: #{$light-background};
+  --cdkit-color-textarea-bg-error: #{$light-background};
+  --cdkit-color-textarea-bg-disabled: #{$light-gray000};
+  --cdkit-color-textarea-bg-hover: #{$light-background};
+
+  --cdkit-color-textarea-text: #{$light-text};
+  --cdkit-color-textarea-text-focus: #{$light-text};
+  --cdkit-color-textarea-text-error: #{$light-text};
+  --cdkit-color-textarea-text-disabled: #{$light-gray200};
+  --cdkit-color-textarea-text-hover: #{$light-text};
+
+  --cdkit-color-textarea-placeholder: #{$light-gray100};
+  --cdkit-color-textarea-placeholder-disabled: #{$light-gray100};
+}
+
+@mixin textarea-dark {
+  --cdkit-color-textarea-border: #{$dark-primary300};
+  --cdkit-color-textarea-border-focus: #{$dark-blue300};
+  --cdkit-color-textarea-border-error: #{$dark-danger};
+  --cdkit-color-textarea-border-disabled: #{$dark-primary100};
+  --cdkit-color-textarea-border-hover: #{$dark-primary300};
+
+  --cdkit-color-textarea-bg: #{$dark-primary100};
+  --cdkit-color-textarea-bg-disabled: #{$dark-primary200};
+
+  --cdkit-color-textarea-bg: #{$dark-primary100};
+  --cdkit-color-textarea-bg-focus: #{$dark-primary100};
+  --cdkit-color-textarea-bg-error: #{$dark-primary100};
+  --cdkit-color-textarea-bg-disabled: #{$dark-primary200};
+  --cdkit-color-textarea-bg-hover: #{$dark-primary100};
+
+  --cdkit-color-textarea-text: #{$dark-text};
+  --cdkit-color-textarea-text-focus: #{$dark-text};
+  --cdkit-color-textarea-text-error: #{$dark-text};
+  --cdkit-color-textarea-text-disabled: #{$dark-primary100};
+  --cdkit-color-textarea-text-hover: #{$dark-text};
+
+  --cdkit-color-textarea-placeholder: #{$dark-primary300};
+  --cdkit-color-textarea-placeholder-disabled: #{$dark-primary100};
+}

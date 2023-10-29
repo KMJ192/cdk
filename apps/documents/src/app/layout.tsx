@@ -2,12 +2,13 @@ import type { Metadata } from 'next';
 
 import ContentsLayout from '@src/components/ContentsLayout/ContentsLayout';
 
-import { getTheme } from '@src/app/actions';
+import { getDevice, getTheme } from '@src/app/actions';
 
 import './globals.css';
+import './theme.scss';
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Common DevelopKit - Documents',
   description: '',
 };
 
@@ -17,6 +18,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const theme = await getTheme();
+  const device = await getDevice();
 
   return (
     <html lang='ko'>
@@ -29,7 +31,9 @@ export default async function RootLayout({
         />
       </head>
       <body data-theme={theme}>
-        <ContentsLayout theme={theme}>{children}</ContentsLayout>
+        <ContentsLayout theme={theme} device={device}>
+          {children}
+        </ContentsLayout>
       </body>
     </html>
   );

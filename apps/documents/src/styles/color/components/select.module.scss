@@ -1,0 +1,83 @@
+@import '../color.module.scss';
+
+@mixin select-light {
+  // box background
+  --cdkit-color-select-box-bg: #{$light-background};
+  --cdkit-color-select-box-bg-focus: #{$light-background};
+  --cdkit-color-select-box-bg-error: #{$light-background};
+  --cdkit-color-select-box-bg-disabled: #{$light-gray000};
+  --cdkit-color-select-box-bg-hover: $light-background;
+  // box text
+  --cdkit-color-select-box-text: #{$light-text};
+  --cdkit-color-select-box-text-focus: #{$light-text};
+  --cdkit-color-select-box-text-error: #{$light-text};
+  --cdkit-color-select-box-text-disabled: #{$light-gray200};
+  --cdkit-color-select-box-text-hover: #{$light-text};
+  // box border
+  --cdkit-color-select-box-border: #{$light-primary600};
+  --cdkit-color-select-box-border-focus: #{$light-blue500};
+  --cdkit-color-select-box-border-error: #{$light-danger};
+  --cdkit-color-select-box-border-disabled: #{$light-gray100};
+  --cdkit-color-select-box-border-hover: #{$light-blue300};
+  // box placeholder
+  --cdkit-color-select-box-placeholder: #{$light-gray100};
+  --cdkit-color-select-box-placeholder-disabled: #{$light-gray100};
+
+  // dropbox background
+  --cdkit-color-select-dropbox-bg: #{$light-background};
+  --cdkit-color-select-dropbox-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+
+  // option background
+  --cdkit-color-select-option-bg: #{$light-background};
+  --cdkit-color-select-option-bg-selected: #{$light-primary100};
+  --cdkit-color-select-option-bg-reserved: #{$light-primary200};
+  --cdkit-color-select-option-bg-disabled: #{$light-gray000};
+  --cdkit-color-select-option-bg-hover: #{$light-primary200};
+  // option text
+  --cdkit-color-select-option-text: #{$light-text};
+  --cdkit-color-select-option-text-selected: #{$light-text};
+  --cdkit-color-select-option-text-reserved: #{$light-text};
+  --cdkit-color-select-option-text-disabled: #{$light-gray200};
+  --cdkit-color-select-option-text-hover: #{$light-text};
+}
+
+@mixin select-dark {
+  // box background
+  --cdkit-color-select-box-bg: #{$dark-primary100};
+  --cdkit-color-select-box-bg-focus: #{$dark-primary100};
+  --cdkit-color-select-box-bg-error: #{$dark-primary100};
+  --cdkit-color-select-box-bg-disabled: #{$dark-primary200};
+  --cdkit-color-select-box-bg-hover: #{$dark-primary100};
+  // box text
+  --cdkit-color-select-box-text: #{$dark-text};
+  --cdkit-color-select-box-text-focus: #{$dark-text};
+  --cdkit-color-select-box-text-error: #{$dark-text};
+  --cdkit-color-select-box-text-disabled: #{$dark-primary100};
+  --cdkit-color-select-box-text-hover: #{$dark-text};
+  // box border
+  --cdkit-color-select-box-border: #{$dark-primary300};
+  --cdkit-color-select-box-border-focus: #{$dark-blue300};
+  --cdkit-color-select-box-border-error: #{$dark-danger};
+  --cdkit-color-select-box-border-disabled: #{$dark-primary100};
+  --cdkit-color-select-box-border-hover: #{$dark-primary300};
+  // box placeholder
+  --cdkit-color-select-box-placeholder: #{$dark-primary300};
+  --cdkit-color-select-box-placeholder-disabled: #{$dark-primary100};
+
+  // dropbox background
+  --cdkit-color-select-dropbox-bg: #{$dark-primary100};
+  --cdkit-color-select-dropbox-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+
+  // option background
+  --cdkit-color-select-option-bg: #{$dark-primary100};
+  --cdkit-color-select-option-bg-selected: #{$dark-primary200};
+  --cdkit-color-select-option-bg-reserved: #{$dark-primary300};
+  --cdkit-color-select-option-bg-disabled: #{$dark-gray000};
+  --cdkit-color-select-option-bg-hover: #{$dark-primary300};
+  // option text
+  --cdkit-color-select-option-text: #{$dark-text};
+  --cdkit-color-select-option-text-selected: #{$dark-text};
+  --cdkit-color-select-option-text-reserved: #{$dark-text};
+  --cdkit-color-select-option-text-disabled: #{$light-gray200};
+  --cdkit-color-select-option-text-hover: #{$dark-text};
+}

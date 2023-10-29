@@ -1,0 +1,14 @@
+@import '@src/styles/utils.module.scss';
+@import './layout.module.scss';
+
+$left-gap: calc($side-nav-width + 18px);
+
+.layout {
+  min-height: calc(100% - $footer-height);
+  width: calc(100% - $left-gap);
+  margin-left: $left-gap;
+  @media screen and (max-width: #{$resolution_width_608}px) {
+    width: 100%;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,9 @@
+@import '../color.module.scss';
+
+@mixin themeIcon-light {
+  --theme-icon-fill: #{$light-text};
+}
+
+@mixin themeIcon-dark {
+  --theme-icon-fill: #{$dark-gray500};
+}

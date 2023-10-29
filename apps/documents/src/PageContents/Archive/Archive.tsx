@@ -1,4 +1,4 @@
-import { Flex } from '@cdk/react-ui';
+import { Flex } from '@cdkit/react-ui';
 
 import Text from '@src/components/Text/Text';
 

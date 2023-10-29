@@ -1,0 +1,39 @@
+@import '../variable/color.module.scss';
+
+@mixin color-set {
+  background: $cdkit-color-nav-menu-bg;
+  box-shadow: $cdkit-color-nav-menu-box-shadow;
+  color: $cdkit-color-nav-menu-text;
+  &:not(.disabled):hover {
+    color: $cdkit-color-nav-menu-text-hover;
+  }
+  &.selected {
+    background: $cdkit-color-nav-menu-bg-selected;
+    box-shadow: $cdkit-color-nav-menu-box-shadow-selected;
+    color: $cdkit-color-nav-menu-text-selected;
+  }
+  &.disabled {
+    background: $cdkit-color-nav-menu-bg-disabled;
+    box-shadow: none;
+    color: $cdkit-color-nav-menu-text-disabled;
+  }
+}
+
+@mixin menu {
+  align-items: center;
+  -webkit-box-align: center;
+  padding: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 8px;
+  padding: 12px;
+  transition: color 0.15s, background-color 0.15s;
+  &.disabled {
+    cursor: not-allowed;
+  }
+}
+
+.menu {
+  @include menu;
+  @include color-set;
+}

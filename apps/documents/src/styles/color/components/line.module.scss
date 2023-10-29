@@ -1,0 +1,9 @@
+@import '../color.module.scss';
+
+@mixin line-light {
+  --line-color: #{$light-primary500};
+}
+
+@mixin line-dark {
+  --line-color: #{$dark-primary100};
+}
