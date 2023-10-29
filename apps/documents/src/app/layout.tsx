@@ -4,7 +4,7 @@ import ContentsLayout from '@src/components/ContentsLayout/ContentsLayout';
 
 import { getDevice, getTheme } from '@src/app/actions';
 
-import './globals.css';
+import './globals.scss';
 import './theme.scss';
 
 export const metadata: Metadata = {

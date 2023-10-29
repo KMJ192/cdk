@@ -22,11 +22,12 @@ type Props = {
 };
 
 function Layout({ type }: Props) {
-  const { pageTitle, pageDesc, tabOption } = LAYOUT_CONTENTS[type];
-  const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const curParam = searchParams.get('compo');
+
+  const { pageTitle, pageDesc, tabOption } = LAYOUT_CONTENTS[type];
 
   const [selectedTab, setSelectedTab] = useState(0);
 
