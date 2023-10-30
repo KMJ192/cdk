@@ -1,7 +1,7 @@
-import React from 'react';
+import NotFound from '@src/PageContents/Error/NotFound/NotFound';
 
-function NotFound() {
-  return <div>not-found</div>;
+function NF() {
+  return <NotFound />;
 }
 
-export default NotFound;
+export default NF;

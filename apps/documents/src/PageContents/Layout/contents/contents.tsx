@@ -1,14 +1,17 @@
-import { TabOption, Text } from '@cdkit/react-ui';
+import type { ReactNode } from 'react';
+import { TabOption } from '@cdkit/react-ui';
+import { centerContents } from './center';
 
 type DOCUMENT = {
-  docTitle: string;
-  docDesc: string;
-  docCode: Array<string>;
+  title: string;
+  desc: string;
+  view: ReactNode;
+  code: Array<string>;
 };
 
-type PROPS = {
-  apiTitle: string;
-  apiDesc: string;
+type APIS = {
+  title: string;
+  desc: string;
   element: Array<{
     name: string;
     type: string;
@@ -33,38 +36,18 @@ type PAGE_CONTENTS = {
   pageDesc: string;
   tabOption: Array<TabOption>;
   document: Array<DOCUMENT>;
-  props: Array<PROPS>;
+  apis: Array<APIS>;
   cssVar?: Array<CSS_VARIABLES>;
 };
 
 const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
-  center: {
-    pageTitle: 'Center',
-    pageDesc: '중앙을 지정하는 컴포넌트',
-    tabOption: [
-      {
-        key: 'docs',
-        contents: <Text typo='b2'>문서</Text>,
-      },
-      {
-        key: 'apis',
-        contents: <Text typo='b2'>APIs</Text>,
-      },
-      {
-        key: 'playground',
-        contents: <Text typo='b2'>플레이 그라운드</Text>,
-      },
-    ],
-    document: [],
-    props: [],
-    cssVar: [],
-  },
+  center: centerContents,
   flex: {
     pageTitle: 'Flex',
     pageDesc: `"display: flex;"가 지정된 컴포넌트`,
     tabOption: [],
     document: [],
-    props: [],
+    apis: [],
     cssVar: [],
   },
   grid: {
@@ -72,7 +55,7 @@ const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
     pageDesc: `"display: grid;"가 지정된 컴포넌트`,
     tabOption: [],
     document: [],
-    props: [],
+    apis: [],
     cssVar: [],
   },
   float: {
@@ -80,7 +63,7 @@ const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
     pageDesc: `부유 속성 컴포넌트`,
     tabOption: [],
     document: [],
-    props: [],
+    apis: [],
     cssVar: [],
   },
   row: {
@@ -88,7 +71,7 @@ const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
     pageDesc: `열을 생성하는 컴포넌트`,
     tabOption: [],
     document: [],
-    props: [],
+    apis: [],
     cssVar: [],
   },
   spacing: {
@@ -96,7 +79,7 @@ const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
     pageDesc: `공간을 차지하는 컴포넌트`,
     tabOption: [],
     document: [],
-    props: [],
+    apis: [],
     cssVar: [],
   },
   stack: {
@@ -104,10 +87,10 @@ const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
     pageDesc: `스택을 쌓는 컴포넌트`,
     tabOption: [],
     document: [],
-    props: [],
+    apis: [],
     cssVar: [],
   },
 };
 
-export type { DOCUMENT, PROPS, CSS_VARIABLES };
+export type { DOCUMENT, APIS, CSS_VARIABLES, PAGE_CONTENTS };
 export { LAYOUT_CONTENTS };

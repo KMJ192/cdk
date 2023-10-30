@@ -11,7 +11,7 @@ import PropsCompo from './PropsCompo/PropsCompo';
 import Playground from './Playground/Playground';
 
 import type { PAGE_LAYOUT } from '@src/utils/url';
-import { LAYOUT_CONTENTS } from './contents';
+import { LAYOUT_CONTENTS } from './contents/contents';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
@@ -29,7 +29,7 @@ function Layout({ type }: Props) {
 
   const { pageTitle, pageDesc, tabOption } = LAYOUT_CONTENTS[type];
 
-  const [selectedTab, setSelectedTab] = useState(0);
+  const [selectedTab, setSelectedTab] = useState(-1);
 
   const createQueryString = useCallback(
     (name: string, value: string) => {
@@ -52,8 +52,18 @@ function Layout({ type }: Props) {
     const initState = () => {
       setSelectedTab(0);
     };
+    if (
+      typeof curParam === 'string' &&
+      curParam !== 'docs' &&
+      curParam !== 'apis' &&
+      curParam !== 'playground'
+    ) {
+      setSelectedTab(-1);
+      return;
+    }
+
     initState();
-  }, [type]);
+  }, [type, curParam]);
 
   useEffect(() => {
     if (curParam === 'docs') {
@@ -79,14 +89,17 @@ function Layout({ type }: Props) {
       <Spacing className={cx('spacing', 'second')} />
       <Tab options={tabOption} selected={selectedTab} onSelect={onSelect} />
       <Spacing className={cx('spacing', 'third')} />
-      <When condition={!curParam || curParam === 'docs'}>
+      <When condition={curParam === null || selectedTab === 0}>
         <Documents type={type} />
       </When>
-      <When condition={curParam === 'props'}>
+      <When condition={selectedTab === 1}>
         <PropsCompo type={type} />
       </When>
-      <When condition={curParam === 'playground'}>
+      <When condition={selectedTab === 2}>
         <Playground type={type} />
+      </When>
+      <When condition={curParam !== null && selectedTab === -1}>
+        <div>No Data</div>
       </When>
     </Flex>
   );
