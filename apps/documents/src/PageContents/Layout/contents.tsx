@@ -47,8 +47,8 @@ const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
         contents: <Text typo='b2'>문서</Text>,
       },
       {
-        key: 'props',
-        contents: <Text typo='b2'>Props</Text>,
+        key: 'apis',
+        contents: <Text typo='b2'>APIs</Text>,
       },
       {
         key: 'playground',

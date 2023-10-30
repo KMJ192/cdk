@@ -55,6 +55,20 @@ function Layout({ type }: Props) {
     initState();
   }, [type]);
 
+  useEffect(() => {
+    if (curParam === 'docs') {
+      setSelectedTab(0);
+      return;
+    }
+    if (curParam === 'apis') {
+      setSelectedTab(1);
+      return;
+    }
+    if (curParam === 'playground') {
+      setSelectedTab(2);
+    }
+  }, [curParam]);
+
   return (
     <Flex flexDirection='column' className={cx('container')}>
       <Text typo='h2'>{pageTitle}</Text>
