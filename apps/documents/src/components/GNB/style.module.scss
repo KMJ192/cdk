@@ -1,5 +1,5 @@
 @import '@src/styles/color/color.module.scss';
-@import '../ContentsLayout/layout.module.scss';
+@import '@src/utils/layout.module.scss';
 
 .gnb {
   position: fixed;

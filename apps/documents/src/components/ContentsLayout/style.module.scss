@@ -1,5 +1,4 @@
-@import '@src/styles/utils.module.scss';
-@import './layout.module.scss';
+@import '@src/utils/layout.module.scss';
 
 $left-gap: calc($side-nav-width + 18px);
 

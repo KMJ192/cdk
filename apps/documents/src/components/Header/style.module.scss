@@ -1,6 +1,6 @@
 @import '@src/styles/color/color.module.scss';
 @import '@src/styles/utils.module.scss';
-@import '../ContentsLayout/layout.module.scss';
+@import '@src/utils/layout.module.scss';
 
 @mixin header-nav {
   padding: 0;

@@ -56,15 +56,15 @@ function Layout({ type }: Props) {
   }, [type]);
 
   return (
-    <Flex flexDirection='column'>
+    <Flex flexDirection='column' className={cx('container')}>
       <Text typo='h2'>{pageTitle}</Text>
-      <Spacing spacing={12} />
+      <Spacing className={cx('spacing', 'first')} />
       <Text typo='s3'>{pageDesc}</Text>
-      <Spacing spacing={32} />
+      <Spacing className={cx('spacing', 'first')} />
       <Line />
-      <Spacing spacing={32} />
+      <Spacing className={cx('spacing', 'second')} />
       <Tab options={tabOption} selected={selectedTab} onSelect={onSelect} />
-      <Spacing spacing={32} />
+      <Spacing className={cx('spacing', 'third')} />
       <When condition={!curParam || curParam === 'docs'}>
         <Documents type={type} />
       </When>

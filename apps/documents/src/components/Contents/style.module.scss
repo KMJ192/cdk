@@ -5,7 +5,4 @@
   width: 100%;
   box-sizing: border-box;
   padding: 4rem 3rem;
-  @media screen and (max-width: #{$resolution_width_360}px) {
-    padding: 48px 12%;
-  }
 }

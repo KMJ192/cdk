@@ -14,12 +14,10 @@ import Contents from '../Contents/Contents';
 import GNB from '../GNB/GNB';
 
 import { useWindowSize } from '@src/store/windowSize';
-
-import { RESOLUTION_WIDTH } from '@src/utils/utils';
+import { RESOLUTION_WIDTH, headerHeight } from '@src/utils/layout';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
-import { headerHeight } from './layout';
 const cx = classNames.bind(style);
 
 type Props = {
