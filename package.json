@@ -33,6 +33,8 @@
     "wk:docs": "yarn workspace @cdkit/documents",
     "wk:rui": "yarn workspace @cdkit/react-ui",
     "wk:rmo": "yarn workspace @cdkit/react-modules",
+    "wk:js": "yarn workspace @cdkit/test-js",
+    "wk:vue": "yarn workspace @cdkit/test-vue",
     "clear:all": "sh ./scripts/clearDependencies.sh",
     "postinstall": "husky install"
   },

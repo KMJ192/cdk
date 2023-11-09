@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
-import ContentsLayout from '@src/components/ContentsLayout/ContentsLayout';
-
 import { getDevice, getTheme } from '@src/app/actions';
+
+import IsomorphicRootLayout from '@src/Isomorphic/layout';
 
 import './globals.scss';
 import './theme.scss';
@@ -31,9 +31,9 @@ export default async function RootLayout({
         />
       </head>
       <body data-theme={theme}>
-        <ContentsLayout theme={theme} device={device}>
+        <IsomorphicRootLayout theme={theme} device={device}>
           {children}
-        </ContentsLayout>
+        </IsomorphicRootLayout>
       </body>
     </html>
   );
