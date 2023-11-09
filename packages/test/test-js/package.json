@@ -1,5 +1,5 @@
 {
-  "name": "@cdkit/test-js",
+  "name": "@cdkit/test-vanila",
   "private": true,
   "version": "0.0.0",
   "type": "module",

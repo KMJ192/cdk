@@ -8,3 +8,5 @@ node_modules/*
 rollup.config.js
 package.json
 .eslintrc
+packages/test/test-svelt
+packages/test/test-vue
