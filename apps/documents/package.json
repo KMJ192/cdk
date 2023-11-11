@@ -12,6 +12,7 @@
   "dependencies": {
     "@cdkit/react-modules": "workspace:^",
     "@cdkit/react-ui": "workspace:^",
+    "@cdkit/style": "workspace:^",
     "axios": "^1.5.1",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.10",
@@ -22,7 +23,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-lottie": "^1.2.3",
-    "sass": "^1.69.3",
+    "sass": "^1.69.5",
     "zustand": "^4.4.3"
   },
   "devDependencies": {

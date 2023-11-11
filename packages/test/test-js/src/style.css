@@ -144,3 +144,12 @@ template {
 [hidden] {
   display: none;
 }
+
+body {
+  color: white;
+  background-color: rgb(32, 32, 32);
+}
+
+.test {
+  color: blue;
+}

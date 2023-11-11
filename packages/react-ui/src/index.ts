@@ -1,3 +1,5 @@
+export { default as Test } from './components/Test/Test';
+
 // layouts
 export { default as Center } from './layout/Center/Center';
 export type { CenterProps } from './layout/Center/Center';
