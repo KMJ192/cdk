@@ -380,9 +380,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cdkit/style@workspace:packages/style"
   dependencies:
+    "@cdkit/react-ui": "workspace:^"
     "@types/react": "npm:^18.2.15"
     "@types/react-dom": "npm:^18.2.7"
     "@vitejs/plugin-react": "npm:^4.0.3"
+    classnames: "npm:^2.3.2"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-router-dom: "npm:^6.18.0"

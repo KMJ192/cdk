@@ -1,0 +1,17 @@
+.layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .header {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    padding: 24px 106px;
+    box-sizing: border-box;
+    background: rgb(203, 239, 245);
+  }
+  .container {
+    box-sizing: border-box;
+    padding: 56px 106px;
+  }
+}

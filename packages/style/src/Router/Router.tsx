@@ -10,8 +10,8 @@ type Props = {
   wrongAccessPage?: ReactNode;
   notFoundPage?: ReactNode;
   children?: ReactNode;
-  extractElement?: (
-    page: ReactNode,
+  layout?: (
+    children: ReactNode,
     pageInfo: Omit<RouterMap, 'page'>,
   ) => ReactNode;
 };
@@ -22,7 +22,7 @@ function Router({
   wrongAccessPage = '',
   notFoundPage = '',
   children,
-  extractElement = (page: ReactNode) => page,
+  layout = (page: ReactNode) => page,
 }: Props) {
   return (
     <BrowserRouter>
@@ -48,7 +48,7 @@ function Router({
                   auth,
                   path,
                 };
-          const render = extractElement(certifiedPage, pageInfo);
+          const render = layout(certifiedPage, pageInfo);
 
           return <Route path={path} element={render} key={`${idx}-${name}`} />;
         })}

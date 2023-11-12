@@ -1,0 +1,31 @@
+.code-guide {
+  flex-direction: column;
+  word-wrap: break-word;
+  .header {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 8px;
+    justify-content: space-between;
+    background-color: #cbcbcb;
+    color: #000;
+    flex-wrap: wrap;
+    .copy {
+      cursor: pointer;
+    }
+  }
+  .code-view {
+    background-color: #353535;
+    color: #fff;
+    padding: 24px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    flex-direction: column;
+    row-gap: 8px;
+    & > pre {
+      text-wrap: wrap;
+    }
+    &.dark {
+      background-color: #0f0d0d;
+    }
+  }
+}

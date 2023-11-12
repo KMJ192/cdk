@@ -4,6 +4,7 @@
     "baseUrl": ".",
     "paths": {
       "@src/*": ["src/*"],
+      "@style/*": ["../style/src/uiStyle/*"]
     },
     "outDir": "build",
     "moduleResolution": "bundler",
@@ -11,7 +12,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "declaration": true,
-    "declarationDir": "build",
+    "declarationDir": "build"
   },
   "include": ["src", "./typings", "src/**/*.scss"],
   "exclude": ["node_modules"]

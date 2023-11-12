@@ -525,9 +525,11 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/style/",\
         "packageDependencies": [\
           ["@cdkit/style", "workspace:packages/style"],\
+          ["@cdkit/react-ui", "workspace:packages/react-ui"],\
           ["@types/react", "npm:18.2.33"],\
           ["@types/react-dom", "npm:18.2.14"],\
           ["@vitejs/plugin-react", "virtual:dc9c7ff92abe0bee338a2df9e06c3837ff7a7378eb1fbb2d1f3f93a6b7742e02c211af474582b22133dcf8af751142265539fc94722f0fb1b27058a3f51c4456#npm:4.1.1"],\
+          ["classnames", "npm:2.3.2"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:0992bce5e5f676066d63fbf5b7b260d59de3aaba85890e733672dbff84af26873b81dd0e3daaef52c7d41ac08b0a9db6ecc616d1b114da4749335c46d5bb69fb#npm:18.2.0"],\
           ["react-router-dom", "virtual:dc9c7ff92abe0bee338a2df9e06c3837ff7a7378eb1fbb2d1f3f93a6b7742e02c211af474582b22133dcf8af751142265539fc94722f0fb1b27058a3f51c4456#npm:6.18.0"],\

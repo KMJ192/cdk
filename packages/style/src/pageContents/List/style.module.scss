@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  .item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(179, 179, 179);
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 16px;
+  }
+}

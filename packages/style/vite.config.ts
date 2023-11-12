@@ -6,6 +6,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@src': path.resolve(__dirname, 'src'),
+      '@css': path.resolve(__dirname, 'src/css'),
     },
   },
   plugins: [react()],
