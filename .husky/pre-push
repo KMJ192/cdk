@@ -15,6 +15,7 @@ commit_action_build="build"
 commit_action_etc="etc"
 
 workspace="workspace"
+css="css"
 react_ui="react-ui"
 react_modules="react-modules"
 documents="documents"
@@ -48,6 +49,9 @@ else
   if [[ $commit_msg == *"$workspace"* ]]; then
     # yarn wk:rmo tsc && yarn wk:rui tsc && yarn wk:docs tsc
     echo "Workspace 작업"
+  elif [[ $commit_msg == *"$css"* ]]; then
+    # yarn wk:rui tsc && yarn wk:rui build
+    echo "css 및 css 문서 작업"  
   elif [[ $commit_msg == *"$react_ui"* ]]; then
     # yarn wk:rui tsc && yarn wk:rui build
     echo "React-UI 작업"
