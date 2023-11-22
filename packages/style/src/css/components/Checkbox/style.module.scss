@@ -1,7 +1,7 @@
 @import './variable/color.module.scss';
 @import './variable/size.module.scss';
 
-@import 'src/layout/Center/style.module.scss';
+@import '../../layout/Center/style.module.scss';
 
 @mixin mark {
   transition: border-color 0.1s, color 0.1s;

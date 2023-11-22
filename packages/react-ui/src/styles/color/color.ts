@@ -1,4 +1,5 @@
-import colorModule from './color.module.scss';
+// import colorModule from './color.module.scss';
+import colorModule from '@css/styles/color/color.module.scss';
 
 type COLOR_SCHEME =
   | 'primary'

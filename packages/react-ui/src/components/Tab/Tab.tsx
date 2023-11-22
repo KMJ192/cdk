@@ -10,7 +10,7 @@ import type { TabOption, TabDirection, TabOptionKey } from './types';
 import useSelectTab from './hooks/useSelectTab';
 
 import classNames from 'classnames/bind';
-import style from './style.module.scss';
+import style from '@css/components/Tab/style.module.scss';
 const cx = classNames.bind(style);
 
 type BaseProps = {

@@ -1,4 +1,4 @@
-@import 'src/styles/color/color.module.scss';
+@import '../../../styles/color/color.module.scss';
 
 $cdkit-color-tab-bg: var(--cdkit-color-tab-bg, $light-primary000);
 $cdkit-color-tab-bg-hover: var(--cdkit-color-tab-bg-hover, $light-primary200);

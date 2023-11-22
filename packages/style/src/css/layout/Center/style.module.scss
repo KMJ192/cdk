@@ -1,5 +1,5 @@
-@import 'src/layout/Flex/flex.scss';
-@import 'src/layout/Grid/grid.scss';
+@import '../Flex/flex.scss';
+@import '../Grid/grid.scss';
 
 @mixin center-vertical {
   align-items: center;

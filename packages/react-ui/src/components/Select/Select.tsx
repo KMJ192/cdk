@@ -11,7 +11,7 @@ import Dropbox from './Dropbox/Dropbox';
 import Option from './Option/Option';
 
 import classNames from 'classnames/bind';
-import style from './style.module.scss';
+import style from '@css/components/Select/style.module.scss';
 const cx = classNames.bind(style);
 
 type BaseProps = {

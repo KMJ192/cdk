@@ -40,8 +40,8 @@ const plugins = [
         replacement: path.resolve(__dirname, 'src'),
       },
       {
-        find: '@style',
-        replacement: path.resolve(__dirname, '../style/src/uiStyle'),
+        find: '@css',
+        replacement: path.resolve(__dirname, '../style/src/css'),
       },
     ],
   }),
