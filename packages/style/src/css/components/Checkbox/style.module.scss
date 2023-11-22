@@ -2,9 +2,11 @@
 @import './variable/size.module.scss';
 
 @import '../../layout/Center/style.module.scss';
+@import '../../layout/Flex/flex.scss';
 
 @mixin mark {
   transition: border-color 0.1s, color 0.1s;
+  @include flex;
   .mark {
     flex-flow: row nowrap;
     align-items: center;
@@ -80,6 +82,7 @@
 @mixin checkbox {
   cursor: pointer;
   width: fit-content;
+  @include flex;
   &.is-children {
     column-gap: 8px;
   }
