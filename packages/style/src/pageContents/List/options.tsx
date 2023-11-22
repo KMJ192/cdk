@@ -1,6 +1,11 @@
+import Button from './components/Button/Button';
 import Center from './layout/Center/Center';
 import Flex from './layout/Flex/Flex';
 import Float from './layout/Float/Float';
+import Grid from './layout/Grid/Grid';
+import Row from './layout/Row/Row';
+import Spacing from './layout/Spacing/Spacing';
+import Stack from './layout/Stack/Stack';
 
 const options = {
   layout: [
@@ -35,12 +40,51 @@ const options = {
         `<div class="float rb">right bottom</div>`,
       ],
     },
+    {
+      name: 'Grid',
+      category: 'Layout',
+      html: <Grid />,
+      code: [`<div class="grid">grid</div>`],
+    },
+    {
+      name: 'Row',
+      category: 'Layout',
+      html: <Row />,
+      code: [
+        `<div class="row">row1</div>`,
+        `<div class="row">row2</div>`,
+        `<div class="row">row3</div>`,
+      ],
+    },
+    {
+      name: 'Spacing',
+      category: 'Layout',
+      html: <Spacing />,
+      code: [`<div class="spacing"></div>`],
+    },
+    {
+      name: 'Stack',
+      category: 'Layout',
+      html: <Stack />,
+      code: [
+        `<div class="stack row">`,
+        `  <div>row</div>`,
+        `  <div>row</div>`,
+        `  <div>row</div>`,
+        `</div>`,
+        `<div class="stack column">`,
+        `  <div>column</div>`,
+        `  <div>column</div>`,
+        `  <div>column</div>`,
+        `</div>`,
+      ],
+    },
   ],
   components: [
     {
       name: 'Button',
       category: 'Components',
-      html: ``,
+      html: <Button />,
       code: [``],
     },
   ],

@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 
-import classNames from 'classnames/bind';
-import style from '@css/layout/Float/style.module.scss';
-const cx = classNames.bind(style);
+// import classNames from 'classnames/bind';
+// import style from '@css/layout/Float/style.module.scss';
+// const cx = classNames.bind(style);
 
 function Float() {
   const ref = useRef<HTMLDivElement>(null);
@@ -18,7 +18,7 @@ function Float() {
     }
   }, []);
 
-  return <div ref={ref}></div>;
+  return <div ref={ref}>미출력</div>;
 }
 
 export default Float;
