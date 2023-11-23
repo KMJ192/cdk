@@ -1,15 +1,24 @@
+@import '../../layout/Flex/flex.scss';
+@import '../../layout/Center/style.module.scss';
 @import './variable/color.module.scss';
 
 @mixin tab {
   position: relative;
   width: fit-content;
   height: fit-content;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   align-items: center;
 }
 
 @mixin options {
   .options {
+    @include flex;
+    &.vertical {
+      @include flex-column;
+    }
+    &.horizontal {
+      @include flex-row;
+    }
     .option {
       height: inherit;
       transition: background-color 0.2s;
@@ -17,13 +26,16 @@
       box-sizing: border-box;
       cursor: pointer;
       text-wrap: nowrap;
+      @include flex;
+      @include center-vertical;
+      @include center-horizontal;
       &:first-child {
-        border-bottom-left-radius: 4px;
-        border-top-left-radius: 4px;
+        border-bottom-left-radius: 0.25rem;
+        border-top-left-radius: 0.25rem;
       }
       &:last-child {
-        border-bottom-right-radius: 4px;
-        border-top-right-radius: 4px;
+        border-bottom-right-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
       }
       &.disabled {
         cursor: not-allowed;
@@ -41,20 +53,20 @@
       height: 0.24rem;
       bottom: 0;
       &.first {
-        border-bottom-left-radius: 4px;
+        border-bottom-left-radius: 0.25rem;
       }
       &.last {
-        border-bottom-right-radius: 4px;
+        border-bottom-right-radius: 0.25rem;
       }
     }
     &.vertical {
       left: 0;
       width: 0.24rem;
       &.first {
-        border-top-left-radius: 4px;
+        border-top-left-radius: 0.25rem;
       }
       &.last {
-        border-bottom-left-radius: 4px;
+        border-bottom-left-radius: 0.25rem;
       }
     }
   }

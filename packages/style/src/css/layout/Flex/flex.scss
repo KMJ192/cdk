@@ -4,22 +4,22 @@
   display: flex;
 }
 
-@mixin column {
+@mixin flex-column {
   flex-direction: column;
   -ms-flex-direction: column;
 }
 
-@mixin column-reverse {
+@mixin flex-column-reverse {
   flex-direction: column-reverse;
   -ms-flex-direction: column-reverse;
 }
 
-@mixin row {
+@mixin flex-row {
   flex-direction: row;
   -ms-flex-direction: row;
 }
 
-@mixin row-reverse {
+@mixin flex-row-reverse {
   flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
 }

@@ -1,8 +1,8 @@
 @import '../../styles/color/color.module.scss';
 
 .row {
-  padding: 16px 24px;
-  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  border-radius: 0.375px;
   color: var(--cdkit-color-row-text, $light-text);
   background: var(--cdkit-color-row-bg, $light-primary000);
   box-shadow: var(

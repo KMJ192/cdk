@@ -1,3 +1,4 @@
+@import '../../../layout/Flex/flex.scss';
 @import '../variable/color.module.scss';
 
 @mixin color-set {
@@ -7,20 +8,21 @@
 
 @mixin select-dropbox {
   position: absolute;
-  flex-direction: column;
   overflow: auto;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   padding: 0;
   transform: scaleY(0);
   transition: ease-in-out, transform 0.2s ease-in-out, padding 0.2s ease-in-out;
   transform-origin: top;
   z-index: 890;
   position: absolute;
+  @include flex;
+  @include flex-column;
   &.up {
     transform-origin: bottom;
   }
   &.open.is-option {
-    padding: 8px 0;
+    padding: 0.5rem 0;
     transform: scaleY(1);
   }
 }

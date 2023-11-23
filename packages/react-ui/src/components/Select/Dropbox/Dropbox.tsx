@@ -2,7 +2,6 @@ import React, { type RefObject, useEffect, useRef } from 'react';
 
 import type { OVER_RIDABLE_PROPS } from '@src/types/types';
 
-import Flex from '@src/layout/Flex/Flex';
 import useSelectState from '../store/hooks/useSelectState';
 
 import classNames from 'classnames/bind';
@@ -24,7 +23,7 @@ function Dropbox<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
 ) {
   const ELEMENT = as || DEFAULT_ELEMENT;
 
-  const dropboxRef = useRef<HTMLElement>(null);
+  const dropboxRef = useRef<React.ElementRef<typeof DEFAULT_ELEMENT>>(null);
   const dropboxHeight = useRef<number>(0);
   const { open, selectBBox, isOption } = useSelectState();
 
@@ -60,8 +59,7 @@ function Dropbox<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
   ]);
 
   return (
-    <Flex
-      as={ELEMENT as any}
+    <ELEMENT
       {...props}
       ref={ref ?? dropboxRef}
       className={cx(
@@ -73,7 +71,7 @@ function Dropbox<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
       )}
     >
       {children}
-    </Flex>
+    </ELEMENT>
   );
 }
 

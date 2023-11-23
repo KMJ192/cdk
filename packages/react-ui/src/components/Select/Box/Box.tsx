@@ -3,7 +3,6 @@ import { When } from '@cdkit/react-modules';
 
 import type { OVER_RIDABLE_PROPS } from '@src/types/types';
 
-import Center from '@src/layout/Center/Center';
 import ExpandIcon from '../ExpandIcon/ExpandIcon';
 
 import useSelectState from '../store/hooks/useSelectState';
@@ -30,12 +29,10 @@ function Box<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
   const { open, error, disabled } = useSelectState();
 
   return (
-    <Center
-      as={ELEMENT as any}
+    <ELEMENT
       {...props}
       ref={ref}
       tabIndex={0}
-      horizontal={false}
       className={cx('select-box', { open }, { disabled }, { error }, className)}
     >
       <When condition={children === undefined || children === ''}>
@@ -43,7 +40,7 @@ function Box<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
       </When>
       <When condition={children !== undefined}>{children}</When>
       <ExpandIcon />
-    </Center>
+    </ELEMENT>
   );
 }
 

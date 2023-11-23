@@ -1,3 +1,5 @@
+@import '../../layout/Flex/flex.scss';
+@import '../../layout/Center/style.module.scss';
 @import './variable/color.module.scss';
 @import './variable/size.module.scss';
 
@@ -59,7 +61,7 @@
 
 @mixin switch-body {
   .switch-body {
-    border-radius: 16px;
+    border-radius: 1rem;
     transition: background-color 0.1s ease;
   }
 }
@@ -74,11 +76,11 @@
 
 @mixin switch {
   position: relative;
-  align-items: center;
-  -webkit-box-align: center;
   width: fit-content;
+  @include flex;
+  @include center-vertical;
   &.is-children {
-    column-gap: 8px;
+    column-gap: 0.5rem;
   }
   &:not(.disabled):hover {
     cursor: pointer;
@@ -96,15 +98,15 @@
   .switch-bullet {
     width: $cdkit-size-switch-bullet;
     height: $cdkit-size-switch-bullet;
-    transform: translateX(4px);
+    transform: translateX(0.25rem);
     &.checked {
       transform: translateX(
-        #{calc($cdkit-size-switch-width - $cdkit-size-switch-bullet - 4px)}
+        #{calc($cdkit-size-switch-width - $cdkit-size-switch-bullet - 0.25rem)}
       );
     }
   }
   .children {
-    font-size: calc($cdkit-size-switch-height - 8px);
+    font-size: calc($cdkit-size-switch-height - 0.5rem);
   }
 }
 

@@ -3,10 +3,10 @@
 
 @keyframes progress {
   0% {
-    left: -36px;
+    left: -2.25rem;
   }
   100% {
-    left: calc(100% + 36px);
+    left: calc(100% + 2.25rem);
   }
 }
 
@@ -30,15 +30,15 @@
 @mixin bar {
   .bar {
     height: 100%;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     position: relative;
     overflow: hidden;
     .pending {
       position: absolute;
       height: 100%;
-      width: 36px;
+      width: 2.25rem;
       top: 0;
-      left: -36px;
+      left: -2.25rem;
       animation: progress 1.3s infinite;
     }
   }
@@ -48,7 +48,7 @@
   width: 100%;
   height: $cdkit-size-progress-height;
   background: $cdkit-color-progress-body;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   overflow: hidden;
 }
 

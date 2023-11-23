@@ -1,7 +1,7 @@
 @import './variable/color.module.scss';
 
 @mixin color-set-data-table-container {
-  border: 1px solid $cdkit-color-data-table-border;
+  border: 0.14rem solid $cdkit-color-data-table-border;
   background: $cdkit-color-data-table-bg;
 }
 
@@ -18,7 +18,7 @@
   }
   .tbody {
     .tr {
-      border-top: 1px solid $cdkit-color-data-table-divide-line;
+      border-top: 0.08rem solid $cdkit-color-data-table-divide-line;
       background: $cdkit-color-data-table-row-bg;
       color: $cdkit-color-data-table-row-text;
       &.disabled {
@@ -32,7 +32,7 @@
     }
   }
   .tfoot > .tr {
-    border-top: 1px solid $cdkit-color-data-table-divide-line;
+    border-top: 0.08rem solid $cdkit-color-data-table-divide-line;
     .td,
     .th {
       color: $cdkit-color-data-table-footer-text;
@@ -71,9 +71,9 @@
 }
 
 @mixin data-table-container {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   white-space: nowrap;
-  padding: 16px 24px;
+  padding: 1rem 1.5rem;
   overflow: scroll;
   box-sizing: border-box;
 }
@@ -82,8 +82,8 @@
   border-collapse: collapse;
   width: 100%;
   .caption {
-    padding-top: 8px;
-    padding-bottom: 16px;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
     text-align: start;
   }
   .thead,
@@ -91,7 +91,7 @@
     .tr {
       .th,
       .td {
-        padding: 16px;
+        padding: 1rem;
         text-align: start;
       }
     }
@@ -101,10 +101,10 @@
       .th,
       .td {
         &:first-child {
-          border-top-left-radius: 8px;
+          border-top-left-radius: 0.5rem;
         }
         &:last-child {
-          border-top-right-radius: 8px;
+          border-top-right-radius: 0.5rem;
         }
       }
     }
@@ -119,7 +119,7 @@
       }
       .td,
       .th {
-        padding: 16px;
+        padding: 1rem;
       }
     }
   }
@@ -128,10 +128,10 @@
       .td,
       .th {
         &:first-child {
-          border-bottom-left-radius: 4px;
+          border-bottom-left-radius: 0.25rem;
         }
         &:last-child {
-          border-bottom-right-radius: 4px;
+          border-bottom-right-radius: 0.25rem;
         }
       }
     }
@@ -140,11 +140,11 @@
 
 @mixin pagination {
   width: 100%;
-  padding-top: 16px;
-  column-gap: 8px;
+  padding-top: 1rem;
+  column-gap: 0.5rem;
   user-select: none;
   .index {
-    width: 32px;
+    width: 2rem;
     aspect-ratio: 1;
     place-content: center;
     border-radius: 50%;
@@ -153,11 +153,11 @@
   }
   .prev,
   .next {
-    column-gap: 8px;
+    column-gap: 0.5rem;
     cursor: pointer;
     & > div {
-      width: 16px;
-      height: 16px;
+      width: 1rem;
+      height: 1rem;
     }
   }
   .prev.first-page,

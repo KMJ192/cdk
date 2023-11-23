@@ -23,7 +23,7 @@
 }
 
 @mixin select-option {
-  padding: 10px;
+  padding: 0.625rem;
   &.disabled {
     cursor: not-allowed;
   }

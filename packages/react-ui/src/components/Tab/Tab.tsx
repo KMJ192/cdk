@@ -1,8 +1,5 @@
 import React from 'react';
 
-import Flex from '@src/layout/Flex/Flex';
-import Center from '@src/layout/Center/Center';
-
 import type { OVER_RIDABLE_PROPS } from '@src/types/types';
 
 import type { TabOption, TabDirection, TabOptionKey } from './types';
@@ -57,14 +54,10 @@ function Tab<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
           )}
         />
       )}
-      <Flex
-        flexDirection={direction === 'vertical' ? 'column' : 'row'}
-        className={cx('options')}
-        ref={optionsRef}
-      >
+      <div className={cx('options', direction)} ref={optionsRef}>
         {options.map(({ key, contents, disabled }, idx: number) => {
           return (
-            <Center
+            <div
               className={cx('option', disabled && 'disabled')}
               key={key}
               onClick={(e: React.MouseEvent) => {
@@ -75,10 +68,10 @@ function Tab<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
               }}
             >
               {contents}
-            </Center>
+            </div>
           );
         })}
-      </Flex>
+      </div>
     </ELEMENT>
   );
 }

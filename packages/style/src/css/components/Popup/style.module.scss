@@ -1,7 +1,7 @@
 @import './variable/color.module.scss';
 
 @mixin default {
-  border-radius: 4px;
+  border-radius: 0.25rem;
   visibility: hidden;
   opacity: 0;
   &.visible {

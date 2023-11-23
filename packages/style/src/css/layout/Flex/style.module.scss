@@ -3,15 +3,15 @@
 .flex {
   @include flex;
   &.column {
-    @include column;
+    @include flex-column;
   }
   &.column-reverse {
-    @include column-reverse;
+    @include flex-column-reverse;
   }
   &.row {
-    @include row;
+    @include flex-row;
   }
   &.row-reverse {
-    @include row-reverse;
+    @include flex-row-reverse;
   }
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Radio, { type RadioProps } from '../Radio/Radio';
-import Flex from '@src/layout/Flex/Flex';
 
 import type { OVER_RIDABLE_PROPS } from '@src/types/types';
 
@@ -41,10 +40,9 @@ function RadioGroup<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
   const ELEMENT = as || DEFAULT_ELEMENT;
 
   return (
-    <Flex
+    <ELEMENT
       {...props}
       ref={ref}
-      as={ELEMENT as any}
       className={cx('radio-group', direction, className)}
     >
       {options.map(({ key, children, disabled }, idx) => {
@@ -65,7 +63,7 @@ function RadioGroup<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
           </Radio>
         );
       })}
-    </Flex>
+    </ELEMENT>
   );
 }
 

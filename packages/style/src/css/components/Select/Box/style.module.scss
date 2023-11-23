@@ -1,3 +1,5 @@
+@import '../../../layout/Flex/flex.scss';
+@import '../../../layout/Center/style.module.scss';
 @import '../variable/color.module.scss';
 
 @mixin color-set {
@@ -36,13 +38,15 @@
 
 @mixin select-box {
   position: relative;
-  padding: 10px 32px 10px 10px;
-  border-radius: 4px;
-  border: 1px solid;
+  padding: 0.625rem 2rem 0.625rem 0.625rem;
+  border-radius: 0.25rem;
+  border: 0.08rem solid;
   box-sizing: border-box;
   width: 100%;
   cursor: default;
   outline: none;
+  @include flex;
+  @include center-vertical;
   &.disabled {
     cursor: not-allowed;
   }
