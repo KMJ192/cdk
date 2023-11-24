@@ -1,0 +1,37 @@
+{
+  "name": "@cdkit/common",
+  "version": "0.0.3",
+  "description": "",
+  "author": {
+    "name": "MyeongJunKim",
+    "email": "myeongjun222@gmail.com"
+  },
+  "files": [
+    "build"
+  ],
+  "main": "./build/index.js",
+  "module": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "type": "module",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KMJ192/cdkit"
+  },
+  "scripts": {
+    "build": "rm -rf build && rollup -c --bundleConfigAsCjs",
+    "pub": "yarn build && yarn npm publish"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "rollup": "^4.5.2",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "tslib": "^2.6.2"
+  }
+}

@@ -16,6 +16,7 @@ commit_action_etc="etc"
 
 workspace="workspace"
 css="css"
+common="common"
 react_ui="react-ui"
 react_modules="react-modules"
 documents="documents"
@@ -61,6 +62,9 @@ else
   elif [[ $commit_msg == *"$documents"* ]]; then
     # yarn wk:docs tsc && yarn wk:docs build
     echo "Documents 작업"
+  elif [[ $commit_msg == *"$common"* ]]; then
+    # yarn wk:docs tsc && yarn wk:docs build
+    echo "Common 작업"
   else 
     echo "커밋 메시지(프로젝트)를 다시 확인하세요."
     exit 1

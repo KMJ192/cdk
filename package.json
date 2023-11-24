@@ -43,6 +43,7 @@
     "wk:rmo": "yarn workspace @cdkit/react-modules",
     "wk:van": "yarn workspace @cdkit/test-vanila",
     "wk:css": "yarn workspace @cdkit/style",
+    "wk:com": "yarn workspace @cdkit/common",
     "clear:all": "sh ./scripts/clearDependencies.sh",
     "postinstall": "husky install"
   },
