@@ -1,6 +1,8 @@
 import Badge from './components/Badge/Badge';
 import Button from './components/Button/Button';
 import Checkbox from './components/Checkbox/Checkbox';
+import DataTable from './components/DataTable/DataTable';
+import HamburgerMenu from './components/HamburgerMenu/HamburgerMenu';
 import Center from './layout/Center/Center';
 import Flex from './layout/Flex/Flex';
 import Float from './layout/Float/Float';
@@ -166,6 +168,18 @@ const options = {
         `  <span class="children">Disabled</span>`,
         `</div>`,
       ],
+    },
+    {
+      name: 'DataTable',
+      category: 'Components',
+      html: <DataTable />,
+      code: [],
+    },
+    {
+      name: 'HamburgerMenu',
+      category: 'Components',
+      html: <HamburgerMenu />,
+      code: [],
     },
   ],
 };
