@@ -1,7 +1,6 @@
 import { sleep, debounce, throttle } from './utils';
-const utils = {
+export default {
   sleep,
   debounce,
   throttle,
 };
-export { utils };

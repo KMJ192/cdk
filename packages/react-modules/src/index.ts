@@ -17,6 +17,5 @@ export {
 } from './hooks/useTrie';
 export { default as useComponentDidMount } from './hooks/useComponentDidMount/useComponentDidMount';
 export { useClickAway, type UseClickAwayParams } from './hooks/useClickAway';
-
-// Utils
-export { sleep } from './utils/utils';
+export { default as useDebounce } from './hooks/useDebounce/useDebounce';
+export { default as useThrottle } from './hooks/useThrottle/useThrottle';
