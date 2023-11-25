@@ -456,7 +456,7 @@ const RAW_RUNTIME_STATE =
           ["@types/lodash", "npm:4.14.200"],\
           ["@types/node", "npm:20.8.9"],\
           ["@types/prop-types", "npm:15.7.9"],\
-          ["@types/react", "npm:18.2.33"],\
+          ["@types/react", "npm:18.2.20"],\
           ["@types/react-dom", "npm:18.2.14"],\
           ["@types/react-lottie", "npm:1.2.8"],\
           ["axios", "npm:1.6.0"],\
@@ -467,7 +467,7 @@ const RAW_RUNTIME_STATE =
           ["next", "virtual:636538b14e8fe3479e5f989525d005e27410e1624767e36bf30f713c057d9a539bfbd63a176fd2e69fe5b41042e8c5ab03ce874bc3194d39e75313032c714791#npm:14.0.0"],\
           ["prop-types", "npm:15.8.1"],\
           ["react", "npm:18.2.0"],\
-          ["react-dom", "virtual:0992bce5e5f676066d63fbf5b7b260d59de3aaba85890e733672dbff84af26873b81dd0e3daaef52c7d41ac08b0a9db6ecc616d1b114da4749335c46d5bb69fb#npm:18.2.0"],\
+          ["react-dom", "virtual:155a038447107a72eb8f73e859c125e4d17443d28de204bc7a2e806ee7f551f5c7dbe5ee4a9fadacf6d653427aebcd835cebaaba735e22bb9a20cdacf5ba9b2c#npm:18.2.0"],\
           ["react-lottie", "virtual:636538b14e8fe3479e5f989525d005e27410e1624767e36bf30f713c057d9a539bfbd63a176fd2e69fe5b41042e8c5ab03ce874bc3194d39e75313032c714791#npm:1.2.3"],\
           ["sass", "npm:1.69.5"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
@@ -5703,14 +5703,14 @@ const RAW_RUNTIME_STATE =
           ["@opentelemetry/api", null],\
           ["@swc/helpers", "npm:0.5.2"],\
           ["@types/opentelemetry__api", null],\
-          ["@types/react", "npm:18.2.33"],\
+          ["@types/react", "npm:18.2.20"],\
           ["@types/react-dom", "npm:18.2.14"],\
           ["@types/sass", null],\
           ["busboy", "npm:1.6.0"],\
           ["caniuse-lite", "npm:1.0.30001555"],\
           ["postcss", "npm:8.4.31"],\
           ["react", "npm:18.2.0"],\
-          ["react-dom", "virtual:0992bce5e5f676066d63fbf5b7b260d59de3aaba85890e733672dbff84af26873b81dd0e3daaef52c7d41ac08b0a9db6ecc616d1b114da4749335c46d5bb69fb#npm:18.2.0"],\
+          ["react-dom", "virtual:155a038447107a72eb8f73e859c125e4d17443d28de204bc7a2e806ee7f551f5c7dbe5ee4a9fadacf6d653427aebcd835cebaaba735e22bb9a20cdacf5ba9b2c#npm:18.2.0"],\
           ["sass", "npm:1.69.5"],\
           ["styled-jsx", "virtual:3ed44321a6821124c1544c7c3d9238a1c055295d9f1c379bf55037922b9886399f8d745815769174725199b3d56acb7b3a474c1503ae6cf563510316bda956a6#npm:5.1.1"],\
           ["watchpack", "npm:2.4.0"]\
@@ -7597,7 +7597,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/react-lottie-virtual-88f3b99550/4/.yarn/berry/cache/react-lottie-npm-1.2.3-3d4f0a3852-10c0.zip/node_modules/react-lottie/",\
         "packageDependencies": [\
           ["react-lottie", "virtual:636538b14e8fe3479e5f989525d005e27410e1624767e36bf30f713c057d9a539bfbd63a176fd2e69fe5b41042e8c5ab03ce874bc3194d39e75313032c714791#npm:1.2.3"],\
-          ["@types/react", "npm:18.2.33"],\
+          ["@types/react", "npm:18.2.20"],\
           ["babel-runtime", "npm:6.26.0"],\
           ["lottie-web", "npm:5.12.2"],\
           ["react", "npm:18.2.0"]\
@@ -8457,7 +8457,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", null],\
           ["@types/babel-plugin-macros", null],\
           ["@types/babel__core", null],\
-          ["@types/react", "npm:18.2.33"],\
+          ["@types/react", "npm:18.2.20"],\
           ["babel-plugin-macros", null],\
           ["client-only", "npm:0.0.1"],\
           ["react", "npm:18.2.0"]\
@@ -8859,7 +8859,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/use-sync-external-store-virtual-b88926408f/4/.yarn/berry/cache/use-sync-external-store-npm-1.2.0-44f75d2564-10c0.zip/node_modules/use-sync-external-store/",\
         "packageDependencies": [\
           ["use-sync-external-store", "virtual:7064ebb6e84b5eaad880877e580d523aed30bce7c30b4119d08e87b1bb408c872fa882d01bb457a0ff7a61a23fdbf602e30cd9fece7ab33695b0663e89a1fa11#npm:1.2.0"],\
-          ["@types/react", "npm:18.2.33"],\
+          ["@types/react", "npm:18.2.20"],\
           ["react", "npm:18.2.0"]\
         ],\
         "packagePeers": [\
@@ -9114,7 +9114,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["zustand", "virtual:636538b14e8fe3479e5f989525d005e27410e1624767e36bf30f713c057d9a539bfbd63a176fd2e69fe5b41042e8c5ab03ce874bc3194d39e75313032c714791#npm:4.4.4"],\
           ["@types/immer", null],\
-          ["@types/react", "npm:18.2.33"],\
+          ["@types/react", "npm:18.2.20"],\
           ["immer", null],\
           ["react", "npm:18.2.0"],\
           ["use-sync-external-store", "virtual:7064ebb6e84b5eaad880877e580d523aed30bce7c30b4119d08e87b1bb408c872fa882d01bb457a0ff7a61a23fdbf602e30cd9fece7ab33695b0663e89a1fa11#npm:1.2.0"]\
