@@ -31,12 +31,12 @@
 }
 
 @mixin hamburgerMenu-reactive {
-  width: 20px;
-  height: 16px;
+  width: 20px !important;
+  height: 16px !important;
   @include position(7px);
   @media (max-width: #{$resolution_width_480}px) {
-    width: 18px;
-    height: 14px;
+    width: 18px !important;
+    height: 14px !important;
     @include position(6px);
   }
 }

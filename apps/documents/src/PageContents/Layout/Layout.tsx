@@ -98,9 +98,6 @@ function Layout({ type }: Props) {
       <When condition={selectedTab === 2}>
         <Playground type={type} />
       </When>
-      <When condition={curParam !== null && selectedTab === -1}>
-        <div>No Data</div>
-      </When>
     </Flex>
   );
 }
