@@ -1,3 +1,5 @@
+import { Center } from '@cdkit/react-ui';
+
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
 const cx = classNames.bind(style);
@@ -18,11 +20,14 @@ function HamburgerMenu({
   onClick,
 }: Props) {
   return (
-    <div className={cx('hamburger', { active }, type, size)} onClick={onClick}>
+    <Center
+      className={cx('hamburger', { active }, type, size)}
+      onClick={onClick}
+    >
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </Center>
   );
 }
 

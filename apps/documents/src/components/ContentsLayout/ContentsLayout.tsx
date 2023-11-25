@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, type ReactNode, useState } from 'react';
+import { type ReactNode } from 'react';
 import { Flex, Spacing } from '@cdkit/react-ui';
 
 import { type THEME } from '@src/types/types';
@@ -13,8 +13,7 @@ import Footer from '../Footer/Footer';
 import Contents from '../Contents/Contents';
 import GNB from '../GNB/GNB';
 
-import { useWindowSize } from '@src/store/windowSize';
-import { RESOLUTION_WIDTH, headerHeight } from '@src/utils/layout';
+import { headerHeight } from '@src/utils/layout';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
@@ -23,20 +22,9 @@ const cx = classNames.bind(style);
 type Props = {
   children: ReactNode;
   theme: THEME;
-  device: string;
 };
 
-function ContentsLayout({ theme, device, children }: Props) {
-  const { width } = useWindowSize();
-
-  const [navPosition, setNavPosition] = useState<'header' | 'side'>(
-    device === 'pc' ? 'side' : 'header',
-  );
-
-  useEffect(() => {
-    setNavPosition(width <= RESOLUTION_WIDTH['768'] ? 'header' : 'side');
-  }, [width]);
-
+function ContentsLayout({ theme, children }: Props) {
   return (
     <AppProvider
       value={{
@@ -44,9 +32,9 @@ function ContentsLayout({ theme, device, children }: Props) {
       }}
     >
       <GlobalState theme={theme} />
-      <Header navPosition={navPosition} />
+      <Header />
       <Spacing spacing={headerHeight} />
-      {navPosition === 'side' && <GNB position={navPosition} />}
+      <GNB position='side' />
       <Flex flexDirection='column' className={cx('layout')}>
         <Contents>{children}</Contents>
         <Footer />

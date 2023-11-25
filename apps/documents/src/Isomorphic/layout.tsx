@@ -7,16 +7,11 @@ import type { THEME } from '@src/types/types';
 
 type Props = {
   theme: THEME;
-  device: string;
   children: React.ReactNode;
 };
 
-function IsomorphicRootLayout({ theme, device, children }: Props) {
-  return (
-    <ContentsLayout theme={theme} device={device}>
-      {children}
-    </ContentsLayout>
-  );
+function IsomorphicRootLayout({ theme, children }: Props) {
+  return <ContentsLayout theme={theme}>{children}</ContentsLayout>;
 }
 
 export default IsomorphicRootLayout;

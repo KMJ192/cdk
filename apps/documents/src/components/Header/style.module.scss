@@ -32,12 +32,16 @@
   @include color-set;
   .contents {
     justify-content: space-between;
-    position: relative;
     .left {
-      column-gap: 32px;
-      min-height: 20px;
+      .hamburger {
+        display: none;
+        @media screen and (max-width: #{$resolution_width_768}px) {
+          display: block;
+        }
+      }
     }
     .right {
+      position: relative;
       &.theme-icon {
         user-select: none;
       }

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { getDevice, getTheme } from '@src/app/actions';
+import { getTheme } from '@src/app/actions';
 
 import IsomorphicRootLayout from '@src/Isomorphic/layout';
 
@@ -18,7 +18,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const theme = await getTheme();
-  const device = await getDevice();
+  // const device = await getDevice();
 
   return (
     <html lang='ko'>
@@ -31,9 +31,7 @@ export default async function RootLayout({
         />
       </head>
       <body data-theme={theme}>
-        <IsomorphicRootLayout theme={theme} device={device}>
-          {children}
-        </IsomorphicRootLayout>
+        <IsomorphicRootLayout theme={theme}>{children}</IsomorphicRootLayout>
       </body>
     </html>
   );

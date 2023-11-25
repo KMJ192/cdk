@@ -9,10 +9,17 @@
     padding: 16px 0 16px 16px;
     --cdkit-size-nav-width: #{$side-nav-width};
     border-right: var(--sideNav-borderRight);
+    @media screen and (max-width: #{$resolution_width_768}px) {
+      display: none;
+    }
   }
   &.header {
     padding: 0 16px;
     --cdkit-size-nav-width: 100%;
+    display: none;
+    @media screen and (max-width: #{$resolution_width_768}px) {
+      display: block;
+    }
   }
   .category {
     font-weight: 700;
