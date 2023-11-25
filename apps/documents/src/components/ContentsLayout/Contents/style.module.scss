@@ -1,8 +1,12 @@
 @import '@src/styles/color/color.module.scss';
 @import '@src/styles/utils.module.scss';
+@import '@src/utils/layout.module.scss';
 
 .contents {
   width: 100%;
   box-sizing: border-box;
   padding: 4rem 3rem;
+  @media screen and (max-width: #{$resolution_width_480}px) {
+    padding: 2.5rem 2rem;
+  }
 }

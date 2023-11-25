@@ -35,12 +35,7 @@ function Header() {
         <Center horizontal={false} className={cx('contents')}>
           <div className={cx('left')}>
             <Center horizontal={false} className={cx('hamburger')}>
-              <HamburgerMenu
-                active={openNav}
-                onClick={onToggleNav}
-                type='type-3'
-                size='sm'
-              />
+              <HamburgerMenu active={openNav} onClick={onToggleNav} />
             </Center>
           </div>
           <div className={cx('right', 'theme-icon')} onClick={onToggleTheme}>

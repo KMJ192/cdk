@@ -1,0 +1,11 @@
+@import '../color.module.scss';
+
+@mixin scroll-light {
+  --cdkit-color-scroll-bg: #{$light-gray200};
+  --cdkit-color-scroll-bg-hover: #{$light-gray300};
+}
+
+@mixin scroll-dark {
+  --cdkit-color-scroll-bg: #{$dark-gray000};
+  --cdkit-color-scroll-bg-hover: #{$dark-gray100};
+}

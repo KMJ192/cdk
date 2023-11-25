@@ -5,6 +5,7 @@ body[data-theme='light'] {
   background: $light-background;
   color: $light-text;
 
+  @include scroll-light;
   @include navigation-light;
   @include header-light;
   @include footer-light;
@@ -31,6 +32,7 @@ body[data-theme='dark'] {
   background: $dark-background;
   color: $dark-text;
 
+  @include scroll-dark;
   @include navigation-dark;
   @include header-dark;
   @include footer-dark;

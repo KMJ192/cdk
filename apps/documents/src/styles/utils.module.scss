@@ -15,3 +15,27 @@
   -ms-transform: $option;
   -moz-transform: $option;
 }
+
+@mixin scrollbar(
+  $width: 0.9rem,
+  $height: 0.9rem,
+  $color: var(--cdkit-color-scroll-bg, $light-gray100),
+  $hoverColor: var(--cdkit-color-scroll-bg-hover, $light-gray200)
+) {
+  &::-webkit-scrollbar {
+    width: $width;
+    height: $height;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 16px;
+    &:hover {
+      background-color: $hoverColor;
+    }
+  }
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
