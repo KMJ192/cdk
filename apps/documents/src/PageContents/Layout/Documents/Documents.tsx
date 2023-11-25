@@ -32,9 +32,9 @@ function Documents({ type }: Props) {
               <Flex flexDirection='column'>
                 {desc.map((d, idx) => {
                   return (
-                    <Text key={`${key}-${idx}`} typo='b3'>
+                    <span key={`${key}-${idx}`} className={cx('desc')}>
                       {d}
-                    </Text>
+                    </span>
                   );
                 })}
               </Flex>

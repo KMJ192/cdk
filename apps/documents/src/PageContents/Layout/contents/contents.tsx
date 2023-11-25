@@ -1,6 +1,12 @@
 import type { ReactNode } from 'react';
-import { TabOption } from '@cdkit/react-ui';
+import { TabOption, Text } from '@cdkit/react-ui';
 import { centerContents } from './center';
+import { flexContents } from './flex';
+import { gridContents } from './grid';
+import { floatContents } from './float';
+import { rowContents } from './row';
+import { spacingContents } from './spacing';
+import { stackContents } from './stack';
 
 type DOCUMENT = {
   title: string;
@@ -35,63 +41,35 @@ type CSS_VARIABLES = {
 type PAGE_CONTENTS = {
   pageTitle: string;
   pageDesc: string;
-  tabOption: Array<TabOption>;
   document: Array<DOCUMENT>;
   props: Array<PROPS>;
   cssVar?: Array<CSS_VARIABLES>;
 };
 
+const tabOption: Array<TabOption> = [
+  {
+    key: 'docs',
+    contents: <Text typo='b2'>문서</Text>,
+  },
+  {
+    key: 'apis',
+    contents: <Text typo='b2'>APIs</Text>,
+  },
+  {
+    key: 'playground',
+    contents: <Text typo='b2'>플레이 그라운드</Text>,
+  },
+];
+
 const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
   center: centerContents,
-  flex: {
-    pageTitle: 'Flex',
-    pageDesc: `"display: flex;"가 지정된 컴포넌트`,
-    tabOption: [],
-    document: [],
-    props: [],
-    cssVar: [],
-  },
-  grid: {
-    pageTitle: 'Grid',
-    pageDesc: `"display: grid;"가 지정된 컴포넌트`,
-    tabOption: [],
-    document: [],
-    props: [],
-    cssVar: [],
-  },
-  float: {
-    pageTitle: 'Float',
-    pageDesc: `부유 속성 컴포넌트`,
-    tabOption: [],
-    document: [],
-    props: [],
-    cssVar: [],
-  },
-  row: {
-    pageTitle: 'Row',
-    pageDesc: `열을 생성하는 컴포넌트`,
-    tabOption: [],
-    document: [],
-    props: [],
-    cssVar: [],
-  },
-  spacing: {
-    pageTitle: 'Spacing',
-    pageDesc: `공간을 차지하는 컴포넌트`,
-    tabOption: [],
-    document: [],
-    props: [],
-    cssVar: [],
-  },
-  stack: {
-    pageTitle: 'Stack',
-    pageDesc: `스택을 쌓는 컴포넌트`,
-    tabOption: [],
-    document: [],
-    props: [],
-    cssVar: [],
-  },
+  flex: flexContents,
+  grid: gridContents,
+  float: floatContents,
+  row: rowContents,
+  spacing: spacingContents,
+  stack: stackContents,
 };
 
 export type { DOCUMENT, PROPS, CSS_VARIABLES, PAGE_CONTENTS };
-export { LAYOUT_CONTENTS };
+export { LAYOUT_CONTENTS, tabOption };

@@ -7,5 +7,10 @@
   }
   .doc-contents {
     width: 100%;
+    .desc {
+      line-height: 1.1rem;
+      letter-spacing: 0.05rem;
+      font-size: 0.85rem;
+    }
   }
 }

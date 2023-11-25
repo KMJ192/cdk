@@ -11,7 +11,7 @@ import PropsCompo from './PropsCompo/PropsCompo';
 import Playground from './Playground/Playground';
 
 import type { PAGE_LAYOUT } from '@src/utils/url';
-import { LAYOUT_CONTENTS } from './contents/contents';
+import { LAYOUT_CONTENTS, tabOption } from './contents/contents';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
@@ -27,9 +27,9 @@ function Layout({ type }: Props) {
   const searchParams = useSearchParams();
   const curParam = searchParams.get('compo');
 
-  const { pageTitle, pageDesc, tabOption } = LAYOUT_CONTENTS[type];
+  const { pageTitle, pageDesc } = LAYOUT_CONTENTS[type];
 
-  const [selectedTab, setSelectedTab] = useState(-1);
+  const [selectedTab, setSelectedTab] = useState(0);
 
   const createQueryString = useCallback(
     (name: string, value: string) => {
