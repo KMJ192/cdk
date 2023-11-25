@@ -11,12 +11,12 @@
 .footer {
   margin-top: auto;
   height: $footer-height !important;
-  padding: 0 16px;
+  padding: 0 1rem;
   justify-content: flex-end;
   box-sizing: border-box;
   @include color-set;
   .update {
     font-style: italic;
-    font-size: 13px;
+    font-size: 0.8rem;
   }
 }

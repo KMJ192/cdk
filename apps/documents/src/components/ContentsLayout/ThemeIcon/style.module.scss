@@ -1,18 +1,12 @@
-@import '@src/styles/color/color.module.scss';
+// @import '@src/styles/color/color.module.scss';
 @import '@src/styles/utils.module.scss';
-@import '@src/utils/layout.module.scss';
+@import '../style.module.scss';
 
 @mixin color-set {
   fill: var(--theme-icon-fill);
 }
 
 .theme-icon {
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  opacity: 1;
-  cursor: pointer;
-  border-radius: 50%;
   @include transform(translate(-24px, -50%) rotate(0deg));
   @include color-set;
   @include transition(
@@ -20,6 +14,11 @@
     background-color 0.14s ease-in-out,
     transform 0.35s ease
   );
+  @include themeIcon-reactive;
+  position: absolute;
+  opacity: 1;
+  cursor: pointer;
+  border-radius: 50%;
   &.light-icon.dark {
     opacity: 0;
     @include transform(translate(-24px, -50%) rotate(180deg));
@@ -27,19 +26,5 @@
   &.dark-icon.light {
     opacity: 0;
     @include transform(translate(-24px, -50%) rotate(180deg));
-  }
-
-  @media (max-width: #{$resolution_width_480}px) {
-    width: 28px;
-    height: 28px;
-    @include transform(translate(-14px, -50%) rotate(0deg));
-    &.light-icon.dark {
-      opacity: 0;
-      @include transform(translate(-14px, -50%) rotate(180deg));
-    }
-    &.dark-icon.light {
-      opacity: 0;
-      @include transform(translate(-14px, -50%) rotate(180deg));
-    }
   }
 }

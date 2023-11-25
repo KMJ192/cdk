@@ -1,5 +1,5 @@
-@import '@src/styles/color/color.module.scss';
 @import '@src/utils/layout.module.scss';
+@import '../style.module.scss';
 
 .gnb {
   position: fixed;
@@ -9,17 +9,12 @@
     padding: 1rem 0 1rem 1rem;
     --cdkit-size-nav-width: #{$side-nav-width};
     border-right: var(--sideNav-borderRight);
-    @media screen and (max-width: #{$resolution_width_768}px) {
-      display: none;
-    }
+    @include sideNav-reactive;
   }
   &.position-header {
     padding: 0 1rem;
     --cdkit-size-nav-width: 100%;
-    display: none;
-    @media screen and (max-width: #{$resolution_width_768}px) {
-      display: block;
-    }
+    @include headerNav-reactive;
   }
   .category {
     font-weight: 700;

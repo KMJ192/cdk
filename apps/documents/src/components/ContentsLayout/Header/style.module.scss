@@ -1,6 +1,6 @@
 @import '@src/styles/color/color.module.scss';
 @import '@src/styles/utils.module.scss';
-@import '@src/utils/layout.module.scss';
+@import '../style.module.scss';
 
 @mixin header-nav {
   padding: 0;
@@ -22,24 +22,16 @@
 }
 
 .header {
+  @include color-set;
+  @include header-reactive;
   position: fixed;
   flex-direction: column;
-  padding: 1.5rem 3rem;
-  height: $header-height !important;
   width: 100%;
   box-sizing: border-box;
   z-index: 999;
-  @include color-set;
+  height: $header-height !important;
   .contents {
     justify-content: space-between;
-    .left {
-      .hamburger {
-        display: none;
-        @media screen and (max-width: #{$resolution_width_768}px) {
-          display: block;
-        }
-      }
-    }
     .right {
       position: relative;
       &.theme-icon {
@@ -47,10 +39,8 @@
       }
     }
   }
-  @media screen and (max-width: #{$resolution_width_480}px) {
-    padding: 2rem;
-  }
 }
+
 .nav {
-  @include header-nav();
+  @include header-nav;
 }

@@ -1,6 +1,5 @@
-@import '@src/styles/color/color.module.scss';
 @import '@src/styles/utils.module.scss';
-@import '@src/utils/layout.module.scss';
+@import '../style.module.scss';
 
 @mixin active($transform) {
   &.active {
@@ -33,17 +32,6 @@
   @include active($pos);
 }
 
-@mixin size {
-  width: 20px;
-  height: 16px;
-  @include position(7px);
-  @media (max-width: #{$resolution_width_480}px) {
-    width: 18px;
-    height: 14px;
-    @include position(6px);
-  }
-}
-
 @mixin hamburger {
   position: relative;
   cursor: pointer;
@@ -51,9 +39,13 @@
   &,
   & > span {
     display: inline-block;
-    transition: transform 0.4s, opacity 0.4s, background-color 0.14s ease-in-out,
-      color 0.14s ease-in-out;
     box-sizing: border-box;
+    @include transition(
+      transform 0.4s,
+      opacity 0.4s,
+      background-color 0.14s ease-in-out,
+      color 0.14s ease-in-out
+    );
   }
 }
 
@@ -76,6 +68,6 @@
 .hamburger {
   @include hamburger;
   @include bar;
-  @include size;
+  @include hamburgerMenu-reactive;
   @include color-set;
 }
