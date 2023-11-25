@@ -1,16 +1,17 @@
 import { Center, Text } from '@cdkit/react-ui';
-import { APIS, CSS_VARIABLES, DOCUMENT, PAGE_CONTENTS } from './contents';
+import type { PROPS, CSS_VARIABLES, DOCUMENT, PAGE_CONTENTS } from './contents';
 
 const document: Array<DOCUMENT> = [
   {
     title: 'Center',
-    desc: 'Center 컴포넌트 문서',
+    subtitle: 'Center 컴포넌트 문서',
+    desc: ['중앙을 지정합니다.', '하위 컴포넌트를 중앙에 위치시킵니다.'],
     view: <Center>This is Center</Center>,
     code: [`<Center>This is Center</Center>`],
   },
 ];
 
-const apis: Array<APIS> = [];
+const props: Array<PROPS> = [];
 
 const cssVar: Array<CSS_VARIABLES> = [];
 
@@ -32,6 +33,6 @@ export const centerContents: PAGE_CONTENTS = {
     },
   ],
   document,
-  apis,
+  props,
   cssVar,
 };

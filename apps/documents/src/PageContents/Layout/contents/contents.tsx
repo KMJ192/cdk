@@ -4,12 +4,13 @@ import { centerContents } from './center';
 
 type DOCUMENT = {
   title: string;
-  desc: string;
+  subtitle: string;
+  desc: Array<string>;
   view: ReactNode;
   code: Array<string>;
 };
 
-type APIS = {
+type PROPS = {
   title: string;
   desc: string;
   element: Array<{
@@ -36,7 +37,7 @@ type PAGE_CONTENTS = {
   pageDesc: string;
   tabOption: Array<TabOption>;
   document: Array<DOCUMENT>;
-  apis: Array<APIS>;
+  props: Array<PROPS>;
   cssVar?: Array<CSS_VARIABLES>;
 };
 
@@ -47,7 +48,7 @@ const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
     pageDesc: `"display: flex;"가 지정된 컴포넌트`,
     tabOption: [],
     document: [],
-    apis: [],
+    props: [],
     cssVar: [],
   },
   grid: {
@@ -55,7 +56,7 @@ const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
     pageDesc: `"display: grid;"가 지정된 컴포넌트`,
     tabOption: [],
     document: [],
-    apis: [],
+    props: [],
     cssVar: [],
   },
   float: {
@@ -63,7 +64,7 @@ const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
     pageDesc: `부유 속성 컴포넌트`,
     tabOption: [],
     document: [],
-    apis: [],
+    props: [],
     cssVar: [],
   },
   row: {
@@ -71,7 +72,7 @@ const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
     pageDesc: `열을 생성하는 컴포넌트`,
     tabOption: [],
     document: [],
-    apis: [],
+    props: [],
     cssVar: [],
   },
   spacing: {
@@ -79,7 +80,7 @@ const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
     pageDesc: `공간을 차지하는 컴포넌트`,
     tabOption: [],
     document: [],
-    apis: [],
+    props: [],
     cssVar: [],
   },
   stack: {
@@ -87,10 +88,10 @@ const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
     pageDesc: `스택을 쌓는 컴포넌트`,
     tabOption: [],
     document: [],
-    apis: [],
+    props: [],
     cssVar: [],
   },
 };
 
-export type { DOCUMENT, APIS, CSS_VARIABLES, PAGE_CONTENTS };
+export type { DOCUMENT, PROPS, CSS_VARIABLES, PAGE_CONTENTS };
 export { LAYOUT_CONTENTS };

@@ -2,6 +2,9 @@ import type { PAGE_LAYOUT } from '@src/utils/url';
 
 import { LAYOUT_CONTENTS } from '../contents/contents';
 
+import { Card, Flex, Spacing, Text } from '@cdkit/react-ui';
+import CodeGuide from '@src/components/CodeGuide/CodeGuide';
+
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
 const cx = classNames.bind(style);
@@ -11,9 +14,40 @@ type Props = {
 };
 
 function Documents({ type }: Props) {
-  // console.log(LAYOUT_CONTENTS[type].document);
-
-  return <div>Documents</div>;
+  return (
+    <Flex className={cx('container')}>
+      {LAYOUT_CONTENTS[type].document.map(
+        ({ title, subtitle, desc, view, code }, idx) => {
+          const key = `${title}-${idx}`;
+          return (
+            <Flex
+              className={cx('doc-contents')}
+              key={key}
+              flexDirection='column'
+            >
+              <Text typo='h4'>{title}</Text>
+              <Spacing spacing={0.5} unit='rem' />
+              <Text typo='b1'>{subtitle}</Text>
+              <Spacing spacing={0.75} unit='rem' />
+              <Flex flexDirection='column'>
+                {desc.map((d, idx) => {
+                  return (
+                    <Text key={`${key}-${idx}`} typo='b3'>
+                      {d}
+                    </Text>
+                  );
+                })}
+              </Flex>
+              <Spacing spacing={1} unit='rem' />
+              <Card className={cx('view')}>{view}</Card>
+              <Spacing spacing={1.2} unit='rem' />
+              <CodeGuide header='jsx' code={code}></CodeGuide>
+            </Flex>
+          );
+        },
+      )}
+    </Flex>
+  );
 }
 
 export default Documents;
