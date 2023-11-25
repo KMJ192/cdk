@@ -19,6 +19,7 @@ body[data-theme='light'] {
   @include radio-light;
   @include badge-light;
   @include checkbox-light;
+  @include card-light;
   @include input-light;
   @include popup-light;
   @include progressbar-light;
@@ -46,6 +47,7 @@ body[data-theme='dark'] {
   @include radio-dark;
   @include badge-dark;
   @include checkbox-dark;
+  @include card-dark;
   @include input-dark;
   @include popup-dark;
   @include progressbar-dark;
