@@ -285,7 +285,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cdkit/common@npm:^0.0.7, @cdkit/common@workspace:packages/common":
+"@cdkit/common@npm:^0.0.7, @cdkit/common@workspace:^, @cdkit/common@workspace:packages/common":
   version: 0.0.0-use.local
   resolution: "@cdkit/common@workspace:packages/common"
   dependencies:
@@ -303,9 +303,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cdkit/documents@workspace:apps/documents"
   dependencies:
+    "@cdkit/common": "workspace:^"
     "@cdkit/react-modules": "workspace:^"
     "@cdkit/react-ui": "workspace:^"
-    "@cdkit/style": "workspace:^"
     "@types/js-cookie": "npm:^3"
     "@types/lodash": "npm:^4"
     "@types/node": "npm:^20"
@@ -391,7 +391,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cdkit/style@workspace:^, @cdkit/style@workspace:packages/style":
+"@cdkit/style@workspace:packages/style":
   version: 0.0.0-use.local
   resolution: "@cdkit/style@workspace:packages/style"
   dependencies:

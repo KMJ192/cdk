@@ -449,9 +449,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./apps/documents/",\
         "packageDependencies": [\
           ["@cdkit/documents", "workspace:apps/documents"],\
+          ["@cdkit/common", "workspace:packages/common"],\
           ["@cdkit/react-modules", "workspace:packages/react-modules"],\
           ["@cdkit/react-ui", "workspace:packages/react-ui"],\
-          ["@cdkit/style", "workspace:packages/style"],\
           ["@types/js-cookie", "npm:3.0.5"],\
           ["@types/lodash", "npm:4.14.200"],\
           ["@types/node", "npm:20.8.9"],\
