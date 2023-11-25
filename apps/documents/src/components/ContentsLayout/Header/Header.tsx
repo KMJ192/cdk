@@ -3,8 +3,8 @@ import { Center, Flex } from '@cdkit/react-ui';
 
 import useToggleTheme from '@src/hooks/useToggleTheme';
 
-import Light from '../Icons/Theme/Light';
-import Dark from '../Icons/Theme/Dark';
+import Light from '../ThemeIcon/Light';
+import Dark from '../ThemeIcon/Dark';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import GNB from '../GNB/GNB';
 

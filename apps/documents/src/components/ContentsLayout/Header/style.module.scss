@@ -10,7 +10,7 @@
   will-change: height, padding;
   @include transition(height 0.3s ease-in-out, padding 0.3s ease-in-out);
   &.openNav {
-    padding: 16px 16px 106px 16px;
+    padding: 1rem 1rem 6.625rem 1rem;
     height: 100%;
   }
 }
@@ -24,7 +24,7 @@
 .header {
   position: fixed;
   flex-direction: column;
-  padding: 24px 48px;
+  padding: 1.5rem 3rem;
   height: $header-height !important;
   width: 100%;
   box-sizing: border-box;
@@ -48,7 +48,7 @@
     }
   }
   @media screen and (max-width: #{$resolution_width_480}px) {
-    padding: 24px;
+    padding: 1.5rem;
   }
 }
 .nav {

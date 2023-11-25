@@ -146,6 +146,13 @@ const initSelectedList: { [key: string]: boolean } = {};
   });
 })();
 
+const initShow = {
+  [URL.layout]: false,
+  [URL.uiComponents]: false,
+  [URL.hooks]: false,
+  [URL.moduleComponents]: false,
+};
+
 const validNavGroup = (dataKey: string): string | null => {
   if (
     dataKey === URL.layout ||
@@ -166,6 +173,7 @@ export {
   category,
   urlDictionary,
   initSelectedList,
+  initShow,
   layoutGroup,
   uiComponentGroup,
   hooksGroup,

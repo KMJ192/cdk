@@ -20,7 +20,9 @@ export const TODAY = dayjs();
  * 현재날짜
  * 포맷: YYYY.MM.DD
  */
-export const today = (format: string = 'YYYY.MM.DD') => {
-  const date = dayjs().local().format(format);
+export const today = (format?: string) => {
+  const date = dayjs()
+    .local()
+    .format(format ?? 'YYYY.MM.DD');
   return date;
 };

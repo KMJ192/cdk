@@ -5,16 +5,16 @@
   position: fixed;
   z-index: 998;
   transition: transform 0.5s ease;
-  &.side {
-    padding: 16px 0 16px 16px;
+  &.position-side {
+    padding: 1rem 0 1rem 1rem;
     --cdkit-size-nav-width: #{$side-nav-width};
     border-right: var(--sideNav-borderRight);
     @media screen and (max-width: #{$resolution_width_768}px) {
       display: none;
     }
   }
-  &.header {
-    padding: 0 16px;
+  &.position-header {
+    padding: 0 1rem;
     --cdkit-size-nav-width: 100%;
     display: none;
     @media screen and (max-width: #{$resolution_width_768}px) {

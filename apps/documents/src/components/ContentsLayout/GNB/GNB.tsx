@@ -18,6 +18,7 @@ import {
   moduleComponentGroup,
   validNavGroup,
   isURL,
+  initShow,
 } from './utils';
 
 import classNames from 'classnames/bind';
@@ -34,16 +35,20 @@ function GNB({ position, className, onClose }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const [selected, setSelected] = useState(cloneDeep(initSelectedList));
-  const [show, setShow] = useState<{ [key: string]: boolean }>({
-    [URL.layout]: false,
-    [URL.uiComponents]: false,
-    [URL.hooks]: false,
-    [URL.moduleComponents]: false,
-  });
+  const [show, setShow] = useState<{ [key: string]: boolean }>(
+    cloneDeep(initShow),
+  );
+
+  const onClickMain = () => {
+    router.push(URL.root);
+    setSelected(cloneDeep(initSelectedList));
+    setShow(cloneDeep(initShow));
+    if (onClose) onClose();
+  };
 
   const onClickUI = () => {
     router.push(URL.ui);
-    setSelected({ ...initSelectedList });
+    setSelected(cloneDeep(initSelectedList));
     setShow({
       ...show,
       [URL.hooks]: false,
@@ -142,10 +147,13 @@ function GNB({ position, className, onClose }: Props) {
 
   return (
     <Navigation
-      className={cx('gnb', position, className)}
+      className={cx('gnb', `position-${position}`, className)}
       onClick={onClick}
       depthGap={0}
     >
+      <Navigation.Menu onClick={onClickMain}>
+        <Text typo='h4'>CDKit</Text>
+      </Navigation.Menu>
       <Navigation.Menu onClick={onClickUI}>
         <Text typo='t1'>UI</Text>
       </Navigation.Menu>

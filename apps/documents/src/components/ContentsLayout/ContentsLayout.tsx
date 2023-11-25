@@ -6,12 +6,12 @@ import { Flex, Spacing } from '@cdkit/react-ui';
 import { type THEME } from '@src/types/types';
 
 import AppProvider from '@src/store/AppProvider/Provider';
-import GlobalState from '../GlobalState/GlobalState';
+import GlobalState from './GlobalState/GlobalState';
 
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Contents from '../Contents/Contents';
-import GNB from '../GNB/GNB';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+import Contents from './Contents/Contents';
+import GNB from './GNB/GNB';
 
 import { headerHeight } from '@src/utils/layout';
 
