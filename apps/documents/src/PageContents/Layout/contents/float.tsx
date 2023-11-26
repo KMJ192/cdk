@@ -10,9 +10,86 @@ const document: Array<DOCUMENT> = [
   },
 ];
 
-const props: Array<PROPS> = [];
+const props: Array<PROPS> = [
+  {
+    title: 'Float Props',
+    desc: '',
+    element: [
+      {
+        name: 'children',
+        type: 'React.ReactNode',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['Children 컴포넌트'],
+      },
+      {
+        name: 'startDirection',
+        type: '"lt" | "lb" | "rt" | "rb"',
+        essential: false,
+        defaultValue: 'lt',
+        description: ['위치 지정'],
+      },
+      {
+        name: 'left',
+        type: 'number',
+        essential: false,
+        defaultValue: 'undefined',
+        description: [
+          '화면 왼쪽 기준 위치 지정',
+          'startDirection에 "l"이 포함된 경우 적용',
+        ],
+      },
+      {
+        name: 'right',
+        type: 'number',
+        essential: false,
+        defaultValue: 'undefined',
+        description: [
+          '화면 오른쪽 기준 위치 지정',
+          'startDirection에 "r"이 포함된 경우 적용',
+        ],
+      },
+      {
+        name: 'top',
+        type: 'number',
+        essential: false,
+        defaultValue: 'undefined',
+        description: [
+          '화면 상단 기준 위치 지정',
+          'startDirection에 "t"가 포함된 경우 적용',
+        ],
+      },
+      {
+        name: 'bottom',
+        type: 'number',
+        essential: false,
+        defaultValue: 'undefined',
+        description: [
+          '화면 하단 기준 위치 지정',
+          'startDirection에 "b"가 포함된 경우 적용',
+        ],
+      },
+      {
+        name: 'display',
+        type: '"flex" | "grid"',
+        essential: false,
+        defaultValue: 'flex',
+        description: ['display 설정'],
+      },
+      {
+        name: 'flexDirection',
+        type: '"column" | "row" | "column-reverse" | "row-reverse"',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['flex-direction (display가 flex로 설정된 경우만)'],
+      },
+    ],
+  },
+];
 
 const cssVar: Array<CSS_VARIABLES> = [];
+
+const defaultCode = [`<Float startDirection="lt">{children}</Float>`];
 
 export const floatContents: PAGE_CONTENTS = {
   pageTitle: 'Float',
@@ -20,4 +97,5 @@ export const floatContents: PAGE_CONTENTS = {
   document,
   props,
   cssVar,
+  defaultCode,
 };

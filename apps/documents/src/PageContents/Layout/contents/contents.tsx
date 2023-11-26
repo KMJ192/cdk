@@ -22,14 +22,15 @@ type PROPS = {
   element: Array<{
     name: string;
     type: string;
+    essential: boolean;
     defaultValue: string;
-    description: string;
+    description: Array<string>;
   }>;
 };
 
 type CSS_VARIABLES = {
-  cssTitle: string;
-  cssDesc: string;
+  title: string;
+  desc: string;
   element: Array<{
     name: string;
     type: 'color' | 'size';
@@ -44,6 +45,7 @@ type PAGE_CONTENTS = {
   document: Array<DOCUMENT>;
   props: Array<PROPS>;
   cssVar?: Array<CSS_VARIABLES>;
+  defaultCode: Array<string>;
 };
 
 const tabOption: Array<TabOption> = [

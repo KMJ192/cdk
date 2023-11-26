@@ -11,9 +11,25 @@ const document: Array<DOCUMENT> = [
   },
 ];
 
-const props: Array<PROPS> = [];
+const props: Array<PROPS> = [
+  {
+    title: 'Grid Props',
+    desc: '',
+    element: [
+      {
+        name: 'children',
+        type: 'React.ReactNode',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['Children 컴포넌트'],
+      },
+    ],
+  },
+];
 
 const cssVar: Array<CSS_VARIABLES> = [];
+
+const defaultCode = ['<Grid>{children}</Grid>'];
 
 export const gridContents: PAGE_CONTENTS = {
   pageTitle: 'Grid',
@@ -21,4 +37,5 @@ export const gridContents: PAGE_CONTENTS = {
   document,
   props,
   cssVar,
+  defaultCode,
 };

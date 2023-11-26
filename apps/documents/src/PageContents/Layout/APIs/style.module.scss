@@ -1,0 +1,6 @@
+@import '@src/utils/layout.module.scss';
+
+.container {
+  @media screen and (max-width: #{resolution_width_768}px) {
+  }
+}

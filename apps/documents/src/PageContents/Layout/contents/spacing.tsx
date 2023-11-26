@@ -21,9 +21,39 @@ const document: Array<DOCUMENT> = [
   },
 ];
 
-const props: Array<PROPS> = [];
+const props: Array<PROPS> = [
+  {
+    title: 'Spacing Props',
+    desc: '',
+    element: [
+      {
+        name: 'direction',
+        type: '"horizontal" | "vertical"',
+        essential: false,
+        defaultValue: 'vertical',
+        description: ['공간 방향'],
+      },
+      {
+        name: 'spacing',
+        type: 'number',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['공간 너비'],
+      },
+      {
+        name: 'unit',
+        type: '"px" | "em" | "rem"',
+        essential: false,
+        defaultValue: 'px',
+        description: ['공간 단위'],
+      },
+    ],
+  },
+];
 
 const cssVar: Array<CSS_VARIABLES> = [];
+
+const defaultCode = ['<Spacing spacing={0} direction="vertical" unit="px" />'];
 
 export const spacingContents: PAGE_CONTENTS = {
   pageTitle: 'Spacing',
@@ -31,4 +61,5 @@ export const spacingContents: PAGE_CONTENTS = {
   document,
   props,
   cssVar,
+  defaultCode,
 };

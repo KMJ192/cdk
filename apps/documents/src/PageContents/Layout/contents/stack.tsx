@@ -23,9 +23,32 @@ const document: Array<DOCUMENT> = [
   },
 ];
 
-const props: Array<PROPS> = [];
+const props: Array<PROPS> = [
+  {
+    title: 'Flex Props',
+    desc: '',
+    element: [
+      {
+        name: 'children',
+        type: 'React.ReactNode',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['Children 컴포넌트'],
+      },
+      {
+        name: 'direction',
+        type: '"column" | "row"',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['스택 방향'],
+      },
+    ],
+  },
+];
 
 const cssVar: Array<CSS_VARIABLES> = [];
+
+const defaultCode = ['<Stack direction="row">{children}</Stack>'];
 
 export const stackContents: PAGE_CONTENTS = {
   pageTitle: 'Stack',
@@ -33,4 +56,5 @@ export const stackContents: PAGE_CONTENTS = {
   document,
   props,
   cssVar,
+  defaultCode,
 };

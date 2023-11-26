@@ -7,7 +7,7 @@ import { When } from '@cdkit/react-modules';
 
 import Line from '@src/components/Line/Line';
 import Documents from './Documents/Documents';
-import PropsCompo from './PropsCompo/PropsCompo';
+import APIs from './APIs/APIs';
 import Playground from './Playground/Playground';
 
 import type { PAGE_LAYOUT } from '@src/utils/url';
@@ -29,7 +29,14 @@ function Layout({ type }: Props) {
 
   const { pageTitle, pageDesc } = LAYOUT_CONTENTS[type];
 
-  const [selectedTab, setSelectedTab] = useState(0);
+  const [selectedTab, setSelectedTab] = useState(
+    (() => {
+      if (curParam === null || curParam === 'docs') return 0;
+      if (curParam === 'apis') return 1;
+      if (curParam === 'playground') return 2;
+      return -1;
+    })(),
+  );
 
   const createQueryString = useCallback(
     (name: string, value: string) => {
@@ -49,34 +56,14 @@ function Layout({ type }: Props) {
   };
 
   useEffect(() => {
-    const initState = () => {
-      setSelectedTab(0);
-    };
-    if (
-      typeof curParam === 'string' &&
-      curParam !== 'docs' &&
-      curParam !== 'apis' &&
-      curParam !== 'playground'
-    ) {
+    if (typeof curParam !== 'string') return;
+
+    if (curParam !== 'docs' && curParam !== 'apis' && curParam !== 'playground')
       setSelectedTab(-1);
-      return;
-    }
 
-    initState();
-  }, [type, curParam]);
-
-  useEffect(() => {
-    if (curParam === 'docs') {
-      setSelectedTab(0);
-      return;
-    }
-    if (curParam === 'apis') {
-      setSelectedTab(1);
-      return;
-    }
-    if (curParam === 'playground') {
-      setSelectedTab(2);
-    }
+    if (curParam === 'docs') setSelectedTab(0);
+    if (curParam === 'apis') setSelectedTab(1);
+    if (curParam === 'playground') setSelectedTab(2);
   }, [curParam]);
 
   return (
@@ -89,11 +76,11 @@ function Layout({ type }: Props) {
       <Spacing className={cx('spacing', 'second')} />
       <Tab options={tabOption} selected={selectedTab} onSelect={onSelect} />
       <Spacing className={cx('spacing', 'third')} />
-      <When condition={curParam === null || selectedTab === 0}>
+      <When condition={selectedTab === 0}>
         <Documents type={type} />
       </When>
       <When condition={selectedTab === 1}>
-        <PropsCompo type={type} />
+        <APIs type={type} />
       </When>
       <When condition={selectedTab === 2}>
         <Playground type={type} />

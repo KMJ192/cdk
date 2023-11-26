@@ -1,0 +1,33 @@
+@import '@src/utils/layout.module.scss';
+@import '@src/styles/color/color.module.scss';
+
+.container {
+  row-gap: 1rem;
+  .props-contents {
+    row-gap: 0.5rem;
+    list-style: disc;
+    padding-left: 1rem;
+    .props-name > .essential {
+      color: $light-red700;
+      &.dark {
+        color: $dark-red100;
+      }
+    }
+    .props-info {
+      row-gap: 0.2rem;
+      padding-left: 1rem;
+    }
+    .props-desc {
+      row-gap: 0.2rem;
+      & > ul {
+        padding-left: 1.2rem;
+      }
+    }
+  }
+  // @media screen and (max-width: #{resolution_width_768}px) {
+  // }
+}
+
+.colon {
+  width: 0.95rem;
+}
