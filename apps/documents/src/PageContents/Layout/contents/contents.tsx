@@ -60,7 +60,7 @@ const tabOption: Array<TabOption> = [
   },
   {
     key: 'playground',
-    contents: <Text typo='b2'>플레이 그라운드</Text>,
+    contents: <Text typo='b2'>플레이그라운드</Text>,
   },
 ];
 
