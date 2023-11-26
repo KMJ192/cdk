@@ -1,12 +1,5 @@
 import type { ReactNode } from 'react';
 import { TabOption, Text } from '@cdkit/react-ui';
-import { centerContents } from './center';
-import { flexContents } from './flex';
-import { gridContents } from './grid';
-import { floatContents } from './float';
-import { rowContents } from './row';
-import { spacingContents } from './spacing';
-import { stackContents } from './stack';
 
 type DOCUMENT = {
   title: string;
@@ -49,7 +42,7 @@ type PAGE_CONTENTS = {
   pgCode: string;
 };
 
-const tabOption: Array<TabOption> = [
+const TAB_OPTIONS: Array<TabOption> = [
   {
     key: 'docs',
     contents: <Text typo='b2'>Documents</Text>,
@@ -64,15 +57,7 @@ const tabOption: Array<TabOption> = [
   },
 ];
 
-const LAYOUT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
-  center: centerContents,
-  flex: flexContents,
-  grid: gridContents,
-  float: floatContents,
-  row: rowContents,
-  spacing: spacingContents,
-  stack: stackContents,
-};
+const COMPONENT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {};
 
 export type { DOCUMENT, PROPS, CSS_VARIABLES, PAGE_CONTENTS };
-export { LAYOUT_CONTENTS, tabOption };
+export { COMPONENT_CONTENTS, TAB_OPTIONS };

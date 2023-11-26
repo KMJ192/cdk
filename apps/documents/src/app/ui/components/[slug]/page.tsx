@@ -1,3 +1,7 @@
+import Components from '@src/appIsomorphic/ui/components/page';
+import NotFoundComponent from '@src/PageContents/NotFoundComponent/NotFoundComponent';
+
+import { COMPONENT_CONTENTS } from '@src/appIsomorphic/ui/components/contents/contents';
 import type { PAGE_UI_COMPONENTS } from '@src/utils/url';
 
 type Props = {
@@ -7,7 +11,11 @@ type Props = {
 };
 
 function Page({ params }: Props) {
-  return <div>{params.slug}</div>;
+  if (COMPONENT_CONTENTS[params.slug]) {
+    return <NotFoundComponent queryParam={params.slug} />;
+  }
+
+  return <Components type={params.slug} />;
 }
 
 export default Page;

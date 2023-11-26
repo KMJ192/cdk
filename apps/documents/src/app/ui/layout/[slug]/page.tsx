@@ -1,7 +1,7 @@
-import Layout from '@src/PageContents/Layout/Layout';
-import NotFoundLayout from '@src/PageContents/Layout/NotFoundLayout/NotFoundLayout';
+import Layout from '@src/appIsomorphic/ui/layout/page';
+import NotFoundComponent from '@src/PageContents/NotFoundComponent/NotFoundComponent';
 
-import { LAYOUT_CONTENTS } from '@src/PageContents/Layout/contents/contents';
+import { LAYOUT_CONTENTS } from '@src/appIsomorphic/ui/layout/contents/contents';
 import type { PAGE_LAYOUT } from '@src/utils/url';
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 
 function Page({ params }: Props) {
   if (!LAYOUT_CONTENTS[params.slug]) {
-    return <NotFoundLayout queryParam={params.slug} />;
+    return <NotFoundComponent queryParam={params.slug} />;
   }
 
   return <Layout type={params.slug} />;

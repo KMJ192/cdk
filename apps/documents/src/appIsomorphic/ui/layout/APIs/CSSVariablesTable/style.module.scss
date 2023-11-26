@@ -1,0 +1,59 @@
+@import '@src/styles/color/color.module.scss';
+
+.container {
+  row-gap: 1rem;
+  .contents {
+    row-gap: 0.5rem;
+    list-style: disc;
+    padding-left: 1rem;
+    .info {
+      row-gap: 0.2rem;
+      padding-left: 1rem;
+      .css-type {
+        border-radius: 6px;
+        padding: 0.1rem 0.2rem 0 0.2rem;
+        &.color {
+          color: $light-text;
+          background: $light-primary500;
+        }
+        &.size {
+          color: $light-text;
+          background: $light-green500;
+        }
+        &.layout {
+          color: $light-text;
+          background: $light-purple300;
+        }
+        &.dark {
+          &.color {
+            color: $dark-text;
+            background: $dark-blue000;
+          }
+          &.size {
+            color: $light-text;
+            background: $dark-green000;
+          }
+          &.layout {
+            color: $dark-text;
+            background: $dark-purple000;
+          }
+        }
+      }
+      .cvt-name {
+        min-width: 6.2rem;
+      }
+      .dv-name {
+        min-width: 3rem;
+      }
+      .css-value {
+        column-gap: 0.5rem;
+      }
+    }
+    .desc {
+      row-gap: 0.2rem;
+      & > ul {
+        padding-left: 1.2rem;
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { SandPackCSS } from '@src/components/SandPackCSS/sandpack-styles';
 import { getTheme } from '@src/app/actions';
 
-import IsomorphicRootLayout from '@src/Isomorphic/layout';
+import IsomorphicRootLayout from '@src/appIsomorphic/layout';
 
 import './globals.scss';
 import './theme.scss';

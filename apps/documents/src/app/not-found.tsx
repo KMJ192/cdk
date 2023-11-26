@@ -1,4 +1,4 @@
-import NotFound from '@src/PageContents/Error/NotFound/NotFound';
+import NotFound from '@src/appIsomorphic/not-found';
 
 function NF() {
   return <NotFound />;

@@ -11,7 +11,7 @@ import APIs from './APIs/APIs';
 import Playground from './Playground/Playground';
 
 import type { PAGE_LAYOUT } from '@src/utils/url';
-import { LAYOUT_CONTENTS, tabOption } from './contents/contents';
+import { LAYOUT_CONTENTS, TAB_OPTIONS } from './contents/contents';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
@@ -52,7 +52,7 @@ function Layout({ type }: Props) {
     if (selectedTab === idx) return;
     setSelectedTab(idx);
     router.push(
-      `${pathname}?${createQueryString('compo', String(tabOption[idx].key))}`,
+      `${pathname}?${createQueryString('compo', String(TAB_OPTIONS[idx].key))}`,
     );
   };
 
@@ -75,7 +75,7 @@ function Layout({ type }: Props) {
       <Spacing className={cx('spacing', 'first')} />
       <Line />
       <Spacing className={cx('spacing', 'second')} />
-      <Tab options={tabOption} selected={selectedTab} onSelect={onSelect} />
+      <Tab options={TAB_OPTIONS} selected={selectedTab} onSelect={onSelect} />
       <Spacing className={cx('spacing', 'third')} />
       <When condition={selectedTab === 0}>
         <Documents type={type} />
