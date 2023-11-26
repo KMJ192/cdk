@@ -4,7 +4,7 @@ import useValueAppState from '@src/store/AppProvider/hooks/useValueAppState';
 
 import Colon from '../Colon';
 
-import { LAYOUT_CONTENTS } from '../../contents/contents';
+import { COMPONENT_CONTENTS } from '../../contents/contents';
 
 import { CSS_VAR_TYPE } from '@src/utils/utils';
 
@@ -18,7 +18,7 @@ type Props = {
 
 function CSSVariablesTable({ type }: Props) {
   const { theme } = useValueAppState();
-  const { cssVar } = LAYOUT_CONTENTS[type];
+  const { cssVar } = COMPONENT_CONTENTS[type];
 
   return (
     <Flex flexDirection='column' className={cx('container')}>

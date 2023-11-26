@@ -11,7 +11,7 @@ type Props = {
 };
 
 function Page({ params }: Props) {
-  if (COMPONENT_CONTENTS[params.slug]) {
+  if (!COMPONENT_CONTENTS[params.slug]) {
     return <NotFoundComponent queryParam={params.slug} />;
   }
 

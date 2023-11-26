@@ -14,6 +14,7 @@ import Playground from './Playground/Playground';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
+import DataTypes from './DataTypes/DataTypes';
 const cx = classNames.bind(style);
 
 type Props = {
@@ -31,8 +32,9 @@ function Components({ type }: Props) {
   const [selectedTab, setSelectedTab] = useState(
     (() => {
       if (curParam === null || curParam === 'docs') return 0;
-      if (curParam === 'apis') return 1;
-      if (curParam === 'playground') return 2;
+      if (curParam === 'data-types') return 1;
+      if (curParam === 'apis') return 2;
+      if (curParam === 'playground') return 3;
       return -1;
     })(),
   );
@@ -58,12 +60,18 @@ function Components({ type }: Props) {
   useEffect(() => {
     if (typeof curParam !== 'string') return;
 
-    if (curParam !== 'docs' && curParam !== 'apis' && curParam !== 'playground')
+    if (
+      curParam !== 'docs' &&
+      curParam !== 'data-types' &&
+      curParam !== 'apis' &&
+      curParam !== 'playground'
+    )
       setSelectedTab(-1);
 
     if (curParam === 'docs') setSelectedTab(0);
-    if (curParam === 'apis') setSelectedTab(1);
-    if (curParam === 'playground') setSelectedTab(2);
+    if (curParam === 'data-types') setSelectedTab(1);
+    if (curParam === 'apis') setSelectedTab(2);
+    if (curParam === 'playground') setSelectedTab(3);
   }, [curParam]);
 
   return (
@@ -80,9 +88,12 @@ function Components({ type }: Props) {
         <Documents type={type} />
       </When>
       <When condition={selectedTab === 1}>
-        <APIs type={type} />
+        <DataTypes type={type} />
       </When>
       <When condition={selectedTab === 2}>
+        <APIs type={type} />
+      </When>
+      <When condition={selectedTab === 3}>
         <Playground type={type} />
       </When>
     </Flex>

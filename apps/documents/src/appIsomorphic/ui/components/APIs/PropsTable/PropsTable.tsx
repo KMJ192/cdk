@@ -3,7 +3,7 @@ import { Flex, Text } from '@cdkit/react-ui';
 
 import useValueAppState from '@src/store/AppProvider/hooks/useValueAppState';
 
-import { LAYOUT_CONTENTS } from '../../contents/contents';
+import { COMPONENT_CONTENTS } from '../../contents/contents';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
@@ -16,7 +16,7 @@ type Props = {
 
 function PropsTable({ type }: Props) {
   const { theme } = useValueAppState();
-  const { props } = LAYOUT_CONTENTS[type];
+  const { props } = COMPONENT_CONTENTS[type];
 
   return (
     <Flex flexDirection='column' className={cx('container')}>
