@@ -31,6 +31,15 @@ const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode = ['<Grid>{children}</Grid>'];
 
+const pgCode = `import { Grid } from '@cdkit/react-ui';
+
+function App() {
+  return <Grid>This is Grid</Grid>;
+}
+
+export default App;
+`;
+
 export const gridContents: PAGE_CONTENTS = {
   pageTitle: 'Grid',
   pageDesc: `"display: grid;"가 지정된 컴포넌트`,
@@ -38,4 +47,5 @@ export const gridContents: PAGE_CONTENTS = {
   props,
   cssVar,
   defaultCode,
+  pgCode,
 };

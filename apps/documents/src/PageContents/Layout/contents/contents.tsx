@@ -46,6 +46,7 @@ type PAGE_CONTENTS = {
   props: Array<PROPS>;
   cssVar?: Array<CSS_VARIABLES>;
   defaultCode: Array<string>;
+  pgCode: string;
 };
 
 const tabOption: Array<TabOption> = [

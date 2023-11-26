@@ -91,6 +91,15 @@ const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode = [`<Float startDirection="lt">{children}</Float>`];
 
+const pgCode = `import { Float } from '@cdkit/react-ui';
+
+function App() {
+  return <Float>This is Float</Float>;
+}
+
+export default App;
+`;
+
 export const floatContents: PAGE_CONTENTS = {
   pageTitle: 'Float',
   pageDesc: `부유 속성 컴포넌트`,
@@ -98,4 +107,5 @@ export const floatContents: PAGE_CONTENTS = {
   props,
   cssVar,
   defaultCode,
+  pgCode,
 };

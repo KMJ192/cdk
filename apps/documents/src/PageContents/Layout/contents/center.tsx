@@ -67,6 +67,15 @@ const defaultCode = [
   '</Center>',
 ];
 
+const pgCode = `import { Center } from '@cdkit/react-ui';
+
+function App() {
+  return <Center>This is Center</Center>;
+}
+
+export default App;
+`;
+
 export const centerContents: PAGE_CONTENTS = {
   pageTitle: 'Center',
   pageDesc: '중앙을 지정하는 컴포넌트',
@@ -74,4 +83,5 @@ export const centerContents: PAGE_CONTENTS = {
   props,
   cssVar,
   defaultCode,
+  pgCode,
 };

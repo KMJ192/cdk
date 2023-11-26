@@ -38,6 +38,15 @@ const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode = ['<Flex>{children}</Flex>'];
 
+const pgCode = `import { Flex } from '@cdkit/react-ui';
+
+function App() {
+  return <Flex>This is Flex</Flex>;
+}
+
+export default App;
+`;
+
 export const flexContents: PAGE_CONTENTS = {
   pageTitle: 'Flex',
   pageDesc: `"display: flex;"가 지정된 컴포넌트`,
@@ -45,4 +54,5 @@ export const flexContents: PAGE_CONTENTS = {
   props,
   cssVar,
   defaultCode,
+  pgCode,
 };

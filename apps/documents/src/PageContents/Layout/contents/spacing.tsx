@@ -55,6 +55,21 @@ const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode = ['<Spacing spacing={0} direction="vertical" unit="px" />'];
 
+const pgCode = `import { Spacing } from '@cdkit/react-ui';
+
+function App() {
+  return (
+    <div>
+      <div>first element</div>
+      <Spacing spacing={30} unit="px"  />
+      <div>second element</div>
+    </div>
+  );
+}
+
+export default App;
+`;
+
 export const spacingContents: PAGE_CONTENTS = {
   pageTitle: 'Spacing',
   pageDesc: `공간을 차지하는 컴포넌트`,
@@ -62,4 +77,5 @@ export const spacingContents: PAGE_CONTENTS = {
   props,
   cssVar,
   defaultCode,
+  pgCode,
 };

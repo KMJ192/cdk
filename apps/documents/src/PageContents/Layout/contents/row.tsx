@@ -45,6 +45,15 @@ const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode = ['<Row>{children}</Row>'];
 
+const pgCode = `import { Row } from '@cdkit/react-ui';
+
+function App() {
+  return <Row>This is Row</Row>;
+}
+
+export default App;
+`;
+
 export const rowContents: PAGE_CONTENTS = {
   pageTitle: 'Row',
   pageDesc: `열을 생성하는 컴포넌트`,
@@ -52,4 +61,5 @@ export const rowContents: PAGE_CONTENTS = {
   props,
   cssVar,
   defaultCode,
+  pgCode,
 };

@@ -50,6 +50,28 @@ const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode = ['<Stack direction="row">{children}</Stack>'];
 
+const pgCode = `import { Stack } from '@cdkit/react-ui';
+
+function App() {
+  return (
+    <>
+      <Stack direction="row">
+        <div>stack-row1</div>
+        <div>stack-row2</div>
+        <div>stack-row3</div>
+      </Stack>
+      <Stack direction="column">
+        <div>stack-column1</div>
+        <div>stack-column2</div>
+        <div>stack-column3</div>
+      </Stack>
+    </>
+  );
+}
+
+export default App;
+`;
+
 export const stackContents: PAGE_CONTENTS = {
   pageTitle: 'Stack',
   pageDesc: `스택을 쌓는 컴포넌트`,
@@ -57,4 +79,5 @@ export const stackContents: PAGE_CONTENTS = {
   props,
   cssVar,
   defaultCode,
+  pgCode,
 };
