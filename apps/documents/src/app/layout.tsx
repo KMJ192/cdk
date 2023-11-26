@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { SandPackCSS } from '@src/components/SandPackCSS/sandpack-styles';
 import { getTheme } from '@src/app/actions';
 
 import IsomorphicRootLayout from '@src/Isomorphic/layout';
@@ -29,6 +30,7 @@ export default async function RootLayout({
           href='https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap'
           rel='stylesheet'
         />
+        <SandPackCSS />
       </head>
       <body data-theme={theme}>
         <IsomorphicRootLayout theme={theme}>{children}</IsomorphicRootLayout>
