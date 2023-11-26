@@ -13,6 +13,7 @@
     "@cdkit/common": "workspace:^",
     "@cdkit/react-modules": "workspace:^",
     "@cdkit/react-ui": "workspace:^",
+    "@codesandbox/sandpack-react": "^2.10.0",
     "axios": "^1.5.1",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.10",
