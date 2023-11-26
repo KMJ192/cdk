@@ -13,7 +13,7 @@ const document: Array<DOCUMENT> = [
 
 const props: Array<PROPS> = [
   {
-    title: 'Grid Props',
+    title: 'Props',
     desc: '',
     element: [
       {

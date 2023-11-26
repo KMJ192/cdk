@@ -1,5 +1,6 @@
 import { Spacing } from '@cdkit/react-ui';
 import type { PROPS, CSS_VARIABLES, DOCUMENT, PAGE_CONTENTS } from './contents';
+import { CSS_VAR_TYPE } from '@src/utils/utils';
 
 const document: Array<DOCUMENT> = [
   {
@@ -23,7 +24,7 @@ const document: Array<DOCUMENT> = [
 
 const props: Array<PROPS> = [
   {
-    title: 'Spacing Props',
+    title: 'Props',
     desc: '',
     element: [
       {
@@ -51,7 +52,20 @@ const props: Array<PROPS> = [
   },
 ];
 
-const cssVar: Array<CSS_VARIABLES> = [];
+const cssVar: Array<CSS_VARIABLES> = [
+  {
+    title: 'CSS Variables',
+    desc: '',
+    element: [
+      {
+        name: '--cdkit-layout-spacing-gap',
+        type: CSS_VAR_TYPE.LAYOUT,
+        defaultValue: '0px',
+        description: ['사이 공간 지정'],
+      },
+    ],
+  },
+];
 
 const defaultCode = ['<Spacing spacing={0} direction="vertical" unit="px" />'];
 

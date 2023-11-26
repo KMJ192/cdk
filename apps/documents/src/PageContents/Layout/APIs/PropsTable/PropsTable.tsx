@@ -7,19 +7,12 @@ import { LAYOUT_CONTENTS } from '../../contents/contents';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
+import Colon from '../Colon';
 const cx = classNames.bind(style);
 
 type Props = {
   type: string;
 };
-
-function Colon() {
-  return (
-    <Text typo='b1' className={cx('colon')}>
-      :
-    </Text>
-  );
-}
 
 function PropsTable({ type }: Props) {
   const { theme } = useValueAppState();
@@ -33,7 +26,7 @@ function PropsTable({ type }: Props) {
             as='ul'
             key={`${title}-${idx}`}
             flexDirection='column'
-            className={cx('props-contents')}
+            className={cx('contents')}
           >
             <Text typo='t1'>{title}</Text>
             <Text typo='s1'>{desc}</Text>
@@ -41,7 +34,7 @@ function PropsTable({ type }: Props) {
               ({ name, type, defaultValue, description, essential }, index) => {
                 return (
                   <Fragment key={`${name}-${index}`}>
-                    <li className={cx('props-name')}>
+                    <li className={cx('name')}>
                       <Text typo='b1'>{name}</Text>
                       {essential && (
                         <Text typo='c1' className={cx('essential', theme)}>
@@ -49,30 +42,29 @@ function PropsTable({ type }: Props) {
                         </Text>
                       )}
                     </li>
-                    <Flex
-                      as='ul'
-                      flexDirection='column'
-                      className={cx('props-info')}
-                    >
+                    <Flex as='ul' flexDirection='column' className={cx('info')}>
                       <li>
                         <Flex>
-                          <Text typo='b3'>타입</Text>
+                          <Text typo='b3' className={cx('type-name')}>
+                            타입
+                          </Text>
                           <Colon />
-                          <Text typo='b3'>{type}</Text>
+                          <Text typo='b3' className={cx('type', theme)}>
+                            {type}
+                          </Text>
                         </Flex>
                       </li>
                       <li>
                         <Flex>
-                          <Text typo='b3'>기본값</Text>
+                          <Text typo='b3' className={cx('dv-name')}>
+                            기본값
+                          </Text>
                           <Colon />
                           <Text typo='b3'>{defaultValue}</Text>
                         </Flex>
                       </li>
                       <li>
-                        <Flex
-                          flexDirection='column'
-                          className={cx('props-desc')}
-                        >
+                        <Flex flexDirection='column' className={cx('desc')}>
                           <Text typo='b3'>설명</Text>
                           <ul>
                             {description.map((desc, i) => {

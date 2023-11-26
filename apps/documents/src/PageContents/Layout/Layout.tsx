@@ -49,6 +49,7 @@ function Layout({ type }: Props) {
   );
 
   const onSelect = (_: TabOptionKey, idx: number) => {
+    if (selectedTab === idx) return;
     setSelectedTab(idx);
     router.push(
       `${pathname}?${createQueryString('compo', String(tabOption[idx].key))}`,

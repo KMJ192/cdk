@@ -1,4 +1,10 @@
-import type { PROPS, CSS_VARIABLES, DOCUMENT, PAGE_CONTENTS } from './contents';
+import { CSS_VAR_TYPE } from '@src/utils/utils';
+import {
+  type PROPS,
+  type CSS_VARIABLES,
+  type DOCUMENT,
+  type PAGE_CONTENTS,
+} from './contents';
 
 const document: Array<DOCUMENT> = [
   {
@@ -12,7 +18,7 @@ const document: Array<DOCUMENT> = [
 
 const props: Array<PROPS> = [
   {
-    title: 'Float Props',
+    title: 'Props',
     desc: '',
     element: [
       {
@@ -87,7 +93,50 @@ const props: Array<PROPS> = [
   },
 ];
 
-const cssVar: Array<CSS_VARIABLES> = [];
+const cssVar: Array<CSS_VARIABLES> = [
+  {
+    title: 'CSS Variables',
+    desc: '',
+    element: [
+      {
+        name: '--cdkit-layout-float-left',
+        type: CSS_VAR_TYPE.LAYOUT,
+        defaultValue: '0px',
+        description: [
+          '화면 왼쪽 기준 위치 지정',
+          'startDirection에 "l"이 포함된 경우 적용',
+        ],
+      },
+      {
+        name: '--cdkit-layout-float-right',
+        type: CSS_VAR_TYPE.LAYOUT,
+        defaultValue: '0px',
+        description: [
+          '화면 오른쪽 기준 위치 지정',
+          'startDirection에 "r"이 포함된 경우 적용',
+        ],
+      },
+      {
+        name: '--cdkit-layout-float-top',
+        type: CSS_VAR_TYPE.LAYOUT,
+        defaultValue: '0px',
+        description: [
+          '화면 상단 기준 위치 지정',
+          'startDirection에 "t"가 포함된 경우 적용',
+        ],
+      },
+      {
+        name: '--cdkit-layout-float-bottom',
+        type: CSS_VAR_TYPE.LAYOUT,
+        defaultValue: '0px',
+        description: [
+          '화면 하단 기준 위치 지정',
+          'startDirection에 "b"가 포함된 경우 적용',
+        ],
+      },
+    ],
+  },
+];
 
 const defaultCode = [`<Float startDirection="lt">{children}</Float>`];
 

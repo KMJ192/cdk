@@ -33,9 +33,9 @@ type CSS_VARIABLES = {
   desc: string;
   element: Array<{
     name: string;
-    type: 'color' | 'size';
+    type: 'color' | 'size' | 'layout';
     defaultValue: string;
-    description: string;
+    description: Array<string>;
   }>;
 };
 
@@ -44,7 +44,7 @@ type PAGE_CONTENTS = {
   pageDesc: string;
   document: Array<DOCUMENT>;
   props: Array<PROPS>;
-  cssVar?: Array<CSS_VARIABLES>;
+  cssVar: Array<CSS_VARIABLES>;
   defaultCode: Array<string>;
   pgCode: string;
 };
@@ -52,7 +52,7 @@ type PAGE_CONTENTS = {
 const tabOption: Array<TabOption> = [
   {
     key: 'docs',
-    contents: <Text typo='b2'>문서</Text>,
+    contents: <Text typo='b2'>Documents</Text>,
   },
   {
     key: 'apis',
@@ -60,7 +60,7 @@ const tabOption: Array<TabOption> = [
   },
   {
     key: 'playground',
-    contents: <Text typo='b2'>플레이그라운드</Text>,
+    contents: <Text typo='b2'>Playground</Text>,
   },
 ];
 

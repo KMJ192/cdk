@@ -13,7 +13,7 @@ const document: Array<DOCUMENT> = [
 
 const props: Array<PROPS> = [
   {
-    title: 'Flex Props',
+    title: 'Props',
     desc: '',
     element: [
       {

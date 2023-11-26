@@ -1,5 +1,6 @@
 import { Row } from '@cdkit/react-ui';
 import type { PROPS, CSS_VARIABLES, DOCUMENT, PAGE_CONTENTS } from './contents';
+import { CSS_VAR_TYPE } from '@src/utils/utils';
 
 const document: Array<DOCUMENT> = [
   {
@@ -13,7 +14,7 @@ const document: Array<DOCUMENT> = [
 
 const props: Array<PROPS> = [
   {
-    title: 'Flex Props',
+    title: 'Props',
     desc: '',
     element: [
       {
@@ -41,7 +42,26 @@ const props: Array<PROPS> = [
   },
 ];
 
-const cssVar: Array<CSS_VARIABLES> = [];
+const cssVar: Array<CSS_VARIABLES> = [
+  {
+    title: 'CSS Variables',
+    desc: '',
+    element: [
+      {
+        name: '--cdkit-color-row-bg',
+        type: CSS_VAR_TYPE.COLOR,
+        defaultValue: '#e7f8ff',
+        description: ['배경 색상'],
+      },
+      {
+        name: '--upcast-color-row-box-shadow',
+        type: CSS_VAR_TYPE.COLOR,
+        defaultValue: '0px 3px 6px rgba(64, 64, 64, 0.2)',
+        description: ['그림자 색상'],
+      },
+    ],
+  },
+];
 
 const defaultCode = ['<Row>{children}</Row>'];
 
