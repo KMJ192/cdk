@@ -3,21 +3,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@app/*": [
-        "./app/*"
-      ],
-      "@src/*": [
-        "src/*"
-      ],
-      "@static/*": [
-        "static/*"
-      ],
+      "@app/*": ["./app/*"],
+      "@src/*": ["src/*"],
+      "@static/*": ["static/*"],
+      "@css/*": ["../../packages/style/src/css/*"]
     },
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "bundler",
     "jsx": "preserve",
@@ -28,13 +19,6 @@
     ],
     "resolveJsonModule": true
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
