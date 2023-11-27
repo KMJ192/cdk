@@ -50,13 +50,11 @@ const cssVar: Array<CSS_VARIABLES> = [
       {
         name: '--cdkit-color-row-bg',
         type: CSS_VAR_TYPE.COLOR,
-        defaultValue: '#e7f8ff',
         description: ['배경 색상'],
       },
       {
         name: '--upcast-color-row-box-shadow',
         type: CSS_VAR_TYPE.COLOR,
-        defaultValue: '0px 3px 6px rgba(64, 64, 64, 0.2)',
         description: ['그림자 색상'],
       },
     ],

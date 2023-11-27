@@ -1,12 +1,10 @@
 import { Fragment } from 'react';
-import { Center, Flex, Text } from '@cdkit/react-ui';
+import { Flex, Text } from '@cdkit/react-ui';
 import useValueAppState from '@src/store/AppProvider/hooks/useValueAppState';
 
 import Colon from '../Colon';
 
 import { LAYOUT_CONTENTS } from '../../contents/contents';
-
-import { CSS_VAR_TYPE } from '@src/utils/utils';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
@@ -32,7 +30,7 @@ function CSSVariablesTable({ type }: Props) {
           >
             <Text typo='t1'>{title}</Text>
             <Text typo='s1'>{desc}</Text>
-            {element.map(({ name, type, defaultValue, description }, index) => {
+            {element.map(({ name, type, description }, index) => {
               return (
                 <Fragment key={`${name}-${index}`}>
                   <li className={cx('name')}>
@@ -48,31 +46,6 @@ function CSSVariablesTable({ type }: Props) {
                         <Text typo='b3' className={cx('css-type', type, theme)}>
                           {type}
                         </Text>
-                      </Flex>
-                    </li>
-                    <li>
-                      <Flex>
-                        <Text typo='b3' className={cx('dv-name')}>
-                          기본값
-                        </Text>
-                        <Colon />
-                        <Center className={cx('css-value')} horizontal={false}>
-                          {type === CSS_VAR_TYPE.COLOR && (
-                            <div
-                              style={{
-                                width: '0.675rem',
-                                height: '0.675rem',
-                                borderRadius: '2px',
-                                boxShadow:
-                                  theme === 'light'
-                                    ? '0px 3px 6px rgba(0, 0, 0, 0.4)'
-                                    : '0px 3px 6px rgba(0, 0, 0, 0.9)',
-                                background: defaultValue,
-                              }}
-                            ></div>
-                          )}
-                          <Text typo='b3'>{defaultValue}</Text>
-                        </Center>
                       </Flex>
                     </li>
                     <li>

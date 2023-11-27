@@ -1,0 +1,15 @@
+.button-document {
+  gap: 1rem;
+  flex-wrap: wrap;
+  .button-variant,
+  .button-shape {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+.badge,
+.checkbox {
+  gap: 1rem;
+  flex-wrap: wrap;
+}

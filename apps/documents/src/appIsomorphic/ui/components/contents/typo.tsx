@@ -9,9 +9,9 @@ import type {
 
 const document: Array<DOCUMENT> = [
   {
-    title: 'Text',
-    subtitle: '',
-    desc: ['text의 크기, 굵기를 지정한 컴포넌트 입니다.'],
+    title: 'Text Example',
+    subtitle: 'text의 크기, 굵기를 지정한 컴포넌트 입니다.',
+    desc: [],
     view: (
       <Flex flexDirection='column'>
         <Text typo='h1'>This is Typo [h1]</Text>

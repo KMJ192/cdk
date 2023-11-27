@@ -60,7 +60,6 @@ const cssVar: Array<CSS_VARIABLES> = [
       {
         name: '--cdkit-layout-spacing-gap',
         type: CSS_VAR_TYPE.LAYOUT,
-        defaultValue: '0px',
         description: ['사이 공간 지정'],
       },
     ],

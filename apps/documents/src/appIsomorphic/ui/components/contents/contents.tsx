@@ -1,6 +1,22 @@
 import type { ReactNode } from 'react';
 import { TabOption, Text } from '@cdkit/react-ui';
+
 import { typoContents } from './typo';
+import { buttonContents } from './button';
+import { badgeContents } from './badge';
+import { inputContents } from './input';
+import { checkboxContents } from './checkbox';
+import { popupContents } from './popup';
+import { progressBarContents } from './progressBar';
+import { radioContents } from './radio';
+import { radioGroupContents } from './radioGroup';
+import { spinnerContents } from './spinner';
+import { switchContents } from './switch';
+import { selectContents } from './select';
+import { tabContents } from './tab';
+import { dataTableContents } from './dataTable';
+import { textareaContents } from './textarea';
+import { cardContents } from './card';
 
 type DOCUMENT = {
   title: string;
@@ -34,7 +50,6 @@ type CSS_VARIABLES = {
   element: Array<{
     name: string;
     type: 'color' | 'size' | 'layout';
-    defaultValue: string;
     description: Array<string>;
   }>;
 };
@@ -53,11 +68,11 @@ type PAGE_CONTENTS = {
 const TAB_OPTIONS: Array<TabOption> = [
   {
     key: 'docs',
-    contents: <Text typo='b2'>Documents</Text>,
+    contents: <Text typo='b2'>문서</Text>,
   },
   {
     key: 'data-types',
-    contents: <Text typo='b2'>DataTypes</Text>,
+    contents: <Text typo='b2'>타입</Text>,
   },
   {
     key: 'apis',
@@ -65,26 +80,27 @@ const TAB_OPTIONS: Array<TabOption> = [
   },
   {
     key: 'playground',
-    contents: <Text typo='b2'>Playground</Text>,
+    contents: <Text typo='b2'>테스트</Text>,
   },
 ];
 
 const COMPONENT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
   typo: typoContents,
-  badge: typoContents,
-  button: typoContents,
-  input: typoContents,
-  checkbox: typoContents,
-  popup: typoContents,
-  'progress-bar': typoContents,
-  radio: typoContents,
-  'radio-group': typoContents,
-  spinner: typoContents,
-  switch: typoContents,
-  select: typoContents,
-  tab: typoContents,
-  'data-table': typoContents,
-  textarea: typoContents,
+  badge: badgeContents,
+  button: buttonContents,
+  input: inputContents,
+  card: cardContents,
+  checkbox: checkboxContents,
+  popup: popupContents,
+  'progress-bar': progressBarContents,
+  radio: radioContents,
+  'radio-group': radioGroupContents,
+  spinner: spinnerContents,
+  switch: switchContents,
+  select: selectContents,
+  tab: tabContents,
+  'data-table': dataTableContents,
+  textarea: textareaContents,
 };
 
 export type { DOCUMENT, DATA_TYPE, PROPS, CSS_VARIABLES, PAGE_CONTENTS };

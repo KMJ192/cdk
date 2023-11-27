@@ -34,7 +34,6 @@ type CSS_VARIABLES = {
   element: Array<{
     name: string;
     type: 'color' | 'size' | 'layout';
-    defaultValue: string;
     description: Array<string>;
   }>;
 };
@@ -52,7 +51,7 @@ type PAGE_CONTENTS = {
 const TAB_OPTIONS: Array<TabOption> = [
   {
     key: 'docs',
-    contents: <Text typo='b2'>Documents</Text>,
+    contents: <Text typo='b2'>문서</Text>,
   },
   {
     key: 'apis',
@@ -60,7 +59,7 @@ const TAB_OPTIONS: Array<TabOption> = [
   },
   {
     key: 'playground',
-    contents: <Text typo='b2'>Playground</Text>,
+    contents: <Text typo='b2'>테스트</Text>,
   },
 ];
 

@@ -55,7 +55,6 @@ const cssVar: Array<CSS_VARIABLES> = [
       {
         name: '--cdkit-layout-stack-gap',
         type: CSS_VAR_TYPE.LAYOUT,
-        defaultValue: '0px',
         description: ['	스택 자식 요소 사이 공간 지정'],
       },
     ],
