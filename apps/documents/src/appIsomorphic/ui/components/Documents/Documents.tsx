@@ -22,7 +22,7 @@ function Documents({ type }: Props) {
         const key = `${title}-${idx}`;
         return (
           <Flex className={cx('doc-contents')} key={key} flexDirection='column'>
-            <Text typo='h4'>{title}</Text>
+            <Text typo='t1'>{title}</Text>
             <Spacing spacing={0.5} unit='rem' />
             <Text typo='b1'>{subtitle}</Text>
             <Spacing spacing={0.75} unit='rem' />

@@ -42,16 +42,24 @@ const uiComponentGroup: Array<NavGroup> = [
     contents: 'Typo',
   },
   {
-    url: URL.button,
-    contents: 'Button',
-  },
-  {
     url: URL.badge,
     contents: 'Badge',
   },
   {
+    url: URL.button,
+    contents: 'Button',
+  },
+  {
+    url: URL.card,
+    contents: 'Card',
+  },
+  {
     url: URL.checkbox,
     contents: 'Checkbox',
+  },
+  {
+    url: URL.dataTable,
+    contents: 'DataTable',
   },
   {
     url: URL.input,
@@ -74,6 +82,10 @@ const uiComponentGroup: Array<NavGroup> = [
     contents: 'RadioGroup',
   },
   {
+    url: URL.select,
+    contents: 'Select',
+  },
+  {
     url: URL.spinner,
     contents: 'Spinner',
   },
@@ -82,16 +94,8 @@ const uiComponentGroup: Array<NavGroup> = [
     contents: 'Switch',
   },
   {
-    url: URL.select,
-    contents: 'Select',
-  },
-  {
     url: URL.tab,
     contents: 'Tab',
-  },
-  {
-    url: URL.dataTable,
-    contents: 'DataTable',
   },
   {
     url: URL.textarea,

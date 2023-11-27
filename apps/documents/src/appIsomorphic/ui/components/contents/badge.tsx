@@ -12,8 +12,8 @@ import style from './style.module.scss';
 
 const document: Array<DOCUMENT> = [
   {
-    title: 'Badge Example',
-    subtitle: 'Badge 코드 예시 입니다.',
+    title: 'Example',
+    subtitle: 'Badge 코드 예시입니다.',
     desc: [],
     view: (
       <Flex className={style.badge}>

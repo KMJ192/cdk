@@ -1,3 +1,8 @@
+import {
+  DataTable,
+  DataTableContainer,
+  useDataTablePagination,
+} from '@cdkit/react-ui';
 import type {
   CSS_VARIABLES,
   DATA_TYPE,
@@ -7,59 +12,703 @@ import type {
 } from './contents';
 import { CSS_VAR_TYPE } from '@src/utils/utils';
 
+const UseDataTablePaginationExample = () => {
+  const paging = useDataTablePagination({
+    lastPageIndex: 55,
+  });
+
+  return (
+    <DataTableContainer>
+      <DataTable.Pagination {...paging}></DataTable.Pagination>
+    </DataTableContainer>
+  );
+};
+
 const document: Array<DOCUMENT> = [
   {
-    title: 'Example',
-    subtitle: '',
+    title: 'DataTable',
+    subtitle: 'DataTable 코드 예시입니다.',
     desc: [],
-    view: '',
-    code: [],
+    view: (
+      <DataTableContainer>
+        <DataTable>
+          <DataTable.Caption>caption</DataTable.Caption>
+          <DataTable.Thead>
+            <DataTable.Tr>
+              <DataTable.Th>head1</DataTable.Th>
+              <DataTable.Th>head2</DataTable.Th>
+              <DataTable.Th>head3</DataTable.Th>
+            </DataTable.Tr>
+          </DataTable.Thead>
+          <DataTable.Tbody>
+            <DataTable.Tr>
+              <DataTable.Td>data1</DataTable.Td>
+              <DataTable.Td>data2</DataTable.Td>
+              <DataTable.Td>data3</DataTable.Td>
+            </DataTable.Tr>
+            <DataTable.Tr>
+              <DataTable.Td>data1</DataTable.Td>
+              <DataTable.Td>data2</DataTable.Td>
+              <DataTable.Td>data3</DataTable.Td>
+            </DataTable.Tr>
+            <DataTable.Tr disabled>
+              <DataTable.Td>data1</DataTable.Td>
+              <DataTable.Td>data2</DataTable.Td>
+              <DataTable.Td>data3</DataTable.Td>
+            </DataTable.Tr>
+            <DataTable.Tr>
+              <DataTable.Td>data1</DataTable.Td>
+              <DataTable.Td>data2</DataTable.Td>
+              <DataTable.Td>data3</DataTable.Td>
+            </DataTable.Tr>
+          </DataTable.Tbody>
+          <DataTable.Tfoot>
+            <DataTable.Tr>
+              <DataTable.Th>foot1</DataTable.Th>
+              <DataTable.Th>foot2</DataTable.Th>
+              <DataTable.Th>foot3</DataTable.Th>
+            </DataTable.Tr>
+          </DataTable.Tfoot>
+        </DataTable>
+        <DataTable.Pagination lastPageIndex={55} />
+      </DataTableContainer>
+    ),
+    code: [
+      `<DataTableContainer>`,
+      `  <DataTable>`,
+      `    <DataTable.Caption>caption</DataTable.Caption>`,
+      `    <DataTable.Thead>`,
+      `      <DataTable.Tr>`,
+      `        <DataTable.Th>head1</DataTable.Th>`,
+      `        <DataTable.Th>head2</DataTable.Th>`,
+      `        <DataTable.Th>head3</DataTable.Th>`,
+      `      </DataTable.Tr>`,
+      `    </DataTable.Thead>`,
+      `    <DataTable.Tbody>`,
+      `      <DataTable.Tr>`,
+      `        <DataTable.Td>data1</DataTable.Td>`,
+      `        <DataTable.Td>data2</DataTable.Td>`,
+      `        <DataTable.Td>data3</DataTable.Td>`,
+      `      </DataTable.Tr>`,
+      `      <DataTable.Tr>`,
+      `        <DataTable.Td>data1</DataTable.Td>`,
+      `        <DataTable.Td>data2</DataTable.Td>`,
+      `        <DataTable.Td>data3</DataTable.Td>`,
+      `      </DataTable.Tr>`,
+      `      <DataTable.Tr disabled>`,
+      `        <DataTable.Td>data1</DataTable.Td>`,
+      `        <DataTable.Td>data2</DataTable.Td>`,
+      `        <DataTable.Td>data3</DataTable.Td>`,
+      `      </DataTable.Tr>`,
+      `      <DataTable.Tr>`,
+      `        <DataTable.Td>data1</DataTable.Td>`,
+      `        <DataTable.Td>data2</DataTable.Td>`,
+      `        <DataTable.Td>data3</DataTable.Td>`,
+      `      </DataTable.Tr>`,
+      `    </DataTable.Tbody>`,
+      `    <DataTable.Tfoot>`,
+      `      <DataTable.Tr>`,
+      `        <DataTable.Th>foot1</DataTable.Th>`,
+      `        <DataTable.Th>foot2</DataTable.Th>`,
+      `        <DataTable.Th>foot3</DataTable.Th>`,
+      `      </DataTable.Tr>`,
+      `    </DataTable.Tfoot>`,
+      `  </DataTable>`,
+      `  <DataTable.Pagination lastPageIndex={55} />`,
+      `</DataTableContainer>`,
+    ],
+  },
+  {
+    title: 'DataTableContainer',
+    subtitle: '테이블을 감싸는 컨테이너 입니다.',
+    desc: [],
+    view: <DataTableContainer>DataTable Container</DataTableContainer>,
+    code: ['<DataTableContainer>DataTable Container</DataTableContainer>'],
+  },
+  {
+    title: 'Caption',
+    subtitle: 'DataTable.Caption 컴포넌트 입니다.',
+    desc: [],
+    view: (
+      <DataTableContainer>
+        <DataTable>
+          <DataTable.Caption>caption</DataTable.Caption>
+        </DataTable>
+      </DataTableContainer>
+    ),
+    code: [
+      `<DataTableContainer>`,
+      `  <DataTable>`,
+      `    <DataTable.Caption>Caption</DataTable.Caption>`,
+      `  </DataTable>`,
+      `</DataTableContainer>`,
+    ],
+  },
+  {
+    title: 'Thead',
+    subtitle: 'DataTable.Thead 컴포넌트 입니다.',
+    desc: [],
+    view: (
+      <DataTableContainer>
+        <DataTable>
+          <DataTable.Thead>
+            <DataTable.Tr>
+              <DataTable.Th>head1</DataTable.Th>
+              <DataTable.Th>head2</DataTable.Th>
+              <DataTable.Th>head3</DataTable.Th>
+            </DataTable.Tr>
+          </DataTable.Thead>
+        </DataTable>
+      </DataTableContainer>
+    ),
+    code: [
+      `<DataTableContainer>`,
+      `  <DataTable>`,
+      `    <DataTable.Thead>`,
+      `      <DataTable.Tr>`,
+      `        <DataTable.Th>head1</DataTable.Th>`,
+      `        <DataTable.Th>head2</DataTable.Th>`,
+      `        <DataTable.Th>head3</DataTable.Th>`,
+      `      </DataTable.Tr>`,
+      `    </DataTable.Thead>`,
+      `  </DataTable>`,
+      `</DataTableContainer>`,
+    ],
+  },
+  {
+    title: 'Tbody',
+    subtitle: 'DataTable.Tbody 컴포넌트 입니다.',
+    desc: [],
+    view: (
+      <DataTableContainer>
+        <DataTable>
+          <DataTable.Tbody>
+            <DataTable.Tr>
+              <DataTable.Td>data1</DataTable.Td>
+              <DataTable.Td>data2</DataTable.Td>
+              <DataTable.Td>data3</DataTable.Td>
+            </DataTable.Tr>
+            <DataTable.Tr>
+              <DataTable.Td>data1</DataTable.Td>
+              <DataTable.Td>data2</DataTable.Td>
+              <DataTable.Td>data3</DataTable.Td>
+            </DataTable.Tr>
+            <DataTable.Tr disabled>
+              <DataTable.Td>data1</DataTable.Td>
+              <DataTable.Td>data2</DataTable.Td>
+              <DataTable.Td>data3</DataTable.Td>
+            </DataTable.Tr>
+            <DataTable.Tr>
+              <DataTable.Td>data1</DataTable.Td>
+              <DataTable.Td>data2</DataTable.Td>
+              <DataTable.Td>data3</DataTable.Td>
+            </DataTable.Tr>
+          </DataTable.Tbody>
+        </DataTable>
+      </DataTableContainer>
+    ),
+    code: [
+      `<DataTableContainer>`,
+      `  <DataTable>`,
+      `      <DataTable.Tbody>`,
+      `          <DataTable.Tr>`,
+      `              <DataTable.Td>data1</DataTable.Td>`,
+      `              <DataTable.Td>data2</DataTable.Td>`,
+      `              <DataTable.Td>data3</DataTable.Td>`,
+      `          </DataTable.Tr>`,
+      `          <DataTable.Tr>`,
+      `              <DataTable.Td>data1</DataTable.Td>`,
+      `              <DataTable.Td>data2</DataTable.Td>`,
+      `              <DataTable.Td>data3</DataTable.Td>`,
+      `          </DataTable.Tr>`,
+      `          <DataTable.Tr disabled>`,
+      `              <DataTable.Td>data1</DataTable.Td>`,
+      `              <DataTable.Td>data2</DataTable.Td>`,
+      `              <DataTable.Td>data3</DataTable.Td>`,
+      `          </DataTable.Tr>`,
+      `          <DataTable.Tr>`,
+      `              <DataTable.Td>data1</DataTable.Td>`,
+      `              <DataTable.Td>data2</DataTable.Td>`,
+      `              <DataTable.Td>data3</DataTable.Td>`,
+      `          </DataTable.Tr>`,
+      `      </DataTable.Tbody>`,
+      `  </DataTable>`,
+      `</DataTableContainer>`,
+    ],
+  },
+  {
+    title: 'Tfoot',
+    subtitle: 'DataTable.Tfoot 컴포넌트 입니다.',
+    desc: [],
+    view: (
+      <DataTableContainer>
+        <DataTable>
+          <DataTable.Tfoot>
+            <DataTable.Tr>
+              <DataTable.Th>foot1</DataTable.Th>
+              <DataTable.Th>foot2</DataTable.Th>
+              <DataTable.Th>foot3</DataTable.Th>
+            </DataTable.Tr>
+          </DataTable.Tfoot>
+        </DataTable>
+      </DataTableContainer>
+    ),
+    code: [
+      `<DataTableContainer>`,
+      `  <DataTable>`,
+      `    <DataTable.Tfoot>`,
+      `      <DataTable.Tr>`,
+      `        <DataTable.Th>foot1</DataTable.Th>`,
+      `        <DataTable.Th>foot2</DataTable.Th>`,
+      `        <DataTable.Th>foot3</DataTable.Th>`,
+      `      </DataTable.Tr>`,
+      `    </DataTable.Tfoot>`,
+      `  </DataTable>`,
+      `</DataTableContainer>`,
+    ],
+  },
+  {
+    title: 'Pagination',
+    subtitle: 'DataTable.Pagination 컴포넌트 입니다.',
+    desc: [],
+    view: (
+      <DataTableContainer>
+        <DataTable.Pagination lastPageIndex={55} />
+      </DataTableContainer>
+    ),
+    code: [
+      `<DataTableContainer>`,
+      `  <DataTable.Pagination lastPageIndex={55} />`,
+      `</DataTableContainer>`,
+    ],
+  },
+  {
+    title: 'useDataTablePagination',
+    subtitle: 'Pagination과 연계할 수 있는 hook 입니다.',
+    desc: [],
+    view: <UseDataTablePaginationExample />,
+    code: [
+      `const {`,
+      `  selectedPageIndex,`,
+      `  currentPaging,`,
+      `  lastPageIndex,`,
+      `  onClickPaging,`,
+      `  onClickPageIndex`,
+      `} = useDataTablePagination({`,
+      `  lastPageIndex: 55,`,
+      `});`,
+      ``,
+      `<DataTableContainer>`,
+      `  <DataTable.Pagination`,
+      `    selectedPageIndex={selectedPageIndex}`,
+      `    currentPaging={currentPaging}`,
+      `    lastPageIndex={lastPageIndex}`,
+      `    onClickPaging={onClickPaging}`,
+      `    onClickPageIndex={onClickPageIndex}`,
+      `  ></DataTable.Pagination>`,
+      `</DataTableContainer>`,
+    ],
   },
 ];
 
-const dataType: Array<DATA_TYPE> = [
-  {
-    name: '',
-    description: '',
-    code: [''],
-  },
-];
+const dataType: Array<DATA_TYPE> = [];
 
 const props: Array<PROPS> = [
   {
-    title: 'Props',
-    desc: '',
-    element: [],
-  },
-];
-
-const cssVar: Array<CSS_VARIABLES> = [
-  {
-    title: '',
+    title: 'DataTableContainer Props',
     desc: '',
     element: [
       {
-        name: '',
-        type: CSS_VAR_TYPE.COLOR,
-        description: [],
+        name: 'children',
+        type: 'React.ReactNode',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['Children 컴포넌트'],
+      },
+    ],
+  },
+  {
+    title: 'DataTable Props',
+    desc: '',
+    element: [
+      {
+        name: 'children',
+        type: 'React.ReactNode',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['Children 컴포넌트'],
+      },
+    ],
+  },
+  {
+    title: 'Caption Props',
+    desc: '',
+    element: [
+      {
+        name: 'children',
+        type: 'React.ReactNode',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['Children 컴포넌트'],
+      },
+    ],
+  },
+  {
+    title: 'Thead Props',
+    desc: '',
+    element: [
+      {
+        name: 'children',
+        type: 'React.ReactNode',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['Children 컴포넌트'],
+      },
+    ],
+  },
+  {
+    title: 'Tbody Props',
+    desc: '',
+    element: [
+      {
+        name: 'children',
+        type: 'React.ReactNode',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['Children 컴포넌트'],
+      },
+    ],
+  },
+  {
+    title: 'Tfoot Props',
+    desc: '',
+    element: [
+      {
+        name: 'children',
+        type: 'React.ReactNode',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['Children 컴포넌트'],
+      },
+    ],
+  },
+  {
+    title: 'Th Props',
+    desc: '',
+    element: [
+      {
+        name: 'children',
+        type: 'React.ReactNode',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['Children 컴포넌트'],
+      },
+    ],
+  },
+  {
+    title: 'Tr Props',
+    desc: '',
+    element: [
+      {
+        name: 'children',
+        type: 'React.ReactNode',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['Children 컴포넌트'],
+      },
+      {
+        name: 'disabled',
+        type: 'boolean',
+        essential: false,
+        defaultValue: 'false',
+        description: ['비활성화 여부'],
+      },
+    ],
+  },
+  {
+    title: 'Td Props',
+    desc: '',
+    element: [
+      {
+        name: 'children',
+        type: 'React.ReactNode',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['Children 컴포넌트'],
+      },
+    ],
+  },
+  {
+    title: 'Pagination Props',
+    desc: '',
+    element: [
+      {
+        name: 'selectedPageIndex',
+        type: 'number',
+        essential: false,
+        defaultValue: '1',
+        description: ['선택된 페이지 인덱스'],
+      },
+      {
+        name: 'currentPaging',
+        type: 'number',
+        essential: false,
+        defaultValue: '1',
+        description: ['페이징 된 숫자'],
+      },
+      {
+        name: 'lastPageIndex',
+        type: 'number',
+        essential: false,
+        defaultValue: '1',
+        description: ['마지막 페이지 인덱스'],
+      },
+      {
+        name: 'onClickPaging',
+        type: '(move: "prev" | "next" | "first" | "last") => void',
+        essential: false,
+        defaultValue: '() => {}',
+        description: ['페이지 이동 아이콘 클릭 이벤트 수신기'],
+      },
+      {
+        name: 'onClickPageIndex',
+        type: '(idx: number) => void',
+        essential: false,
+        defaultValue: '() => {}',
+        description: ['	페이지 인덱스 클릭 이벤트 수신기'],
       },
     ],
   },
 ];
 
-const defaultCode: Array<string> = [];
+const cssVar: Array<CSS_VARIABLES> = [
+  {
+    title: 'CSS Variables',
+    desc: '',
+    element: [
+      {
+        name: '--cdkit-color-data-table-bg',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['테이블 배경 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-border',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['테이블 경계선 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-caption-text',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['캡션 글자 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-header-bg',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['Header 배경 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-header-text',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['Header 글자 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-footer-bg',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['Footer 배경 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-footer-text',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['Footer 글자 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-divide-line',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['Row 경계선 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-row-bg',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['Row 배경 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-row-bg-hover',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['Row 배경 색상', '마우스 호버'],
+      },
+      {
+        name: '--cdkit-color-data-table-row-bg-disabled',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['Row 배경 색상', '비활성화'],
+      },
+      {
+        name: '--cdkit-color-data-table-row-text',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['Row 글자 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-row-text-hover',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['Row 글자 색상', '마우스 호버'],
+      },
+      {
+        name: '--cdkit-color-data-table-row-text-disabled',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['Row 글자 색상', '비활성화'],
+      },
+      {
+        name: '--cdkit-color-data-table-pagination-index-bg',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['페이지네이션 목록 배경 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-pagination-index-bg-selected',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['페이지네이션 목록 배경 색상', '선택됨'],
+      },
+      {
+        name: '--cdkit-color-data-table-pagination-index-bg-disabled',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['페이지네이션 목록 배경 색상', '비활성화'],
+      },
+      {
+        name: '--cdkit-color-data-table-pagination-index-bg-hover',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['페이지네이션 목록 배경 색상', '마우스 호버'],
+      },
+      {
+        name: '--cdkit-color-data-table-pagination-index-text',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['페이지네이션 목록 글자 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-pagination-index-text-selected',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['페이지네이션 목록 글자 색상', '선택됨'],
+      },
+      {
+        name: '--cdkit-color-data-table-pagination-index-text-disabled',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['페이지네이션 목록 글자 색상', '비활성화'],
+      },
+      {
+        name: '--cdkit-color-data-table-pagination-index-text-hover',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['페이지네이션 목록 글자 색상', '마우스 호버'],
+      },
+      {
+        name: '--cdkit-color-data-table-pagination-arrow',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['페이지네이션 화살표 색상'],
+      },
+      {
+        name: '--cdkit-color-data-table-pagination-arrow-disabled',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['페이지네이션 화살표 색상', '비활성화'],
+      },
+    ],
+  },
+];
 
-const pgCode = `import { Button } from '@cdkit/react-ui';
+const defaultCode: Array<string> = [
+  `<DataTableContainer>`,
+  `  <DataTable>`,
+  `    <DataTable.Caption>caption</DataTable.Caption>`,
+  `    <DataTable.Thead>`,
+  `      <DataTable.Tr>`,
+  `        <DataTable.Th>head1</DataTable.Th>`,
+  `        <DataTable.Th>head2</DataTable.Th>`,
+  `        <DataTable.Th>head3</DataTable.Th>`,
+  `      </DataTable.Tr>`,
+  `    </DataTable.Thead>`,
+  `    <DataTable.Tbody>`,
+  `      <DataTable.Tr>`,
+  `        <DataTable.Td>data1</DataTable.Td>`,
+  `        <DataTable.Td>data2</DataTable.Td>`,
+  `        <DataTable.Td>data3</DataTable.Td>`,
+  `      </DataTable.Tr>`,
+  `      <DataTable.Tr>`,
+  `        <DataTable.Td>data1</DataTable.Td>`,
+  `        <DataTable.Td>data2</DataTable.Td>`,
+  `        <DataTable.Td>data3</DataTable.Td>`,
+  `      </DataTable.Tr>`,
+  `      <DataTable.Tr disabled>`,
+  `        <DataTable.Td>data1</DataTable.Td>`,
+  `        <DataTable.Td>data2</DataTable.Td>`,
+  `        <DataTable.Td>data3</DataTable.Td>`,
+  `      </DataTable.Tr>`,
+  `      <DataTable.Tr>`,
+  `        <DataTable.Td>data1</DataTable.Td>`,
+  `        <DataTable.Td>data2</DataTable.Td>`,
+  `        <DataTable.Td>data3</DataTable.Td>`,
+  `      </DataTable.Tr>`,
+  `    </DataTable.Tbody>`,
+  `    <DataTable.Tfoot>`,
+  `      <DataTable.Tr>`,
+  `        <DataTable.Th>foot1</DataTable.Th>`,
+  `        <DataTable.Th>foot2</DataTable.Th>`,
+  `        <DataTable.Th>foot3</DataTable.Th>`,
+  `      </DataTable.Tr>`,
+  `    </DataTable.Tfoot>`,
+  `  </DataTable>`,
+  `  <DataTable.Pagination />`,
+  `</DataTableContainer>`,
+];
+
+const pgCode = `import {
+  DataTable, 
+  DataTableContainer, 
+  useDataTablePagination,
+} from '@cdkit/react-ui';
 
 function App() {
+  const paging = useDataTablePagination({
+    lastPageIndex: 55,
+  });
+
   return (
-    <Button 
-      variant='primary'
-      shape='rect'
-      loading={false}
-    >
-      Button
-    </Button>
+    <DataTableContainer>
+      <DataTable>
+        <DataTable.Caption>caption</DataTable.Caption>
+        <DataTable.Thead>
+          <DataTable.Tr>
+            <DataTable.Th>head1</DataTable.Th>
+            <DataTable.Th>head2</DataTable.Th>
+            <DataTable.Th>head3</DataTable.Th>
+          </DataTable.Tr>
+        </DataTable.Thead>
+        <DataTable.Tbody>
+          <DataTable.Tr>
+            <DataTable.Td>data1</DataTable.Td>
+            <DataTable.Td>data2</DataTable.Td>
+            <DataTable.Td>data3</DataTable.Td>
+          </DataTable.Tr>
+          <DataTable.Tr>
+            <DataTable.Td>data1</DataTable.Td>
+            <DataTable.Td>data2</DataTable.Td>
+            <DataTable.Td>data3</DataTable.Td>
+          </DataTable.Tr>
+          <DataTable.Tr disabled>
+            <DataTable.Td>data1</DataTable.Td>
+            <DataTable.Td>data2</DataTable.Td>
+            <DataTable.Td>data3</DataTable.Td>
+          </DataTable.Tr>
+          <DataTable.Tr>
+            <DataTable.Td>data1</DataTable.Td>
+            <DataTable.Td>data2</DataTable.Td>
+            <DataTable.Td>data3</DataTable.Td>
+          </DataTable.Tr>
+        </DataTable.Tbody>
+        <DataTable.Tfoot>
+          <DataTable.Tr>
+            <DataTable.Th>foot1</DataTable.Th>
+            <DataTable.Th>foot2</DataTable.Th>
+            <DataTable.Th>foot3</DataTable.Th>
+          </DataTable.Tr>
+        </DataTable.Tfoot>
+      </DataTable>
+      <DataTable.Pagination {...paging} />
+    </DataTableContainer>
   );
 }
 

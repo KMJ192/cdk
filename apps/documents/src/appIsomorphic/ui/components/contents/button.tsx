@@ -11,8 +11,8 @@ import style from './style.module.scss';
 
 const document: Array<DOCUMENT> = [
   {
-    title: 'Button Example',
-    subtitle: 'Button 코드 예시 입니다.',
+    title: 'Example',
+    subtitle: 'Button 코드 예시입니다.',
     desc: [],
     view: (
       <Flex flexDirection='column' className={style['button-document']}>

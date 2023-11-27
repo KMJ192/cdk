@@ -12,8 +12,8 @@ import style from './style.module.scss';
 
 const document: Array<DOCUMENT> = [
   {
-    title: 'Checkbox Example',
-    subtitle: 'Checkbox 코드 예시 입니다.',
+    title: 'Example',
+    subtitle: 'Checkbox 예시입니다.',
     desc: [],
     view: (
       <Flex className={style.checkbox}>
@@ -179,20 +179,25 @@ const defaultCode: Array<string> = [
   `<Checkbox checked={false} multiple={false} disabled={false}>Checkbox</Checkbox>`,
 ];
 
-const pgCode = `import { Checkbox } from '@cdkit/react-ui';
+const pgCode = `import { Checkbox, Spacing } from '@cdkit/react-ui';
 
 function App() {
   return (
     <>
       <Checkbox>unchecked</Checkbox>
+      <Spacing spacing={8} />
       <Checkbox checked>checked</Checkbox>
+      <Spacing spacing={8} />
       <Checkbox checked multiple>
         multiple
       </Checkbox>
+      <Spacing spacing={8} />
       <Checkbox disabled>disabled</Checkbox>
+      <Spacing spacing={8} />
       <Checkbox disabled checked>
         disabled
       </Checkbox>
+      <Spacing spacing={8} />
       <Checkbox disabled checked multiple>
         disabled
       </Checkbox>

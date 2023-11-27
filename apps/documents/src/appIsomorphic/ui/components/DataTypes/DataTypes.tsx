@@ -21,7 +21,7 @@ function DataTypes({ type }: Props) {
   return (
     <Flex className={cx('container')} flexDirection='column'>
       <When condition={dataType.length === 0}>
-        <div>No Data</div>
+        <Text typo='b1'>사용되는 커스텀 타입이 없습니다.</Text>
       </When>
       <When condition={dataType.length > 0}>
         {dataType.map(({ name, description, code }, idx) => {
