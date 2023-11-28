@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import cloneDeep from 'lodash/cloneDeep';
-import { Spacing, Text } from '@cdkit/react-ui';
+import { Center, Spacing, Text } from '@cdkit/react-ui';
 
 import { Navigation } from './Navigation';
 import Category from './Category/Category';
@@ -23,6 +23,7 @@ import {
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
+import MainLogo from '@src/components/ContentsLayout/MainLogo/MainLogo';
 const cx = classNames.bind(style);
 
 type Props = {
@@ -152,7 +153,9 @@ function GNB({ position, className, onClose }: Props) {
       depthGap={0}
     >
       <Navigation.Menu onClick={onClickMain}>
-        <Text typo='h4'>CDKit</Text>
+        <Center horizontal={false}>
+          <MainLogo />
+        </Center>
       </Navigation.Menu>
       <Navigation.Menu onClick={onClickUI}>
         <Text typo='t1'>UI</Text>

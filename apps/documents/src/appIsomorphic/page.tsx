@@ -13,11 +13,11 @@ const cx = classNames.bind(style);
 function IndexPage() {
   return (
     <Center className={cx('container')} display='flex' flexDirection='column'>
-      <Text typo='h1'>Component Develop Kit</Text>
+      <Text typo='h1'>CDKit</Text>
       <Spacing direction='vertical' spacing={1} unit='rem' />
       <Text className={cx('description')} typo='s1'>
-        CDKit은 React 애플리케이션에 필요한 디자인 요소 및 기능을 제공하는
-        간단한 모듈식 구성요소 라이브러리 입니다.
+        CDKit(Component Develop Kit)은 React 애플리케이션에 필요한 디자인 요소
+        및 기능을 제공하는 간단한 모듈식 구성요소 라이브러리 입니다.
       </Text>
       <Spacing direction='vertical' spacing={1.5} unit='rem' />
       <Line />

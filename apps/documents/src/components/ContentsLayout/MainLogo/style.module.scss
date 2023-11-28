@@ -1,0 +1,10 @@
+@import '@src/styles/color/color.module.scss';
+
+.container {
+  gap: 0.5rem;
+
+  .logo {
+    width: 2rem;
+    height: 2rem;
+  }
+}

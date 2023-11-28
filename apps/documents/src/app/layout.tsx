@@ -9,7 +9,7 @@ import './globals.scss';
 import './theme.scss';
 
 export const metadata: Metadata = {
-  title: 'Component DevelopKit - Documents',
+  title: 'CDKit - Docs',
   description: '',
 };
 
@@ -19,13 +19,11 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const theme = await getTheme();
-  // const device = await getDevice();
 
   return (
     <html lang='ko'>
       <head>
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link rel='icon' href='./favicon.ico' sizes='any' />
         <link
           href='https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap'
           rel='stylesheet'
