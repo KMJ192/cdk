@@ -158,7 +158,7 @@ function GNB({ position, className, onClose }: Props) {
         </Center>
       </Navigation.Menu>
       <Navigation.Menu onClick={onClickUI}>
-        <Text typo='t1'>UI</Text>
+        <Text typo='s1'>UI</Text>
       </Navigation.Menu>
       <Navigation.MenuGroup show>
         <Category
@@ -180,7 +180,7 @@ function GNB({ position, className, onClose }: Props) {
       </Navigation.MenuGroup>
       <Line />
       <Navigation.Menu onClick={onClickModules}>
-        <Text typo='t1'>Module</Text>
+        <Text typo='s1'>Module</Text>
       </Navigation.Menu>
       <Navigation.MenuGroup show>
         <Category

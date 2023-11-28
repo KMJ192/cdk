@@ -29,7 +29,7 @@ function Category({ menu, category, selected, show, group, position }: Props) {
         selected={selected[URL[category]]}
         className={cx('side-menu', position)}
       >
-        <Text typo='s2' data-key={URL[category]}>
+        <Text typo='b3' data-key={URL[category]}>
           {menu}
         </Text>
       </Navigation.Menu>

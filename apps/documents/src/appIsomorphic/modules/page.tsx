@@ -13,7 +13,7 @@ const cx = classNames.bind(style);
 function ModulePage() {
   return (
     <Center display='flex' flexDirection='column'>
-      <Text typo='h1'>CDKit React Modules</Text>
+      <Text typo='h3'>CDKit React Modules</Text>
       <Spacing direction='vertical' spacing={1} unit='rem' />
       <Text className={cx('description')} typo='s1'>
         CDKit Modules는 React 애플리케이션에 사용 될 수 있는 기능을 제공하는

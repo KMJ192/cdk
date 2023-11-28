@@ -13,7 +13,7 @@ const cx = classNames.bind(style);
 function IndexPage() {
   return (
     <Center className={cx('container')} display='flex' flexDirection='column'>
-      <Text typo='h1'>CDKit</Text>
+      <Text typo='h3'>CDKit</Text>
       <Spacing direction='vertical' spacing={1} unit='rem' />
       <Text className={cx('description')} typo='s1'>
         CDKit(Component Develop Kit)은 React 애플리케이션에 필요한 디자인 요소
