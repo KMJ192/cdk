@@ -12,7 +12,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'Card 예시입니다.',
-    desc: [],
     view: <Card>Card</Card>,
     code: ['<Card>Card</Card>'],
   },
@@ -23,7 +22,7 @@ const dataType: Array<DATA_TYPE> = [];
 const props: Array<PROPS> = [
   {
     title: 'Props',
-    desc: '',
+    defaultTag: 'div',
     element: [
       {
         name: 'children',
@@ -53,7 +52,6 @@ const props: Array<PROPS> = [
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
-    desc: '',
     element: [
       {
         name: '--cdkit-color-card-border',

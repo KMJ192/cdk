@@ -21,7 +21,6 @@ import { cardContents } from './card';
 type DOCUMENT = {
   title: string;
   subtitle: string;
-  desc: Array<string>;
   view: ReactNode;
   code: Array<string>;
 };
@@ -34,7 +33,7 @@ type DATA_TYPE = {
 
 type PROPS = {
   title: string;
-  desc: string;
+  defaultTag: string;
   element: Array<{
     name: string;
     type: string;
@@ -46,7 +45,6 @@ type PROPS = {
 
 type CSS_VARIABLES = {
   title: string;
-  desc: string;
   element: Array<{
     name: string;
     type: 'color' | 'size' | 'layout';

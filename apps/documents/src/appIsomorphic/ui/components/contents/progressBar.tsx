@@ -14,7 +14,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'ProgressBar 코드 예시입니다.',
-    desc: [],
     view: (
       <Flex flexDirection='column' className={style.pgbar}>
         <ProgressBar percent={70} pending={false} />
@@ -33,7 +32,7 @@ const dataType: Array<DATA_TYPE> = [];
 const props: Array<PROPS> = [
   {
     title: 'Props',
-    desc: '',
+    defaultTag: 'div',
     element: [
       {
         name: 'percent',
@@ -56,7 +55,6 @@ const props: Array<PROPS> = [
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
-    desc: '',
     element: [
       {
         name: '--cdkit-color-progress-body',

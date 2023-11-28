@@ -14,7 +14,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'Radio 코드 예시입니다.',
-    desc: [],
     view: (
       <Flex className={style.radio}>
         <Radio checked={false}>Unchecked</Radio>
@@ -41,7 +40,7 @@ const dataType: Array<DATA_TYPE> = [];
 const props: Array<PROPS> = [
   {
     title: 'Props',
-    desc: '',
+    defaultTag: 'div',
     element: [
       {
         name: 'children',
@@ -71,7 +70,6 @@ const props: Array<PROPS> = [
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
-    desc: '',
     element: [
       {
         name: '--cdkit-color-radio-border,',
@@ -81,7 +79,7 @@ const cssVar: Array<CSS_VARIABLES> = [
       {
         name: '--cdkit-color-radio-border-checked',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '선택'],
+        description: ['경계선 색상', '선택됨'],
       },
       {
         name: '--cdkit-color-radio-border-disabled',
@@ -91,7 +89,7 @@ const cssVar: Array<CSS_VARIABLES> = [
       {
         name: '--cdkit-color-radio-border-checked-disabled',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '선택', '비활성화'],
+        description: ['경계선 색상', '선택됨', '비활성화'],
       },
       {
         name: '--cdkit-color-radio-border-hover',
@@ -101,7 +99,7 @@ const cssVar: Array<CSS_VARIABLES> = [
       {
         name: '--cdkit-color-radio-border-checked-hover',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '선택', '마우스 호버'],
+        description: ['경계선 색상', '선택됨', '마우스 호버'],
       },
       {
         name: '-cdkit-color-radio-bg',
@@ -111,17 +109,17 @@ const cssVar: Array<CSS_VARIABLES> = [
       {
         name: '--cdkit-color-radio-bg-checked',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['배경색', '선택'],
+        description: ['배경색', '선택됨'],
       },
       {
         name: '--cdkit-color-radio-bg-checked-hover',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['배경색', '선택', '마우스 호버'],
+        description: ['배경색', '선택됨', '마우스 호버'],
       },
       {
         name: '--cdkit-color-radio-bg-checked-disabled',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['배경색', '선택', '비활성화'],
+        description: ['배경색', '선택됨', '비활성화'],
       },
       {
         name: '--cdkit-color-radio-bg-disabled',

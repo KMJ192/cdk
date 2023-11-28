@@ -14,7 +14,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'Badge 코드 예시입니다.',
-    desc: [],
     view: (
       <Flex className={style.badge}>
         <Badge colorSchema='primary'>primary</Badge>
@@ -39,7 +38,7 @@ const dataType: Array<DATA_TYPE> = [];
 const props: Array<PROPS> = [
   {
     title: 'Props',
-    desc: '',
+    defaultTag: 'span',
     element: [
       {
         name: 'children',
@@ -62,7 +61,6 @@ const props: Array<PROPS> = [
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
-    desc: '',
     element: [
       {
         name: '--cdkit-color-badge-text',

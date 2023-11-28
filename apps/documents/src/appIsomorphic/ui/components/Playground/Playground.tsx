@@ -21,7 +21,7 @@ function Playground({ type }: Props) {
 
   return (
     <Flex flexDirection='column' className={cx('container')}>
-      <Text typo='s1'>CodeSandbox에서 테스트 하기</Text>
+      <Text typo='s1'>테스트 하기</Text>
       <Sandpack
         theme={theme}
         customSetup={{

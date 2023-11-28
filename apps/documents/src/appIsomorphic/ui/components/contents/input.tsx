@@ -11,8 +11,7 @@ import { CSS_VAR_TYPE } from '@src/utils/utils';
 const document: Array<DOCUMENT> = [
   {
     title: 'Example',
-    subtitle: 'Input 코드 예시입니다.',
-    desc: [],
+    subtitle: '코드 예시입니다.',
     view: <Input placeholder='placeholder' />,
     code: ['<Input placeholder="placeholder" />'],
   },
@@ -23,7 +22,7 @@ const dataType: Array<DATA_TYPE> = [];
 const props: Array<PROPS> = [
   {
     title: 'Props',
-    desc: '',
+    defaultTag: 'input',
     element: [
       {
         name: 'error',
@@ -39,7 +38,6 @@ const props: Array<PROPS> = [
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
-    desc: '',
     element: [
       {
         name: '--cdkit-color-input-border',
@@ -49,7 +47,7 @@ const cssVar: Array<CSS_VARIABLES> = [
       {
         name: '--cdkit-color-input-border-focus',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '활성화'],
+        description: ['경계선 색상', '포커싱'],
       },
       {
         name: '--cdkit-color-input-border-error',
@@ -74,7 +72,7 @@ const cssVar: Array<CSS_VARIABLES> = [
       {
         name: '--cdkit-color-input-bg-focus',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상', '활성화'],
+        description: ['배경 색상', '포커싱'],
       },
       {
         name: '--cdkit-color-input-bg-disabled',
@@ -99,7 +97,7 @@ const cssVar: Array<CSS_VARIABLES> = [
       {
         name: '--cdkit-color-input-text-focus',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상', '활성화'],
+        description: ['글자 색상', '포커싱'],
       },
       {
         name: '--cdkit-color-input-text-disabled',

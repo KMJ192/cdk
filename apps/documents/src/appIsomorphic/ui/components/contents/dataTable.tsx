@@ -28,7 +28,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'DataTable',
     subtitle: 'DataTable 코드 예시입니다.',
-    desc: [],
     view: (
       <DataTableContainer>
         <DataTable>
@@ -121,7 +120,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'useDataTablePagination',
     subtitle: 'Pagination과 연계할 수 있는 hook 입니다.',
-    desc: [],
     view: <UseDataTablePaginationExample />,
     code: [
       `const {`,
@@ -152,7 +150,7 @@ const dataType: Array<DATA_TYPE> = [];
 const props: Array<PROPS> = [
   {
     title: 'DataTableContainer Props',
-    desc: '',
+    defaultTag: 'div',
     element: [
       {
         name: 'children',
@@ -165,7 +163,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'DataTable Props',
-    desc: '',
+    defaultTag: 'table',
     element: [
       {
         name: 'children',
@@ -178,7 +176,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'Caption Props',
-    desc: '',
+    defaultTag: 'caption',
     element: [
       {
         name: 'children',
@@ -191,7 +189,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'Thead Props',
-    desc: '',
+    defaultTag: 'thead',
     element: [
       {
         name: 'children',
@@ -204,7 +202,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'Tbody Props',
-    desc: '',
+    defaultTag: 'tbody',
     element: [
       {
         name: 'children',
@@ -217,7 +215,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'Tfoot Props',
-    desc: '',
+    defaultTag: 'tfoot',
     element: [
       {
         name: 'children',
@@ -230,7 +228,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'Th Props',
-    desc: '',
+    defaultTag: 'th',
     element: [
       {
         name: 'children',
@@ -243,7 +241,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'Tr Props',
-    desc: '',
+    defaultTag: 'tr',
     element: [
       {
         name: 'children',
@@ -263,7 +261,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'Td Props',
-    desc: '',
+    defaultTag: 'td',
     element: [
       {
         name: 'children',
@@ -276,7 +274,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'Pagination Props',
-    desc: '',
+    defaultTag: 'div',
     element: [
       {
         name: 'selectedPageIndex',
@@ -320,17 +318,16 @@ const props: Array<PROPS> = [
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
-    desc: '',
     element: [
       {
         name: '--cdkit-color-data-table-bg',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['테이블 배경 색상'],
+        description: ['배경 색상'],
       },
       {
         name: '--cdkit-color-data-table-border',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['테이블 경계선 색상'],
+        description: ['경계선 색상'],
       },
       {
         name: '--cdkit-color-data-table-caption-text',

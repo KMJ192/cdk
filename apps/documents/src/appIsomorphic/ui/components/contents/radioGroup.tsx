@@ -11,7 +11,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'RadioGroup 코드 예시입니다.',
-    desc: [],
     view: (
       <RadioGroup
         selected={0}
@@ -62,12 +61,12 @@ const document: Array<DOCUMENT> = [
 const dataType: Array<DATA_TYPE> = [
   {
     name: 'RadioGroupOptionKey',
-    description: 'Radio 컴포넌트의 개별 옵션의 키값(Unique)',
+    description: '개별 옵션의 키값(Unique)',
     code: [`type Option = string | number`],
   },
   {
     name: 'RadioGroupOption',
-    description: 'Radio 컴포넌트의 개별 옵션 정보',
+    description: '개별 옵션 정보',
     code: [
       `type RadioGroupOption = {`,
       `  children: React.ReactNode;`,
@@ -81,7 +80,7 @@ const dataType: Array<DATA_TYPE> = [
 const props: Array<PROPS> = [
   {
     title: 'Props',
-    desc: '',
+    defaultTag: 'div',
     element: [
       {
         name: 'options',

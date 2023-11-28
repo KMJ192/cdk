@@ -20,7 +20,7 @@ function CSSVariablesTable({ type }: Props) {
 
   return (
     <Flex flexDirection='column' className={cx('container')}>
-      {cssVar.map(({ title, desc, element }, idx) => {
+      {cssVar.map(({ title, element }, idx) => {
         return (
           <Flex
             as='ul'
@@ -29,7 +29,6 @@ function CSSVariablesTable({ type }: Props) {
             className={cx('contents')}
           >
             <Text typo='t1'>{title}</Text>
-            <Text typo='s1'>{desc}</Text>
             {element.map(({ name, type, description }, index) => {
               return (
                 <Fragment key={`${name}-${index}`}>

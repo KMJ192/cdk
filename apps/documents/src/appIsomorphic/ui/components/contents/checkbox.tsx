@@ -14,7 +14,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'Checkbox 예시입니다.',
-    desc: [],
     view: (
       <Flex className={style.checkbox}>
         <Checkbox>unchecked</Checkbox>
@@ -47,7 +46,7 @@ const dataType: Array<DATA_TYPE> = [];
 const props: Array<PROPS> = [
   {
     title: 'Props',
-    desc: '',
+    defaultTag: 'div',
     element: [
       {
         name: 'children',
@@ -84,7 +83,6 @@ const props: Array<PROPS> = [
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
-    desc: '',
     element: [
       {
         name: '--cdkit-color-checkbox-border',
@@ -104,17 +102,17 @@ const cssVar: Array<CSS_VARIABLES> = [
       {
         name: '--cdkit-color-checkbox-border-checked',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '선택'],
+        description: ['경계선 색상', '선택됨'],
       },
       {
         name: '--cdkit-color-checkbox-border-checked-hover',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '마우스 호버', '선택'],
+        description: ['경계선 색상', '선택됨', '마우스 호버'],
       },
       {
         name: '--cdkit-color-checkbox-border-checked-disabled',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '비활성화', '선택'],
+        description: ['경계선 색상', '선택됨', '비활성화'],
       },
       {
         name: '--cdkit-color-checkbox-bg',

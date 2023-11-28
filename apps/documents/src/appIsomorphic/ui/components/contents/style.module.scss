@@ -11,7 +11,10 @@
 .badge,
 .checkbox,
 .pgbar,
-.radio {
+.radio,
+.spinner,
+.switch,
+.tab {
   gap: 1rem;
   flex-wrap: wrap;
 }

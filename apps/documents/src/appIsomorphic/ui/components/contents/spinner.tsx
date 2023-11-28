@@ -1,3 +1,4 @@
+import { Flex, Spinner } from '@cdkit/react-ui';
 import type {
   CSS_VARIABLES,
   DATA_TYPE,
@@ -7,59 +8,78 @@ import type {
 } from './contents';
 import { CSS_VAR_TYPE } from '@src/utils/utils';
 
+import style from './style.module.scss';
+
 const document: Array<DOCUMENT> = [
   {
     title: 'Example',
-    subtitle: '',
-    desc: [],
-    view: '',
-    code: [],
+    subtitle: 'Spinner 코드 예시입니다.',
+    view: (
+      <Flex className={style.spinner}>
+        <Spinner type='type-1' />
+        <Spinner type='type-2' />
+      </Flex>
+    ),
+    code: [`<Spinner type='type-1' />`, `<Spinner type='type-2' />`],
   },
 ];
 
-const dataType: Array<DATA_TYPE> = [
-  {
-    name: '',
-    description: '',
-    code: [''],
-  },
-];
+const dataType: Array<DATA_TYPE> = [];
 
 const props: Array<PROPS> = [
   {
     title: 'Props',
-    desc: '',
-    element: [],
-  },
-];
-
-const cssVar: Array<CSS_VARIABLES> = [
-  {
-    title: '',
-    desc: '',
+    defaultTag: 'div',
     element: [
       {
-        name: '',
-        type: CSS_VAR_TYPE.COLOR,
-        description: [],
+        name: 'type',
+        type: '"type-1" | "type-2"',
+        essential: false,
+        defaultValue: 'type-1',
+        description: ['Spinner 타입'],
       },
     ],
   },
 ];
 
-const defaultCode: Array<string> = [];
+const cssVar: Array<CSS_VARIABLES> = [
+  {
+    title: 'CSS Variables',
+    element: [
+      {
+        name: '--cdkit-color-spinner-color1',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['색상1'],
+      },
+      {
+        name: '--cdkit-color-spinner-color2',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['색상2'],
+      },
+      {
+        name: '--cdkit-size-spinner',
+        type: CSS_VAR_TYPE.SIZE,
+        description: ['크기'],
+      },
+      {
+        name: '--cdkit-size-border-width',
+        type: CSS_VAR_TYPE.SIZE,
+        description: ['굵기'],
+      },
+    ],
+  },
+];
 
-const pgCode = `import { Button } from '@cdkit/react-ui';
+const defaultCode: Array<string> = ['<Spinner />'];
+
+const pgCode = `import { Spinner } from '@cdkit/react-ui';
 
 function App() {
   return (
-    <Button 
-      variant='primary'
-      shape='rect'
-      loading={false}
-    >
-      Button
-    </Button>
+    <>
+      <Spinner />
+      <Spinner type="type-2" />
+    </>
   );
 }
 

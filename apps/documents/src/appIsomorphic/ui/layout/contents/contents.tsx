@@ -18,7 +18,7 @@ type DOCUMENT = {
 
 type PROPS = {
   title: string;
-  desc: string;
+  defaultTag: string;
   element: Array<{
     name: string;
     type: string;

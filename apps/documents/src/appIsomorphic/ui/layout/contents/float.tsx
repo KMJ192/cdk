@@ -19,7 +19,7 @@ const document: Array<DOCUMENT> = [
 const props: Array<PROPS> = [
   {
     title: 'Props',
-    desc: '',
+    defaultTag: 'div',
     element: [
       {
         name: 'children',

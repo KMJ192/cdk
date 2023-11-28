@@ -13,7 +13,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'Button 코드 예시입니다.',
-    desc: [],
     view: (
       <Flex flexDirection='column' className={style['button-document']}>
         <Flex className={style['button-variant']}>
@@ -60,7 +59,7 @@ const dataType: Array<DATA_TYPE> = [
 const props: Array<PROPS> = [
   {
     title: 'Props',
-    desc: '',
+    defaultTag: 'button',
     element: [
       {
         name: 'children',
@@ -124,7 +123,6 @@ const props: Array<PROPS> = [
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
-    desc: '',
     element: [
       {
         name: '--cdkit-color-button-bg',
@@ -154,32 +152,37 @@ const cssVar: Array<CSS_VARIABLES> = [
       {
         name: '--cdkit-color-button-text',
         type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상', '기본'],
+        description: ['글자 색상'],
       },
       {
-        name: '--cdkit-color-button-text-disabled',
+        name: '--cdkit-color-button-text-hover',
         type: CSS_VAR_TYPE.COLOR,
         description: ['글자 색상', '마우스 호버'],
       },
       {
-        name: '--cdkit-color-button-text-active',
+        name: '--cdkit-color-button-text-disabled',
         type: CSS_VAR_TYPE.COLOR,
         description: ['글자 색상', '비활성화'],
       },
       {
-        name: '--cdkit-color-button-box-shadow',
+        name: '--cdkit-color-button-text-active',
         type: CSS_VAR_TYPE.COLOR,
         description: ['글자 색상', '활성화'],
       },
       {
-        name: '--cdkit-color-button-outline',
+        name: '--cdkit-color-button-box-shadow',
         type: CSS_VAR_TYPE.COLOR,
         description: ['그림자 색상'],
       },
       {
-        name: '--cdkit-color-button-outline-disabled',
+        name: '--cdkit-color-button-outline',
         type: CSS_VAR_TYPE.COLOR,
         description: ['경계선 색상'],
+      },
+      {
+        name: '--cdkit-color-button-outline-disabled',
+        type: CSS_VAR_TYPE.COLOR,
+        description: ['경계선 색상', '비활성화'],
       },
     ],
   },

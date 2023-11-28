@@ -168,7 +168,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'Select',
     subtitle: 'Select 코드 예시입니다.',
-    desc: [],
     view: <SelectTemplate />,
     code: [
       `<Select>`,
@@ -188,7 +187,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'Select.Input',
     subtitle: 'Select 코드 예시입니다. (Input 타입)',
-    desc: [],
     view: <InputSelectTemplate />,
     code: [
       `<Select>`,
@@ -208,7 +206,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'useSelectController',
     subtitle: 'Select의 기능을 제공하는 hook 입니다.',
-    desc: [],
     view: <SelectTemplate />,
     code: [
       `const list = useRef([`,
@@ -287,7 +284,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'useInputSelectController',
     subtitle: 'Select(Input 타입)의 기능을 제공하는 hook 입니다.',
-    desc: [],
     view: <InputSelectTemplate />,
     code: [
       `const list = useRef([`,
@@ -416,7 +412,7 @@ const dataType: Array<DATA_TYPE> = [
 const props: Array<PROPS> = [
   {
     title: 'Select Props',
-    desc: '',
+    defaultTag: 'div',
     element: [
       {
         name: 'children',
@@ -457,7 +453,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'Box Props',
-    desc: '',
+    defaultTag: 'div',
     element: [
       {
         name: 'children',
@@ -476,8 +472,13 @@ const props: Array<PROPS> = [
     ],
   },
   {
+    title: 'InputBox Props',
+    defaultTag: 'input',
+    element: [],
+  },
+  {
     title: 'Dropbox Props',
-    desc: '',
+    defaultTag: 'ul',
     element: [
       {
         name: 'children',
@@ -497,7 +498,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'Option Props',
-    desc: '',
+    defaultTag: 'li',
     element: [
       {
         name: 'children',
@@ -531,7 +532,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'useSelectController Param',
-    desc: '',
+    defaultTag: '',
     element: [
       {
         name: 'initSelectedIdx',
@@ -551,7 +552,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'useInputSelectController Param',
-    desc: '',
+    defaultTag: '',
     element: [
       {
         name: 'initSelectedIdx',
@@ -581,7 +582,6 @@ const props: Array<PROPS> = [
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
-    desc: '',
     element: [
       {
         name: '--cdkit-color-select-box-bg',

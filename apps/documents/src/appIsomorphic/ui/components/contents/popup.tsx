@@ -12,7 +12,6 @@ const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'Popup 코드 예시입니다.',
-    desc: [],
     view: <Popup visible>Popup</Popup>,
     code: ['<Popup visible>Popup</Popup>'],
   },
@@ -23,7 +22,7 @@ const dataType: Array<DATA_TYPE> = [];
 const props: Array<PROPS> = [
   {
     title: 'Props',
-    desc: '',
+    defaultTag: 'div',
     element: [
       {
         name: 'children',
@@ -53,7 +52,6 @@ const props: Array<PROPS> = [
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
-    desc: '',
     element: [
       {
         name: '--cdkit-color-popup-bg',
