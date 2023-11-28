@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 import { Center, Flex } from '@cdkit/react-ui';
 
 import useToggleTheme from '@src/hooks/useToggleTheme';
@@ -7,6 +8,7 @@ import Light from '../ThemeIcon/Light';
 import Dark from '../ThemeIcon/Dark';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import GNB from '../GNB/GNB';
+import GitHubIcon from '../GithubIcon/GithubIcon';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
@@ -38,10 +40,19 @@ function Header() {
               <HamburgerMenu active={openNav} onClick={onToggleNav} />
             </Center>
           </div>
-          <div className={cx('right', 'theme-icon')} onClick={onToggleTheme}>
-            <Light />
-            <Dark />
-          </div>
+          <Center className={cx('right')} horizontal={false}>
+            <Link
+              href='https://github.com/KMJ192/cdkit'
+              target='_blank'
+              className={cx('github-icon')}
+            >
+              <GitHubIcon />
+            </Link>
+            <div className={cx('theme-icon')} onClick={onToggleTheme}>
+              <Light />
+              <Dark />
+            </div>
+          </Center>
         </Center>
       </Flex>
       <GNB

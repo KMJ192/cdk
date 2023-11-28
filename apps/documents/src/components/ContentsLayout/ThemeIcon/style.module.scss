@@ -1,4 +1,4 @@
-// @import '@src/styles/color/color.module.scss';
+@import '@src/styles/color/color.module.scss';
 @import '@src/styles/utils.module.scss';
 @import '../style.module.scss';
 
@@ -12,7 +12,8 @@
   @include transition(
     opacity 0.15s ease-in-out,
     background-color 0.14s ease-in-out,
-    transform 0.35s ease
+    transform 0.35s ease,
+    fill 0.2s ease-in-out
   );
   @include themeIcon-reactive;
   position: absolute;

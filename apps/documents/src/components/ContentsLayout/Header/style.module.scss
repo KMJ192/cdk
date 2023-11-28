@@ -33,8 +33,12 @@
   .contents {
     justify-content: space-between;
     .right {
-      position: relative;
-      &.theme-icon {
+      justify-content: flex-end;
+      .github-icon {
+        transform: translate(-40px);
+      }
+      .theme-icon {
+        position: relative;
         user-select: none;
       }
     }
