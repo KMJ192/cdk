@@ -10,31 +10,33 @@ import Documents from './Documents/Documents';
 import APIs from './APIs/APIs';
 import Playground from './Playground/Playground';
 
-import type { PAGE_LAYOUT } from '@src/utils/url';
+import type { PAGE_HOOKS } from '@src/utils/url';
 import { createQueryString } from '@src/utils/utils';
-import { LAYOUT_CONTENTS, TAB_OPTIONS } from './contents/contents';
+import { HOOKS_CONTENTS, TAB_OPTIONS } from './contents/contents';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
+import DataTypes from './DataTypes/DataTypes';
 const cx = classNames.bind(style);
 
 type Props = {
-  type: PAGE_LAYOUT;
+  type: PAGE_HOOKS;
 };
 
-function Layout({ type }: Props) {
+function HooksPage({ type }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const curParam = searchParams.get('compo');
+  const curParam = searchParams.get('hooks');
 
-  const { pageTitle, pageDesc } = LAYOUT_CONTENTS[type];
+  const { pageTitle, pageDesc } = HOOKS_CONTENTS[type];
 
   const [selectedTab, setSelectedTab] = useState(
     (() => {
       if (curParam === null || curParam === 'docs') return 0;
-      if (curParam === 'apis') return 1;
-      if (curParam === 'playground') return 2;
+      if (curParam === 'data-types') return 1;
+      if (curParam === 'apis') return 2;
+      if (curParam === 'playground') return 3;
       return -1;
     })(),
   );
@@ -45,7 +47,7 @@ function Layout({ type }: Props) {
     router.push(
       `${pathname}?${createQueryString(
         searchParams,
-        'compo',
+        'hooks',
         String(TAB_OPTIONS[idx].key),
       )}`,
     );
@@ -54,17 +56,25 @@ function Layout({ type }: Props) {
   useEffect(() => {
     if (typeof curParam !== 'string') return;
 
-    if (curParam !== 'docs' && curParam !== 'apis' && curParam !== 'playground')
+    if (
+      curParam !== 'docs' &&
+      curParam !== 'data-types' &&
+      curParam !== 'apis' &&
+      curParam !== 'playground'
+    )
       setSelectedTab(-1);
 
     if (curParam === 'docs') setSelectedTab(0);
-    if (curParam === 'apis') setSelectedTab(1);
-    if (curParam === 'playground') setSelectedTab(2);
+    if (curParam === 'data-types') setSelectedTab(1);
+    if (curParam === 'apis') setSelectedTab(2);
+    if (curParam === 'playground') setSelectedTab(3);
   }, [curParam]);
 
   return (
     <Flex flexDirection='column' className={cx('container')}>
-      <Text typo='h4'>{pageTitle}</Text>
+      <Text typo='h4' ellipsis>
+        {pageTitle}
+      </Text>
       <Spacing className={cx('spacing', 'first')} />
       <Text typo='s3'>{pageDesc}</Text>
       <Spacing className={cx('spacing', 'first')} />
@@ -76,13 +86,16 @@ function Layout({ type }: Props) {
         <Documents type={type} />
       </When>
       <When condition={selectedTab === 1}>
-        <APIs type={type} />
+        <DataTypes type={type} />
       </When>
       <When condition={selectedTab === 2}>
+        <APIs type={type} />
+      </When>
+      <When condition={selectedTab === 3}>
         <Playground type={type} />
       </When>
     </Flex>
   );
 }
 
-export default Layout;
+export default HooksPage;

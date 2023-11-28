@@ -1,3 +1,5 @@
+import { type ReadonlyURLSearchParams } from 'next/navigation';
+
 export const isWindow: boolean = typeof window !== 'undefined';
 
 // eslint-disable-next-line consistent-return
@@ -14,3 +16,14 @@ export const CSS_VAR_TYPE = {
 };
 
 export const version = 'v1.0.0';
+
+export const createQueryString = (
+  searchParams: ReadonlyURLSearchParams,
+  name: string,
+  value: string,
+) => {
+  const params = new URLSearchParams(searchParams);
+  params.set(name, value);
+
+  return params.toString();
+};

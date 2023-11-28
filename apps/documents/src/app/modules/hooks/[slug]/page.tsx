@@ -1,3 +1,4 @@
+import HooksPage from '@src/appIsomorphic/modules/hooks/page';
 import type { PAGE_HOOKS } from '@src/utils/url';
 
 type Props = {
@@ -7,7 +8,7 @@ type Props = {
 };
 
 function Page({ params }: Props) {
-  return <div>{params.slug}</div>;
+  return <HooksPage type={params.slug} />;
 }
 
 export default Page;

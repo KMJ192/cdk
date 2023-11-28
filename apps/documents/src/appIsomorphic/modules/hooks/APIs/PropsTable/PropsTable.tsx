@@ -4,7 +4,8 @@ import { When } from '@cdkit/react-modules';
 
 import useValueAppState from '@src/store/AppProvider/hooks/useValueAppState';
 
-import { LAYOUT_CONTENTS } from '../../contents/contents';
+import { HOOKS_CONTENTS } from '../../contents/contents';
+
 import Colon from '../Colon';
 
 import classNames from 'classnames/bind';
@@ -17,11 +18,11 @@ type Props = {
 
 function PropsTable({ type }: Props) {
   const { theme } = useValueAppState();
-  const { props } = LAYOUT_CONTENTS[type];
+  const { props } = HOOKS_CONTENTS[type];
 
   return (
     <Flex flexDirection='column' className={cx('container')}>
-      {props.map(({ title, defaultTag, element }, idx) => {
+      {props.map(({ title, element }, idx) => {
         return (
           <Flex
             as='ul'
@@ -30,12 +31,6 @@ function PropsTable({ type }: Props) {
             className={cx('contents')}
           >
             <Text typo='t1'>{title}</Text>
-            {defaultTag !== '' && (
-              <Text typo='b3'>
-                기본 태그는 [{defaultTag}]이며, 해당 태그의 속성을 사용할 수
-                있습니다.
-              </Text>
-            )}
             {element.map(
               ({ name, type, defaultValue, description, essential }, index) => {
                 return (
