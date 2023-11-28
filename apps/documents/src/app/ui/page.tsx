@@ -1,5 +1,7 @@
+import UIPage from '@src/appIsomorphic/ui/page';
+
 function Page() {
-  return <div></div>;
+  return <UIPage />;
 }
 
 export default Page;

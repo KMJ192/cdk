@@ -1,3 +1,23 @@
-.index-container {
-  box-sizing: border-box;
+.container {
+  .description {
+    padding: 0 1rem;
+    line-height: 1.5;
+  }
+  .start-group {
+    flex-wrap: wrap;
+    gap: 2rem;
+    .ui,
+    .modules {
+      @media screen and (max-width: 1006px) {
+        width: 100%;
+      }
+    }
+    .use-guide {
+      width: fit-content;
+    }
+    .goto-button {
+      padding: 1rem;
+      width: 100%;
+    }
+  }
 }

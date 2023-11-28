@@ -1,5 +1,7 @@
+import ModulePage from '@src/appIsomorphic/modules/page';
+
 function Page() {
-  return <div>Modules Page</div>;
+  return <ModulePage />;
 }
 
 export default Page;

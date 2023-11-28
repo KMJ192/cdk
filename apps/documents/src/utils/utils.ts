@@ -12,3 +12,5 @@ export const CSS_VAR_TYPE = {
   SIZE: 'size' as const,
   LAYOUT: 'layout' as const,
 };
+
+export const version = 'v1.0.0';

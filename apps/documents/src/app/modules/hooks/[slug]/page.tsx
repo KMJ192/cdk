@@ -7,7 +7,8 @@ type Props = {
 };
 
 function Page({ params }: Props) {
-  return <div>{params.slug}</div>;
+  // return <div>{params.slug}</div>;
+  return <div>준비중 입니다.</div>;
 }
 
 export default Page;
