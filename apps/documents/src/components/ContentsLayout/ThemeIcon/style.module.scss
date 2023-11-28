@@ -7,7 +7,7 @@
 }
 
 .theme-icon {
-  @include transform(translate(-24px, -50%) rotate(0deg));
+  @include transform(rotate(0deg));
   @include color-set;
   @include transition(
     opacity 0.15s ease-in-out,
@@ -22,10 +22,10 @@
   border-radius: 50%;
   &.light-icon.dark {
     opacity: 0;
-    @include transform(translate(-24px, -50%) rotate(180deg));
+    @include transform(rotate(180deg));
   }
   &.dark-icon.light {
     opacity: 0;
-    @include transform(translate(-24px, -50%) rotate(180deg));
+    @include transform(rotate(180deg));
   }
 }

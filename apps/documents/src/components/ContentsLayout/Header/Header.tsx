@@ -48,10 +48,10 @@ function Header() {
             >
               <GitHubIcon />
             </Link>
-            <div className={cx('theme-icon')} onClick={onToggleTheme}>
+            <Flex className={cx('theme-icon')} onClick={onToggleTheme}>
               <Light />
               <Dark />
-            </div>
+            </Flex>
           </Center>
         </Center>
       </Flex>

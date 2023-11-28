@@ -30,16 +30,19 @@
   box-sizing: border-box;
   z-index: 999;
   height: $header-height !important;
+  box-sizing: border-box;
   .contents {
     justify-content: space-between;
     .right {
       justify-content: flex-end;
       .github-icon {
-        transform: translate(-40px);
+        @include transform(translate(-1.2rem));
       }
       .theme-icon {
         position: relative;
         user-select: none;
+        align-items: center;
+        -webkit-box-align: center;
       }
     }
   }
