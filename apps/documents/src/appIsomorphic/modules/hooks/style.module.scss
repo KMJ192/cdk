@@ -1,0 +1,13 @@
+.container {
+  .spacing {
+    &.first {
+      height: 0.8rem;
+    }
+    &.second {
+      height: 1.4rem;
+    }
+    &.third {
+      height: 1.8rem;
+    }
+  }
+}

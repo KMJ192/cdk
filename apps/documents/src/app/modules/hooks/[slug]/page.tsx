@@ -1,17 +1,14 @@
-// import type { PAGE_HOOKS } from '@src/utils/url';
+import HooksPage from '@src/appIsomorphic/modules/hooks/page';
+import type { PAGE_HOOKS } from '@src/utils/url';
 
-// type Props = {
-//   params: {
-//     slug: PAGE_HOOKS;
-//   };
-// };
+type Props = {
+  params: {
+    slug: PAGE_HOOKS;
+  };
+};
 
-// function Page({ params }: Props) {
-//   return <div>{params.slug}</div>;
-// }
-
-function Page() {
-  return <div>준비중 입니다.</div>;
+function Page({ params }: Props) {
+  return <HooksPage type={params.slug} />;
 }
 
 export default Page;

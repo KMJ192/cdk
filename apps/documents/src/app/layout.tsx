@@ -23,7 +23,7 @@ export default async function RootLayout({
   return (
     <html lang='ko'>
       <head>
-        <link rel='icon' href='./favicon.ico' sizes='any' />
+        <link rel='icon' href='/favicon.ico' sizes='any' />
         <link
           href='https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap'
           rel='stylesheet'

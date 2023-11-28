@@ -27,6 +27,7 @@ function Playground({ type }: Props) {
         customSetup={{
           dependencies: {
             '@cdkit/react-ui': 'latest',
+            '@cdkit/react-modules': 'latest',
           },
         }}
         template='react'

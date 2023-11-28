@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { Flex, Spacing, Tab, type TabOptionKey, Text } from '@cdkit/react-ui';
 import { When } from '@cdkit/react-modules';
@@ -11,6 +11,7 @@ import APIs from './APIs/APIs';
 import Playground from './Playground/Playground';
 
 import type { PAGE_LAYOUT } from '@src/utils/url';
+import { createQueryString } from '@src/utils/utils';
 import { LAYOUT_CONTENTS, TAB_OPTIONS } from './contents/contents';
 
 import classNames from 'classnames/bind';
@@ -38,21 +39,15 @@ function Layout({ type }: Props) {
     })(),
   );
 
-  const createQueryString = useCallback(
-    (name: string, value: string) => {
-      const params = new URLSearchParams(searchParams);
-      params.set(name, value);
-
-      return params.toString();
-    },
-    [searchParams],
-  );
-
   const onSelect = (_: TabOptionKey, idx: number) => {
     if (selectedTab === idx) return;
     setSelectedTab(idx);
     router.push(
-      `${pathname}?${createQueryString('compo', String(TAB_OPTIONS[idx].key))}`,
+      `${pathname}?${createQueryString(
+        searchParams,
+        'compo',
+        String(TAB_OPTIONS[idx].key),
+      )}`,
     );
   };
 
@@ -69,7 +64,7 @@ function Layout({ type }: Props) {
 
   return (
     <Flex flexDirection='column' className={cx('container')}>
-      <Text typo='h2'>{pageTitle}</Text>
+      <Text typo='h4'>{pageTitle}</Text>
       <Spacing className={cx('spacing', 'first')} />
       <Text typo='s3'>{pageDesc}</Text>
       <Spacing className={cx('spacing', 'first')} />

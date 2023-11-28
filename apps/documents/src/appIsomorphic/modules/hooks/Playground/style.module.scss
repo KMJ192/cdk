@@ -1,0 +1,10 @@
+.container {
+  row-gap: 1.2rem;
+  .pg-layout {
+    min-height: 360px;
+    .pg-editor,
+    .pg-preview {
+      min-height: 360px;
+    }
+  }
+}

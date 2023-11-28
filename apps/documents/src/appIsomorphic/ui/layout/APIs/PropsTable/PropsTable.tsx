@@ -1,13 +1,14 @@
 import { Fragment } from 'react';
 import { Flex, Text } from '@cdkit/react-ui';
+import { When } from '@cdkit/react-modules';
 
 import useValueAppState from '@src/store/AppProvider/hooks/useValueAppState';
 
 import { LAYOUT_CONTENTS } from '../../contents/contents';
+import Colon from '../Colon';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
-import Colon from '../Colon';
 const cx = classNames.bind(style);
 
 type Props = {
@@ -42,7 +43,7 @@ function PropsTable({ type }: Props) {
                     <li className={cx('name')}>
                       <Text typo='b1'>{name}</Text>
                       {essential && (
-                        <Text typo='c1' className={cx('essential', theme)}>
+                        <Text typo='b1' className={cx('essential', theme)}>
                           *
                         </Text>
                       )}
@@ -59,15 +60,17 @@ function PropsTable({ type }: Props) {
                           </Text>
                         </Flex>
                       </li>
-                      <li>
-                        <Flex>
-                          <Text typo='b3' className={cx('dv-name')}>
-                            기본값
-                          </Text>
-                          <Colon />
-                          <Text typo='b3'>{defaultValue}</Text>
-                        </Flex>
-                      </li>
+                      <When condition={defaultValue !== ''}>
+                        <li>
+                          <Flex>
+                            <Text typo='b3' className={cx('dv-name')}>
+                              기본값
+                            </Text>
+                            <Colon />
+                            <Text typo='b3'>{defaultValue}</Text>
+                          </Flex>
+                        </li>
+                      </When>
                       <li>
                         <Flex flexDirection='column' className={cx('desc')}>
                           <Text typo='b3'>설명</Text>

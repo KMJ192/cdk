@@ -1,0 +1,42 @@
+@import '@src/styles/color/color.module.scss';
+
+.container {
+  row-gap: 1rem;
+  .contents {
+    row-gap: 0.5rem;
+    list-style: disc;
+    padding-left: 1rem;
+    .name > .essential {
+      color: $light-red700;
+      &.dark {
+        color: $dark-red100;
+      }
+    }
+    .info {
+      row-gap: 0.2rem;
+      padding-left: 1rem;
+      .type-name {
+        min-width: 2rem;
+      }
+      .dv-name {
+        min-width: 3rem;
+      }
+      .type {
+        border-radius: 6px;
+        padding: 0.1rem 0.2rem 0 0.2rem;
+        background-color: $light-primary500;
+        color: $light-text;
+        &.dark {
+          background-color: $dark-primary100;
+          color: $dark-text;
+        }
+      }
+    }
+    .desc {
+      row-gap: 0.2rem;
+      & > ul {
+        padding-left: 1.2rem;
+      }
+    }
+  }
+}

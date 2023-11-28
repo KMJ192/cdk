@@ -13,7 +13,7 @@
 @mixin header-reactive {
   padding: 1.5rem 3rem;
   @media screen and (max-width: #{$resolution_width_480}px) {
-    padding: 2rem;
+    padding-left: 1.75rem;
   }
   .contents > .left > .hamburger {
     display: none;
@@ -34,7 +34,7 @@
   width: 20px !important;
   height: 16px !important;
   @include position(7px);
-  @media (max-width: #{$resolution_width_480}px) {
+  @media screen and (max-width: #{$resolution_width_480}px) {
     width: 18px !important;
     height: 14px !important;
     @include position(6px);
@@ -60,15 +60,6 @@
   @media (max-width: #{$resolution_width_480}px) {
     width: 28px;
     height: 28px;
-    @include transform(translate(-14px, -50%) rotate(0deg));
-    &.light-icon.dark {
-      opacity: 0;
-      @include transform(translate(-14px, -50%) rotate(180deg));
-    }
-    &.dark-icon.light {
-      opacity: 0;
-      @include transform(translate(-14px, -50%) rotate(180deg));
-    }
   }
 }
 
