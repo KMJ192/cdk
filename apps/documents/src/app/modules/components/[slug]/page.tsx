@@ -1,3 +1,4 @@
+import ModuleComponentsPage from '@src/appIsomorphic/modules/components/page';
 import type { PAGE_MODULE_COMPONENTS } from '@src/utils/url';
 
 type Props = {
@@ -7,7 +8,7 @@ type Props = {
 };
 
 function Page({ params }: Props) {
-  return <div>{params.slug}</div>;
+  return <ModuleComponentsPage type={params.slug} />;
 }
 
 export default Page;

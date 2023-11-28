@@ -10,9 +10,9 @@ import Documents from './Documents/Documents';
 import APIs from './APIs/APIs';
 import Playground from './Playground/Playground';
 
-import type { PAGE_HOOKS } from '@src/utils/url';
+import type { PAGE_MODULE_COMPONENTS } from '@src/utils/url';
 import { createQueryString } from '@src/utils/utils';
-import { HOOKS_CONTENTS, TAB_OPTIONS } from './contents/contents';
+import { MODULE_COMPONENTS_CONTENTS, TAB_OPTIONS } from './contents/contents';
 import DataTypes from './DataTypes/DataTypes';
 
 import classNames from 'classnames/bind';
@@ -20,16 +20,16 @@ import style from './style.module.scss';
 const cx = classNames.bind(style);
 
 type Props = {
-  type: PAGE_HOOKS;
+  type: PAGE_MODULE_COMPONENTS;
 };
 
-function HooksPage({ type }: Props) {
+function ModuleComponentsPage({ type }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const curParam = searchParams.get('hooks');
 
-  const { pageTitle, pageDesc } = HOOKS_CONTENTS[type];
+  const { pageTitle, pageDesc } = MODULE_COMPONENTS_CONTENTS[type];
 
   const [selectedTab, setSelectedTab] = useState(
     (() => {
@@ -98,4 +98,4 @@ function HooksPage({ type }: Props) {
   );
 }
 
-export default HooksPage;
+export default ModuleComponentsPage;
