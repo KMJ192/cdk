@@ -1,5 +1,5 @@
 import Components from '@src/appIsomorphic/ui/components/page';
-import NotFoundComponent from '@src/PageContents/NotFoundComponent/NotFoundComponent';
+import NotFoundComponent from '@src/components/NotFoundComponent/NotFoundComponent';
 
 import { COMPONENT_CONTENTS } from '@src/appIsomorphic/ui/components/contents/contents';
 import type { PAGE_UI_COMPONENTS } from '@src/utils/url';

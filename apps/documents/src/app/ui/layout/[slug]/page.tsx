@@ -1,5 +1,5 @@
 import Layout from '@src/appIsomorphic/ui/layout/page';
-import NotFoundComponent from '@src/PageContents/NotFoundComponent/NotFoundComponent';
+import NotFoundComponent from '@src/components/NotFoundComponent/NotFoundComponent';
 
 import { LAYOUT_CONTENTS } from '@src/appIsomorphic/ui/layout/contents/contents';
 import type { PAGE_LAYOUT } from '@src/utils/url';
