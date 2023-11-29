@@ -128,7 +128,7 @@ const cssVar: Array<CSS_VARIABLES> = [
   },
 ];
 
-const defaultCode: Array<string> = [];
+const defaultCode: Array<string> = ['<Input placeholder="placeholder" />'];
 
 const pgCode = `import { Input } from '@cdkit/react-ui';
 
