@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse, userAgent } from 'next/server';
+import { themeCookieMaxAge } from './utils/utils';
 
 export function middleware(request: NextRequest) {
   const response = NextResponse.next();
@@ -7,7 +8,7 @@ export function middleware(request: NextRequest) {
 
   const theme = request.cookies.get('theme')?.value ?? 'light';
 
-  response.cookies.set('theme', theme, { maxAge: Infinity });
+  response.cookies.set('theme', theme, { maxAge: themeCookieMaxAge });
 
   if (device.ua.match(/Mobile|Android/i)) {
     response.cookies.set('device', 'mobile', { maxAge: Infinity });
