@@ -2,22 +2,18 @@ import { Fragment } from 'react';
 import { Flex, Spacing, Text } from '@cdkit/react-ui';
 import { When } from '@cdkit/react-modules';
 
-import { HOOKS_CONTENTS } from '../contents/contents';
-
-import type { PAGE_HOOKS } from '@src/utils/url';
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
+import type { DATA_TYPE } from '../types';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
 const cx = classNames.bind(style);
 
 type Props = {
-  type: PAGE_HOOKS;
+  dataType: Array<DATA_TYPE>;
 };
 
-function DataTypes({ type }: Props) {
-  const { dataType } = HOOKS_CONTENTS[type];
-
+function DataTypes({ dataType }: Props) {
   return (
     <Flex className={cx('container')} flexDirection='column'>
       <When condition={dataType.length === 0}>

@@ -1,12 +1,12 @@
 import { Flex, Tab } from '@cdkit/react-ui';
+import { CSS_VAR_TYPE } from '@src/utils/utils';
 import type {
   CSS_VARIABLES,
   DATA_TYPE,
   DOCUMENT,
   PAGE_CONTENTS,
-  PROPS,
-} from './contents';
-import { CSS_VAR_TYPE } from '@src/utils/utils';
+  PARAMS,
+} from '@src/components/DocsContents/types';
 
 import style from './style.module.scss';
 
@@ -61,7 +61,7 @@ const dataType: Array<DATA_TYPE> = [
   },
 ];
 
-const props: Array<PROPS> = [
+const params: Array<PARAMS> = [
   {
     title: 'Props',
     defaultTag: 'div',
@@ -196,7 +196,7 @@ export const tabContents: PAGE_CONTENTS = {
   pageDesc: 'Tab 컴포넌트',
   document,
   dataType,
-  props,
+  params,
   cssVar,
   defaultCode,
   pgCode,

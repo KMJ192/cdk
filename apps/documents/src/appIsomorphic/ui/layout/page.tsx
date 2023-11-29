@@ -6,9 +6,9 @@ import { Flex, Spacing, Tab, type TabOptionKey, Text } from '@cdkit/react-ui';
 import { When } from '@cdkit/react-modules';
 
 import Line from '@src/components/Line/Line';
-import Documents from './Documents/Documents';
-import APIs from './APIs/APIs';
-import Playground from './Playground/Playground';
+import Documents from '@src/components/DocsContents/Documents/Documents';
+import APIs from '@src/components/DocsContents/APIs/APIs';
+import Playground from '@src/components/DocsContents/Playground/Playground';
 
 import type { PAGE_LAYOUT } from '@src/utils/url';
 import { createQueryString } from '@src/utils/utils';
@@ -28,7 +28,8 @@ function Layout({ type }: Props) {
   const searchParams = useSearchParams();
   const curParam = searchParams.get('compo');
 
-  const { pageTitle, pageDesc } = LAYOUT_CONTENTS[type];
+  const { pageTitle, pageDesc, document, params, cssVar, defaultCode, pgCode } =
+    LAYOUT_CONTENTS[type];
 
   const [selectedTab, setSelectedTab] = useState(
     (() => {
@@ -73,13 +74,13 @@ function Layout({ type }: Props) {
       <Tab options={TAB_OPTIONS} selected={selectedTab} onSelect={onSelect} />
       <Spacing className={cx('spacing', 'third')} />
       <When condition={selectedTab === 0}>
-        <Documents type={type} />
+        <Documents document={document} />
       </When>
       <When condition={selectedTab === 1}>
-        <APIs type={type} />
+        <APIs params={params} cssVar={cssVar} defaultCode={defaultCode} />
       </When>
       <When condition={selectedTab === 2}>
-        <Playground type={type} />
+        <Playground pgCode={pgCode} />
       </When>
     </Flex>
   );

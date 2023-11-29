@@ -1,12 +1,16 @@
 import { Spacing } from '@cdkit/react-ui';
-import type { PROPS, CSS_VARIABLES, DOCUMENT, PAGE_CONTENTS } from './contents';
 import { CSS_VAR_TYPE } from '@src/utils/utils';
+import type {
+  PARAMS,
+  CSS_VARIABLES,
+  DOCUMENT,
+  PAGE_CONTENTS,
+} from '@src/components/DocsContents/types';
 
 const document: Array<DOCUMENT> = [
   {
     title: 'Spacing',
     subtitle: 'Spacing 컴포넌트 문서',
-    desc: ['빈 공간을 추가합니다.'],
     view: (
       <>
         <div>first element</div>
@@ -22,7 +26,7 @@ const document: Array<DOCUMENT> = [
   },
 ];
 
-const props: Array<PROPS> = [
+const params: Array<PARAMS> = [
   {
     title: 'Props',
     defaultTag: 'div',
@@ -55,7 +59,6 @@ const props: Array<PROPS> = [
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
-    desc: '',
     element: [
       {
         name: '--cdkit-layout-spacing-gap',
@@ -86,8 +89,9 @@ export default App;
 export const spacingContents: PAGE_CONTENTS = {
   pageTitle: 'Spacing',
   pageDesc: `공간을 차지하는 컴포넌트`,
+  dataType: [],
   document,
-  props,
+  params,
   cssVar,
   defaultCode,
   pgCode,

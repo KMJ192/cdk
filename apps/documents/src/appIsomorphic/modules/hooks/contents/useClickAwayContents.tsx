@@ -1,10 +1,15 @@
-import type { PROPS, DOCUMENT, PAGE_CONTENTS, DATA_TYPE } from './contents';
+import type {
+  PARAMS,
+  DOCUMENT,
+  PAGE_CONTENTS,
+  DATA_TYPE,
+} from '@src/components/DocsContents/types';
 
 const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'useClickAway Hook 문서',
-    desc: ['useClickAway 코드 예시'],
+    view: 'none',
     code: [
       `import { useRef } from 'react'`,
       `import { useClickAway } from '@cdkit/react-modules';`,
@@ -27,9 +32,10 @@ const document: Array<DOCUMENT> = [
   },
 ];
 
-const props: Array<PROPS> = [
+const params: Array<PARAMS> = [
   {
     title: 'Params',
+    defaultTag: 'none',
     element: [
       {
         name: 'onClickAway',
@@ -116,7 +122,8 @@ export const useClickAwayContents: PAGE_CONTENTS = {
   pageTitle: 'useClickAway',
   pageDesc: '특정 영역 이외의 마우스 클릭을 감지하는 hook 입니다.',
   document,
-  props,
+  cssVar: [],
+  params,
   dataType,
   defaultCode,
   pgCode,
