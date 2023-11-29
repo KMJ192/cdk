@@ -1,22 +1,21 @@
 import { CSS_VAR_TYPE } from '@src/utils/utils';
-import {
-  type PROPS,
-  type CSS_VARIABLES,
-  type DOCUMENT,
-  type PAGE_CONTENTS,
-} from './contents';
+import type {
+  PARAMS,
+  CSS_VARIABLES,
+  DOCUMENT,
+  PAGE_CONTENTS,
+} from '@src/components/DocsContents/types';
 
 const document: Array<DOCUMENT> = [
   {
     title: 'Float',
     subtitle: 'Float 컴포넌트 문서',
-    desc: ['부유 속성을 생성합니다.'],
     view: '부유 속성',
     code: ['<Float>부유 속성</Float>'],
   },
 ];
 
-const props: Array<PROPS> = [
+const params: Array<PARAMS> = [
   {
     title: 'Props',
     defaultTag: 'div',
@@ -96,7 +95,6 @@ const props: Array<PROPS> = [
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
-    desc: '',
     element: [
       {
         name: '--cdkit-layout-float-left',
@@ -148,8 +146,9 @@ export default App;
 export const floatContents: PAGE_CONTENTS = {
   pageTitle: 'Float',
   pageDesc: `부유 속성 컴포넌트`,
+  dataType: [],
   document,
-  props,
+  params,
   cssVar,
   defaultCode,
   pgCode,

@@ -1,10 +1,15 @@
-import type { PROPS, DOCUMENT, PAGE_CONTENTS, DATA_TYPE } from './contents';
+import type {
+  PARAMS,
+  DOCUMENT,
+  PAGE_CONTENTS,
+  DATA_TYPE,
+} from '@src/components/DocsContents/types';
 
 const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'useTrie Hook 문서',
-    desc: ['useTrie 코드 예시'],
+    view: 'none',
     code: [
       `import { useTrie } from '@upcast/react-modules';`,
       ``,
@@ -33,9 +38,10 @@ const document: Array<DOCUMENT> = [
   },
 ];
 
-const props: Array<PROPS> = [
+const params: Array<PARAMS> = [
   {
     title: 'Params',
+    defaultTag: 'none',
     element: [
       {
         name: 'dictionary',
@@ -189,8 +195,9 @@ export default App;
 export const useTrieContents: PAGE_CONTENTS = {
   pageTitle: 'useTrie',
   pageDesc: 'trie DS를 사용할 수 있는 hook 입니다.',
+  cssVar: [],
   document,
-  props,
+  params,
   dataType,
   defaultCode,
   pgCode,

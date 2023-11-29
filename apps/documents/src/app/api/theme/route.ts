@@ -1,4 +1,5 @@
 import { NextResponse, NextRequest } from 'next/server';
+import { themeCookieMaxAge } from '@src/utils/utils';
 
 export async function GET(request: NextRequest) {
   const theme = request.url
@@ -14,7 +15,7 @@ export async function GET(request: NextRequest) {
   response.cookies.set({
     name: 'theme',
     value: themeValue,
-    maxAge: Infinity,
+    maxAge: themeCookieMaxAge,
   });
 
   return response;

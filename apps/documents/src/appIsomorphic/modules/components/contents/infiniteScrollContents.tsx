@@ -1,10 +1,15 @@
-import type { PROPS, DOCUMENT, PAGE_CONTENTS, DATA_TYPE } from './contents';
+import type {
+  DOCUMENT,
+  PARAMS,
+  DATA_TYPE,
+  PAGE_CONTENTS,
+} from '@src/components/DocsContents/types';
 
 const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'InfiniteScroll 문서',
-    desc: ['InfiniteScroll 코드 예시'],
+    view: 'none',
     code: [
       `import { InfiniteScroll } from "@cdkit/react-modules";`,
       ``,
@@ -29,9 +34,10 @@ const document: Array<DOCUMENT> = [
   },
 ];
 
-const props: Array<PROPS> = [
+const params: Array<PARAMS> = [
   {
-    title: 'Params',
+    title: 'Props',
+    defaultTag: 'div',
     element: [
       {
         name: 'children',
@@ -154,8 +160,9 @@ export default App;
 export const infiniteScrollContents: PAGE_CONTENTS = {
   pageTitle: 'InfiniteScroll',
   pageDesc: 'InfiniteScroll 컴포넌트 문서 페이지',
+  cssVar: [],
   document,
-  props,
+  params,
   dataType,
   defaultCode,
   pgCode,

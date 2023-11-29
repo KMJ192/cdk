@@ -2,40 +2,7 @@ import { TabOption, Text } from '@cdkit/react-ui';
 import { useTrieContents } from './useTrieContents';
 import { useClickAwayContents } from './useClickAwayContents';
 import { useComponentDidMountContents } from './useComponentDidMountContents';
-
-type DOCUMENT = {
-  title: string;
-  subtitle: string;
-  desc: Array<string>;
-  code: Array<string>;
-};
-
-type PROPS = {
-  title: string;
-  element: Array<{
-    name: string;
-    type: string;
-    essential: boolean;
-    defaultValue: string;
-    description: Array<string>;
-  }>;
-};
-
-type DATA_TYPE = {
-  name: string;
-  description: string;
-  code: Array<string>;
-};
-
-type PAGE_CONTENTS = {
-  pageTitle: string;
-  pageDesc: string;
-  document: Array<DOCUMENT>;
-  props: Array<PROPS>;
-  dataType: Array<DATA_TYPE>;
-  defaultCode: Array<string>;
-  pgCode: string;
-};
+import type { PAGE_CONTENTS } from '@src/components/DocsContents/types';
 
 const TAB_OPTIONS: Array<TabOption> = [
   {
@@ -62,5 +29,4 @@ const HOOKS_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
   'use-component-did-mount': useComponentDidMountContents,
 };
 
-export type { DOCUMENT, DATA_TYPE, PROPS, PAGE_CONTENTS };
 export { HOOKS_CONTENTS, TAB_OPTIONS };

@@ -1,10 +1,15 @@
-import type { PROPS, DOCUMENT, PAGE_CONTENTS, DATA_TYPE } from './contents';
+import type {
+  PARAMS,
+  DOCUMENT,
+  PAGE_CONTENTS,
+  DATA_TYPE,
+} from '@src/components/DocsContents/types';
 
 const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'Hook 문서',
-    desc: ['useComponentDidMount 코드 예시'],
+    view: 'none',
     code: [
       `import { useComponentDidMount } from "@upcast/react-modules";`,
       `function Component() {`,
@@ -19,9 +24,10 @@ const document: Array<DOCUMENT> = [
   },
 ];
 
-const props: Array<PROPS> = [
+const params: Array<PARAMS> = [
   {
     title: 'Params',
+    defaultTag: 'none',
     element: [
       {
         name: 'callback',
@@ -77,8 +83,9 @@ export default App;
 export const useComponentDidMountContents: PAGE_CONTENTS = {
   pageTitle: 'useComponentDidMount',
   pageDesc: '컴포넌트 마운트시, 단 한번 실행됩니다.',
+  cssVar: [],
   document,
-  props,
+  params,
   dataType,
   defaultCode,
   pgCode,

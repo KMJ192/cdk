@@ -1,17 +1,21 @@
 import { Grid } from '@cdkit/react-ui';
-import type { PROPS, CSS_VARIABLES, DOCUMENT, PAGE_CONTENTS } from './contents';
+import type {
+  PARAMS,
+  CSS_VARIABLES,
+  DOCUMENT,
+  PAGE_CONTENTS,
+} from '@src/components/DocsContents/types';
 
 const document: Array<DOCUMENT> = [
   {
     title: 'Grid',
     subtitle: 'Grid 컴포넌트 문서',
-    desc: ['grid를 설정합니다.'],
     view: <Grid>This is Grid Display</Grid>,
     code: [`<Grid>This is Grid Display</Grid>`],
   },
 ];
 
-const props: Array<PROPS> = [
+const params: Array<PARAMS> = [
   {
     title: 'Props',
     defaultTag: 'div',
@@ -43,8 +47,9 @@ export default App;
 export const gridContents: PAGE_CONTENTS = {
   pageTitle: 'Grid',
   pageDesc: `"display: grid;"가 지정된 컴포넌트`,
+  dataType: [],
   document,
-  props,
+  params,
   cssVar,
   defaultCode,
   pgCode,

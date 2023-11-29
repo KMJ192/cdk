@@ -4,6 +4,7 @@ import { today } from '@src/utils/date';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
+import { version } from '@src/utils/utils';
 const cx = classNames.bind(style);
 
 function Footer() {
@@ -14,6 +15,7 @@ function Footer() {
       className={cx('footer')}
       horizontal={false}
     >
+      <span className={cx('update')}>latest : {version}</span>
       <span className={cx('update')}>last update : {today()}</span>
     </Center>
   );

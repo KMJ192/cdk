@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import { TabOption, Text } from '@cdkit/react-ui';
 
 import { typoContents } from './typo';
@@ -17,51 +16,7 @@ import { tabContents } from './tab';
 import { dataTableContents } from './dataTable';
 import { textareaContents } from './textarea';
 import { cardContents } from './card';
-
-type DOCUMENT = {
-  title: string;
-  subtitle: string;
-  view: ReactNode;
-  code: Array<string>;
-};
-
-type DATA_TYPE = {
-  name: string;
-  description: string;
-  code: Array<string>;
-};
-
-type PROPS = {
-  title: string;
-  defaultTag: string;
-  element: Array<{
-    name: string;
-    type: string;
-    essential: boolean;
-    defaultValue: string;
-    description: Array<string>;
-  }>;
-};
-
-type CSS_VARIABLES = {
-  title: string;
-  element: Array<{
-    name: string;
-    type: 'color' | 'size' | 'layout';
-    description: Array<string>;
-  }>;
-};
-
-type PAGE_CONTENTS = {
-  pageTitle: string;
-  pageDesc: string;
-  document: Array<DOCUMENT>;
-  dataType: Array<DATA_TYPE>;
-  props: Array<PROPS>;
-  cssVar: Array<CSS_VARIABLES>;
-  defaultCode: Array<string>;
-  pgCode: string;
-};
+import type { PAGE_CONTENTS } from '@src/components/DocsContents/types';
 
 const TAB_OPTIONS: Array<TabOption> = [
   {
@@ -101,5 +56,4 @@ const COMPONENT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
   textarea: textareaContents,
 };
 
-export type { DOCUMENT, DATA_TYPE, PROPS, CSS_VARIABLES, PAGE_CONTENTS };
 export { COMPONENT_CONTENTS, TAB_OPTIONS };

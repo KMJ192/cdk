@@ -3,24 +3,22 @@ import { Flex, Text } from '@cdkit/react-ui';
 import useValueAppState from '@src/store/AppProvider/hooks/useValueAppState';
 
 import Colon from '../Colon';
-
-import { LAYOUT_CONTENTS } from '../../contents/contents';
+import type { CSS_VARIABLES } from '../../types';
 
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
 const cx = classNames.bind(style);
 
 type Props = {
-  type: string;
+  cssVar: Array<CSS_VARIABLES>;
 };
 
-function CSSVariablesTable({ type }: Props) {
+function CSSVariablesTable({ cssVar }: Props) {
   const { theme } = useValueAppState();
-  const { cssVar } = LAYOUT_CONTENTS[type];
 
   return (
     <Flex flexDirection='column' className={cx('container')}>
-      {cssVar.map(({ title, desc, element }, idx) => {
+      {cssVar.map(({ title, element }, idx) => {
         return (
           <Flex
             as='ul'
@@ -29,7 +27,6 @@ function CSSVariablesTable({ type }: Props) {
             className={cx('contents')}
           >
             <Text typo='t1'>{title}</Text>
-            <Text typo='s1'>{desc}</Text>
             {element.map(({ name, type, description }, index) => {
               return (
                 <Fragment key={`${name}-${index}`}>

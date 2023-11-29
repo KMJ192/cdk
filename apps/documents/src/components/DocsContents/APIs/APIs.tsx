@@ -1,32 +1,29 @@
 import { Flex, Spacing } from '@cdkit/react-ui';
 import { When } from '@cdkit/react-modules';
 
-import { LAYOUT_CONTENTS } from '../contents/contents';
-
 import CodeGuide from '@src/components/CodeGuide/CodeGuide';
 
 import CSSVariablesTable from './CSSVariablesTable/CSSVariablesTable';
 import PropsTable from './PropsTable/PropsTable';
-
-import { type PAGE_LAYOUT } from '@src/utils/url';
+import type { CSS_VARIABLES, PARAMS } from '../types';
 
 type Props = {
-  type: PAGE_LAYOUT;
+  params: Array<PARAMS>;
+  cssVar: Array<CSS_VARIABLES>;
+  defaultCode: Array<string>;
 };
 
-function APIs({ type }: Props) {
-  const { props, cssVar, defaultCode } = LAYOUT_CONTENTS[type];
-
+function APIs({ params, cssVar, defaultCode }: Props) {
   return (
     <Flex flexDirection='column'>
       <CodeGuide header='jsx' code={defaultCode} />
-      <When condition={props.length > 0}>
-        <PropsTable type={type} />
+      <When condition={params.length > 0}>
+        <PropsTable params={params} />
       </When>
       <When condition={cssVar.length > 0}>
         <>
           <Spacing spacing={1} unit='rem' />
-          <CSSVariablesTable type={type} />
+          <CSSVariablesTable cssVar={cssVar} />
         </>
       </When>
     </Flex>

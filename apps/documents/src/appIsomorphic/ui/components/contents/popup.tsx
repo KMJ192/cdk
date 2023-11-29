@@ -1,12 +1,12 @@
 import { Popup } from '@cdkit/react-ui';
+import { CSS_VAR_TYPE } from '@src/utils/utils';
 import type {
   CSS_VARIABLES,
   DATA_TYPE,
   DOCUMENT,
   PAGE_CONTENTS,
-  PROPS,
-} from './contents';
-import { CSS_VAR_TYPE } from '@src/utils/utils';
+  PARAMS,
+} from '@src/components/DocsContents/types';
 
 const document: Array<DOCUMENT> = [
   {
@@ -19,7 +19,7 @@ const document: Array<DOCUMENT> = [
 
 const dataType: Array<DATA_TYPE> = [];
 
-const props: Array<PROPS> = [
+const params: Array<PARAMS> = [
   {
     title: 'Props',
     defaultTag: 'div',
@@ -98,7 +98,7 @@ export const popupContents: PAGE_CONTENTS = {
   pageDesc: 'Popup 컴포넌트',
   document,
   dataType,
-  props,
+  params,
   cssVar,
   defaultCode,
   pgCode,

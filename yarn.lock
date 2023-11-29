@@ -285,7 +285,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cdkit/common@npm:^0.0.9, @cdkit/common@workspace:^, @cdkit/common@workspace:packages/common":
+"@cdkit/common@npm:^0.1.0, @cdkit/common@workspace:^, @cdkit/common@workspace:packages/common":
   version: 0.0.0-use.local
   resolution: "@cdkit/common@workspace:packages/common"
   dependencies:
@@ -330,7 +330,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@cdkit/react-modules@npm:^0.0.9, @cdkit/react-modules@workspace:^, @cdkit/react-modules@workspace:packages/react-modules":
+"@cdkit/react-modules@npm:^0.1.0, @cdkit/react-modules@workspace:^, @cdkit/react-modules@workspace:packages/react-modules":
   version: 0.0.0-use.local
   resolution: "@cdkit/react-modules@workspace:packages/react-modules"
   dependencies:
@@ -364,8 +364,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@cdkit/react-ui@workspace:packages/react-ui"
   dependencies:
-    "@cdkit/common": "npm:^0.0.9"
-    "@cdkit/react-modules": "npm:^0.0.9"
+    "@cdkit/common": "npm:^0.1.0"
+    "@cdkit/react-modules": "npm:^0.1.0"
     "@rollup/plugin-alias": "npm:^5.0.0"
     "@rollup/plugin-commonjs": "npm:^25.0.4"
     "@rollup/plugin-node-resolve": "npm:^15.2.1"

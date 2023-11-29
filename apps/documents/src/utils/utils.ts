@@ -15,7 +15,9 @@ export const CSS_VAR_TYPE = {
   LAYOUT: 'layout' as const,
 };
 
-export const version = 'v1.0.0';
+export const version = 'v0.1.0';
+
+export const themeCookieMaxAge = 60 * 60 * 24 * 365;
 
 export const createQueryString = (
   searchParams: ReadonlyURLSearchParams,

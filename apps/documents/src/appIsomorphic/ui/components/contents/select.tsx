@@ -1,5 +1,3 @@
-'use client';
-
 import {
   Select,
   useInputSelectController,
@@ -7,15 +5,14 @@ import {
   type SelectOption,
   type InputSelectOption,
 } from '@cdkit/react-ui';
-
+import { CSS_VAR_TYPE } from '@src/utils/utils';
 import type {
   CSS_VARIABLES,
   DATA_TYPE,
   DOCUMENT,
   PAGE_CONTENTS,
-  PROPS,
-} from './contents';
-import { CSS_VAR_TYPE } from '@src/utils/utils';
+  PARAMS,
+} from '@src/components/DocsContents/types';
 
 const primaryList: Array<SelectOption> = Array.from(
   { length: 5 },
@@ -409,7 +406,7 @@ const dataType: Array<DATA_TYPE> = [
   },
 ];
 
-const props: Array<PROPS> = [
+const params: Array<PARAMS> = [
   {
     title: 'Select Props',
     defaultTag: 'div',
@@ -532,7 +529,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'useSelectController Param',
-    defaultTag: '',
+    defaultTag: 'none',
     element: [
       {
         name: 'initSelectedIdx',
@@ -552,7 +549,7 @@ const props: Array<PROPS> = [
   },
   {
     title: 'useInputSelectController Param',
-    defaultTag: '',
+    defaultTag: 'none',
     element: [
       {
         name: 'initSelectedIdx',
@@ -819,7 +816,7 @@ export const selectContents: PAGE_CONTENTS = {
   pageDesc: 'Select 컴포넌트',
   document,
   dataType,
-  props,
+  params,
   cssVar,
   defaultCode,
   pgCode,
