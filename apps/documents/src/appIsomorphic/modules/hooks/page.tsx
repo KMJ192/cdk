@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { Flex, Spacing, Tab, type TabOptionKey, Text } from '@cdkit/react-ui';
+import { Flex, Spacing, Text } from '@cdkit/react-ui';
 import { When } from '@cdkit/react-modules';
 
 import Line from '@src/components/Line/Line';
@@ -10,6 +10,7 @@ import Documents from '@src/components/DocsContents/Documents/Documents';
 import APIs from '@src/components/DocsContents/APIs/APIs';
 import Playground from '@src/components/DocsContents/Playground/Playground';
 import DataTypes from '@src/components/DocsContents/DataTypes/DataTypes';
+import DocSelectTab from '@src/components/DocSelectTab/DocSelectTab';
 
 import type { PAGE_HOOKS } from '@src/utils/url';
 import { createQueryString } from '@src/utils/utils';
@@ -50,8 +51,7 @@ function HooksPage({ type }: Props) {
     })(),
   );
 
-  const onSelect = (_: TabOptionKey, idx: number) => {
-    if (selectedTab === idx) return;
+  const onSelect = (idx: number) => {
     setSelectedTab(idx);
     router.push(
       `${pathname}?${createQueryString(
@@ -89,7 +89,11 @@ function HooksPage({ type }: Props) {
       <Spacing className={cx('spacing', 'first')} />
       <Line />
       <Spacing className={cx('spacing', 'second')} />
-      <Tab options={TAB_OPTIONS} selected={selectedTab} onSelect={onSelect} />
+      <DocSelectTab
+        options={TAB_OPTIONS}
+        selected={selectedTab}
+        onSelect={onSelect}
+      />
       <Spacing className={cx('spacing', 'third')} />
       <When condition={selectedTab === 0}>
         <Documents document={document} />

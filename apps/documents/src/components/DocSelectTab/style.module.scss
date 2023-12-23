@@ -1,0 +1,15 @@
+.tab {
+  .mark {
+    background: var(--cdkit-color-tab-mark);
+  }
+  .options {
+    .option {
+      color: var(--cdkit-color-tab-text);
+      background: var(--cdkit-color-tab-bg);
+      &:hover {
+        color: var(--cdkit-color-tab-text-hover);
+        background: var(--cdkit-color-tab-bg-hover);
+      }
+    }
+  }
+}

@@ -21,6 +21,7 @@ function Playground({ pgCode }: Props) {
         theme={theme}
         customSetup={{
           dependencies: {
+            '@cdkit/common': 'latest',
             '@cdkit/react-ui': 'latest',
             '@cdkit/react-modules': 'latest',
           },
