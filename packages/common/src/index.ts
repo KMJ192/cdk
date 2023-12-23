@@ -1,6 +1,3 @@
-import { sleep, debounce, throttle } from './utils';
-export default {
-  sleep,
-  debounce,
-  throttle,
-};
+import { sleep, debounce, throttle, deepClone } from './utils';
+
+export { sleep, debounce, throttle, deepClone };
