@@ -108,12 +108,7 @@ const dataType: Array<DATA_TYPE> = [];
 const pgCode = `import { useState } from 'react';
 import { Flex, Row, Spinner, Spacing, Text } from '@cdkit/react-ui';
 import { InfiniteScroll } from '@cdkit/react-modules';
-
-function sleep(ms: number) {
-  return new Promise((res) => {
-    setTimeout(res, ms);
-  });
-}
+import { sleep } from '@cdkit/common';
 
 function App() {
   const [list, setList] = useState(Array.from({ length: 20 }, () => 0));
