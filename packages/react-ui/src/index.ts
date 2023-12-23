@@ -43,13 +43,7 @@ export { default as Switch } from './components/Switch/Switch';
 export type { SwitchProps } from './components/Switch/Switch';
 export { default as Spinner } from './components/Spinner/Spinner';
 export type { SpinnerProps } from './components/Spinner/Spinner';
-export { default as Tab } from './components/Tab/Tab';
-export type { TabProps } from './components/Tab/Tab';
-export type {
-  TabOptionKey,
-  TabOption,
-  TabDirection,
-} from './components/Tab/types';
+export { Tab, type TabProps, type TabDirection } from './components/Tab';
 export { default as Text } from './components/Text/Text';
 export type { TextProps } from './components/Text/Text';
 export { default as Textarea } from './components/Textarea/Textarea';
