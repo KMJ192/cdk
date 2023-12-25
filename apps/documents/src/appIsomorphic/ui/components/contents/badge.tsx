@@ -1,5 +1,4 @@
 import { Badge, Flex } from '@cdkit/react-ui';
-import { CSS_VAR_TYPE } from '@src/utils/utils';
 import type {
   CSS_VARIABLES,
   DATA_TYPE,
@@ -58,23 +57,7 @@ const params: Array<PARAMS> = [
   },
 ];
 
-const cssVar: Array<CSS_VARIABLES> = [
-  {
-    title: 'CSS Variables',
-    element: [
-      {
-        name: '--cdkit-color-badge-text',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상'],
-      },
-      {
-        name: '--cdkit-color-badge-bg',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상'],
-      },
-    ],
-  },
-];
+const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode: Array<string> = [
   '<Badge colorSchema="primary">Badge</Badge>',
