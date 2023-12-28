@@ -19,8 +19,13 @@ export type { StackProps } from './layout/Stack/Stack';
 // components
 export { default as Badge } from './components/Badge/Badge';
 export type { BadgeProps } from './components/Badge/Badge';
-export { default as Button } from './components/Button/Button';
-export type { ButtonProps } from './components/Button/Button';
+export {
+  Button,
+  type ButtonProps,
+  type ButtonLoadingSpinnerProps,
+  type ButtonShape,
+  type ButtonVariant,
+} from './components/Button';
 export { default as Card } from './components/Card/Card';
 export type { CardProps } from './components/Card/Card';
 export { default as Checkbox } from './components/Checkbox/Checkbox';
