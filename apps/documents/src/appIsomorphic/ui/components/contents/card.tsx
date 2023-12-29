@@ -1,5 +1,4 @@
 import { Card } from '@cdkit/react-ui';
-import { CSS_VAR_TYPE } from '@src/utils/utils';
 import type {
   CSS_VARIABLES,
   DATA_TYPE,
@@ -45,36 +44,32 @@ const params: Array<PARAMS> = [
         defaultValue: 'undefined',
         description: ['flex-direction (display가 flex로 설정된 경우만)'],
       },
+      {
+        name: 'centerVertical',
+        type: 'boolean',
+        essential: false,
+        defaultValue: 'true',
+        description: ['중앙정렬 - 수직'],
+      },
+      {
+        name: 'centerHorizontal',
+        type: 'boolean',
+        essential: false,
+        defaultValue: 'true',
+        description: ['중앙정렬 - 수평'],
+      },
     ],
   },
 ];
 
-const cssVar: Array<CSS_VARIABLES> = [
-  {
-    title: 'CSS Variables',
-    element: [
-      {
-        name: '--cdkit-color-card-border',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상'],
-      },
-      {
-        name: '--cdkit-color-card-bg',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경색상'],
-      },
-    ],
-  },
-];
+const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode: Array<string> = ['<Card>Card</Card>'];
 
 const pgCode = `import { Card } from '@cdkit/react-ui';
 
 function App() {
-  return (
-    <Card>Card</Card>
-  );
+  return <Card>Card</Card>;
 }
 
 export default App;
