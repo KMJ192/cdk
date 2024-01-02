@@ -14,7 +14,6 @@ type BaseProps = {
   children?: React.ReactNode;
   colorSchema?:
     | 'primary'
-    | 'success'
     | 'info'
     | 'warning'
     | 'danger'
