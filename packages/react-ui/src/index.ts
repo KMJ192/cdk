@@ -32,8 +32,11 @@ export { default as Checkbox } from './components/Checkbox/Checkbox';
 export type { CheckboxProps } from './components/Checkbox/Checkbox';
 export { default as Input } from './components/Input/Input';
 export type { InputProps } from './components/Input/Input';
-export { default as Popup } from './components/Popup/Popup';
-export type { PopupProps } from './components/Popup/Popup';
+export {
+  Popup,
+  type PopupProps,
+  type PopupAnimation,
+} from './components/Popup';
 export { default as ProgressBar } from './components/ProgressBar/ProgressBar';
 export type { ProgressBarProps } from './components/ProgressBar/ProgressBar';
 export { default as Radio } from './components/Radio/Radio';
