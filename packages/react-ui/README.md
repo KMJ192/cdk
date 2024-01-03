@@ -1,11 +1,5 @@
 # @cdkit/react-ui
 
-### Getting start
-
-```
-yarn add @cdkit/react-ui
-```
-
 ### Components
 
 - Center
