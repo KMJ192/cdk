@@ -5,6 +5,18 @@ body[data-theme='light'] {
   background: $light-background;
   color: $light-text;
 
+  --button-bg: #{$light-primary000};
+  --button-text: #{$light-text};
+  --button-bg-hover: #{$light-primary100};
+  --button-text-hover: #{$light-text};
+
+  --tab-bg: #{$light-primary000};
+  --tab-bg-hover: #{$light-primary200};
+  --tab-text: #{$light-text};
+  --tab-mark: #{$light-blue300};
+
+  --card-bg: #{$light-background};
+
   @include scroll-light;
   @include navigation-light;
   @include header-light;
@@ -13,25 +25,38 @@ body[data-theme='light'] {
   @include themeIcon-light;
   @include line-light;
 
-  @include tab-light;
-  @include button-light;
-  @include data-table-light;
-  @include radio-light;
-  @include badge-light;
-  @include checkbox-light;
-  @include card-light;
-  @include input-light;
-  @include popup-light;
-  @include progressbar-light;
-  @include spinner-light;
-  @include switch-light;
-  @include row-light;
-  @include textarea-light;
-  @include select-light;
+  // @include tab-light;
+  // @include button-light;
+  // @include data-table-light;
+  // @include radio-light;
+  // @include badge-light;
+  // @include checkbox-light;
+  // @include card-light;
+  // @include input-light;
+  // @include popup-light;
+  // @include progressbar-light;
+  // @include spinner-light;
+  // @include switch-light;
+  // @include row-light;
+  // @include textarea-light;
+  // @include select-light;
 }
+
 body[data-theme='dark'] {
   background: $dark-background;
   color: $dark-text;
+
+  --button-bg: #{$dark-primary100};
+  --button-bg-hover: #{$dark-primary200};
+  --button-text: #{$dark-text};
+  --button-text-hover: #{$dark-text};
+
+  --tab-bg: #{$dark-primary200};
+  --tab-bg-hover: #{$dark-primary300};
+  --tab-text: #{$dark-text};
+  --tab-mark: #{$dark-blue300};
+
+  --card-bg: #{$dark-background};
 
   @include scroll-dark;
   @include navigation-dark;
@@ -41,19 +66,19 @@ body[data-theme='dark'] {
   @include themeIcon-dark;
   @include line-dark;
 
-  @include tab-dark;
-  @include button-dark;
-  @include data-table-dark;
-  @include radio-dark;
-  @include badge-dark;
-  @include checkbox-dark;
-  @include card-dark;
-  @include input-dark;
-  @include popup-dark;
-  @include progressbar-dark;
-  @include spinner-dark;
-  @include switch-dark;
-  @include row-dark;
-  @include textarea-dark;
-  @include select-dark;
+  // @include tab-dark;
+  // @include button-dark;
+  // @include data-table-dark;
+  // @include radio-dark;
+  // @include badge-dark;
+  // @include checkbox-dark;
+  // @include card-dark;
+  // @include input-dark;
+  // @include popup-dark;
+  // @include progressbar-dark;
+  // @include spinner-dark;
+  // @include switch-dark;
+  // @include row-dark;
+  // @include textarea-dark;
+  // @include select-dark;
 }

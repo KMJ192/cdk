@@ -1,14 +1,13 @@
 .tab {
   .mark {
-    background: var(--cdkit-color-tab-mark);
+    background: var(--tab-mark);
   }
   .options {
     .option {
-      color: var(--cdkit-color-tab-text);
-      background: var(--cdkit-color-tab-bg);
+      background: var(--tab-bg);
+      color: var(--tab-text);
       &:hover {
-        color: var(--cdkit-color-tab-text-hover);
-        background: var(--cdkit-color-tab-bg-hover);
+        background: var(--tab-bg-hover);
       }
     }
   }

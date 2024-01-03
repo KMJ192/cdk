@@ -30,7 +30,7 @@ function UIPage() {
         <CodeGuide header='use yarn' code={['yarn add @cdkit/react-ui']} />
         <Spacing direction='vertical' spacing={2} unit='rem' />
         <Link href={URL.center}>
-          <Button className={cx('goto')}>
+          <Button className={cx('custom', 'goto-button')}>
             <Text typo='s1'>문서 보러 가기</Text>
           </Button>
         </Link>
