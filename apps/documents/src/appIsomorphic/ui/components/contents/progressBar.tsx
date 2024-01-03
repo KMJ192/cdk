@@ -1,5 +1,4 @@
 import { Flex, ProgressBar } from '@cdkit/react-ui';
-import { CSS_VAR_TYPE } from '@src/utils/utils';
 import type {
   CSS_VARIABLES,
   DATA_TYPE,
@@ -16,13 +15,21 @@ const document: Array<DOCUMENT> = [
     subtitle: 'ProgressBar 코드 예시입니다.',
     view: (
       <Flex flexDirection='column' className={style.pgbar}>
-        <ProgressBar percent={70} pending={false} />
-        <ProgressBar percent={50} pending />
+        <ProgressBar percent={70} pending={false}>
+          <ProgressBar.Pending />
+        </ProgressBar>
+        <ProgressBar percent={50} pending>
+          <ProgressBar.Pending />
+        </ProgressBar>
       </Flex>
     ),
     code: [
-      `<ProgressBar percent={70} pending={false} />`,
-      `<ProgressBar percent={50} pending />`,
+      `<ProgressBar percent={70} pending={false}>`,
+      `  <ProgressBar.Pending />`,
+      `</ProgressBar>`,
+      `<ProgressBar percent={50} pending>`,
+      `  <ProgressBar.Pending />`,
+      `</ProgressBar>`,
     ],
   },
 ];
@@ -31,7 +38,7 @@ const dataType: Array<DATA_TYPE> = [];
 
 const params: Array<PARAMS> = [
   {
-    title: 'Props',
+    title: 'ProgressBarProps',
     defaultTag: 'div',
     element: [
       {
@@ -50,40 +57,14 @@ const params: Array<PARAMS> = [
       },
     ],
   },
-];
-
-const cssVar: Array<CSS_VARIABLES> = [
   {
-    title: 'CSS Variables',
-    element: [
-      {
-        name: '--cdkit-color-progress-body',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상'],
-      },
-      {
-        name: '--cdkit-color-progress-bar',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['진행바 색상', '진행 중'],
-      },
-      {
-        name: '--cdkit-color-progress-exit',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['진행바 색상', '진행 종료'],
-      },
-      {
-        name: '--cdkit-color-progress-pending',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['진행 애니메이션 색상'],
-      },
-      {
-        name: '--cdkit-size-progress-height',
-        type: CSS_VAR_TYPE.SIZE,
-        description: ['높이'],
-      },
-    ],
+    title: 'ProgressBarPendingProps',
+    defaultTag: 'div',
+    element: [],
   },
 ];
+
+const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode: Array<string> = [
   `<ProgressBar percent={100} pending={false} />`,
@@ -106,7 +87,9 @@ function App() {
         onChange={onChange}
       />
       <Spacing spacing={8} />
-      <ProgressBar percent={percent} pending />
+      <ProgressBar percent={percent} pending>
+        <ProgressBar.Pending />
+      </ProgressBar>
     </>
   );
 }

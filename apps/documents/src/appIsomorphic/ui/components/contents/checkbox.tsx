@@ -16,38 +16,28 @@ const document: Array<DOCUMENT> = [
     view: (
       <Flex className={style.checkbox}>
         <Checkbox>
-          <Checkbox.MarkField>
-            <Checkbox.Mark></Checkbox.Mark>
-          </Checkbox.MarkField>
+          <Checkbox.Mark />
         </Checkbox>
         <Checkbox checked>
-          <Checkbox.MarkField>
-            <Checkbox.Mark></Checkbox.Mark>
-          </Checkbox.MarkField>
+          <Checkbox.Mark />
         </Checkbox>
         <Checkbox checked multiple>
-          <Checkbox.MarkField>
-            <Checkbox.Mark></Checkbox.Mark>
-          </Checkbox.MarkField>
+          <Checkbox.Mark />
         </Checkbox>
         <Checkbox checked disabled>
-          <Checkbox.MarkField>
-            <Checkbox.Mark></Checkbox.Mark>
-          </Checkbox.MarkField>
+          <Checkbox.Mark />
         </Checkbox>
         <Checkbox checked multiple disabled>
-          <Checkbox.MarkField>
-            <Checkbox.Mark></Checkbox.Mark>
-          </Checkbox.MarkField>
+          <Checkbox.Mark />
         </Checkbox>
       </Flex>
     ),
     code: [
-      `<Checkbox><Checkbox.MarkField><Checkbox.Mark></Checkbox.Mark></Checkbox.MarkField></Checkbox>`,
-      `<Checkbox checked><Checkbox.MarkField><Checkbox.Mark></Checkbox.Mark></Checkbox.MarkField></Checkbox>`,
-      `<Checkbox checked multiple><Checkbox.MarkField><Checkbox.Mark></Checkbox.Mark></Checkbox.MarkField></Checkbox>`,
-      `<Checkbox checked disabled><Checkbox.MarkField><Checkbox.Mark></Checkbox.Mark></Checkbox.MarkField></Checkbox>`,
-      `<Checkbox checked multiple disabled><Checkbox.MarkField><Checkbox.Mark></Checkbox.Mark></Checkbox.MarkField></Checkbox>`,
+      `<Checkbox><Checkbox.Mark /></Checkbox>`,
+      `<Checkbox checked><Checkbox.Mark /></Checkbox>`,
+      `<Checkbox checked multiple><Checkbox.Mark /></Checkbox>`,
+      `<Checkbox checked disabled><Checkbox.Mark /></Checkbox>`,
+      `<Checkbox checked multiple disabled><Checkbox.Mark /></Checkbox>`,
     ],
   },
 ];
@@ -78,7 +68,7 @@ const params: Array<PARAMS> = [
         type: 'boolean',
         essential: false,
         defaultValue: 'undefined',
-        description: ['다중 마킹 여부'],
+        description: ['다중 마킹 모양 여부'],
       },
       {
         name: 'disabled',
@@ -90,34 +80,20 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'MarkField Props',
+    title: 'CheckboxMarkProps',
     defaultTag: 'div',
-    element: [
-      {
-        name: 'children',
-        type: 'React.ReactNode',
-        essential: false,
-        defaultValue: 'undefined',
-        description: ['Children 컴포넌트'],
-      },
-    ],
+    element: [],
   },
 ];
 
 const cssVar: Array<CSS_VARIABLES> = [];
 
-const defaultCode: Array<string> = [
-  `<Checkbox>`,
-  `  <Checkbox.MarkField>`,
-  `    <Checkbox.Mark></Checkbox.Mark>`,
-  `  </Checkbox.MarkField>`,
-  `</Checkbox>`,
-];
+const defaultCode: Array<string> = [`<Checkbox><Checkbox.Mark /></Checkbox>`];
 
 const pgCode = `import { Checkbox } from '@cdkit/react-ui';
 
 function App() {
-  return <Checkbox></Checkbox>;
+  return <Checkbox><Checkbox.Mark /></Checkbox>;
 }
 
 export default App;

@@ -20,7 +20,7 @@ const dataType: Array<DATA_TYPE> = [];
 
 const params: Array<PARAMS> = [
   {
-    title: 'Props',
+    title: 'CardProps',
     defaultTag: 'div',
     element: [
       {

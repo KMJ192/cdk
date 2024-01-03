@@ -149,7 +149,7 @@ const dataType: Array<DATA_TYPE> = [];
 
 const params: Array<PARAMS> = [
   {
-    title: 'DataTableContainer Props',
+    title: 'DataTableContainerProps',
     defaultTag: 'div',
     element: [
       {
@@ -162,7 +162,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'DataTable Props',
+    title: 'DataTableProps',
     defaultTag: 'table',
     element: [
       {
@@ -175,7 +175,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Caption Props',
+    title: 'CaptionProps',
     defaultTag: 'caption',
     element: [
       {
@@ -188,7 +188,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Thead Props',
+    title: 'TheadProps',
     defaultTag: 'thead',
     element: [
       {
@@ -201,7 +201,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Tbody Props',
+    title: 'TbodyProps',
     defaultTag: 'tbody',
     element: [
       {
@@ -214,7 +214,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Tfoot Props',
+    title: 'TfootProps',
     defaultTag: 'tfoot',
     element: [
       {
@@ -227,7 +227,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Th Props',
+    title: 'ThProps',
     defaultTag: 'th',
     element: [
       {
@@ -240,7 +240,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Tr Props',
+    title: 'TrProps',
     defaultTag: 'tr',
     element: [
       {
@@ -260,7 +260,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Td Props',
+    title: 'TdProps',
     defaultTag: 'td',
     element: [
       {
@@ -273,7 +273,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Pagination Props',
+    title: 'DataTablePaginationProps',
     defaultTag: 'div',
     element: [
       {

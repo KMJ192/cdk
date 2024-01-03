@@ -78,10 +78,6 @@ const uiComponentGroup: Array<NavGroup> = [
     contents: 'Radio',
   },
   {
-    url: URL.radioGroup,
-    contents: 'RadioGroup',
-  },
-  {
     url: URL.select,
     contents: 'Select',
   },

@@ -16,19 +16,25 @@ const document: Array<DOCUMENT> = [
     subtitle: 'Switch 코드 예시입니다.',
     view: (
       <Flex className={style.switch}>
-        <Switch>Unchecked</Switch>
-        <Switch checked>Checked</Switch>
-        <Switch disabled>Disabled</Switch>
+        <Switch>
+          <Switch.Bullet />
+        </Switch>
+        <Switch checked>
+          <Switch.Bullet />
+        </Switch>
+        <Switch disabled>
+          <Switch.Bullet />
+        </Switch>
         <Switch checked disabled>
-          Disabled
+          <Switch.Bullet />
         </Switch>
       </Flex>
     ),
     code: [
-      `<Switch>Unchecked</Switch>`,
-      `<Switch checked>Checked</Switch>`,
-      `<Switch disabled>Disabled</Switch>`,
-      `<Switch checked disabled>Disabled</Switch>`,
+      `<Switch><Switch.Bullet /></Switch>`,
+      `<Switch checked><Switch.Bullet /></Switch>`,
+      `<Switch disabled><Switch.Bullet /></Switch>`,
+      `<Switch checked disabled><Switch.Bullet /></Switch>`,
     ],
   },
 ];
@@ -63,92 +69,17 @@ const params: Array<PARAMS> = [
       },
     ],
   },
+  {
+    title: 'SwitchBulletProps',
+    defaultTag: 'div',
+    element: [],
+  },
 ];
 
 const cssVar: Array<CSS_VARIABLES> = [
   {
     title: 'CSS Variables',
     element: [
-      {
-        name: '--cdkit-color-switch-bg',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상'],
-      },
-      {
-        name: '--cdkit-color-switch-bg-checked',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상', '선택됨'],
-      },
-      {
-        name: '--cdkit-color-switch-bg-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-switch-bg-checked-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상', '선택됨', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-switch-bg-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-color-switch-bg-checked-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상', '선택됨', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-color-switch-bullet',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['불랫 색상'],
-      },
-      {
-        name: '--cdkit-color-switch-bullet-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['불랫 색상', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-switch-bullet-checked',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['불랫 색상', '선택됨'],
-      },
-      {
-        name: '--cdkit-color-switch-bullet-checked-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['불랫 색상', '선택됨', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-switch-bullet-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['불랫 색상', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-color-switch-bullet-checked-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['불랫 색상', '선택됨', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-color-switch-bullet-box-shadow',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['불랫 색상', '그림자 색상'],
-      },
-      {
-        name: '--cdkit-color-switch-text',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상'],
-      },
-      {
-        name: '--cdkit-color-switch-text-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-color-switch-text-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상', '비활성화'],
-      },
       {
         name: '--cdkit-size-switch-bullet',
         type: CSS_VAR_TYPE.SIZE,
@@ -168,7 +99,7 @@ const cssVar: Array<CSS_VARIABLES> = [
   },
 ];
 
-const defaultCode: Array<string> = [`<Switch>Switch</Switch>`];
+const defaultCode: Array<string> = [`<Switch><Switch.Bullet /></Switch>`];
 
 const pgCode = `import { useState } from 'react';
 import { Switch } from '@cdkit/react-ui';
@@ -181,7 +112,7 @@ function App() {
       checked={checked}
       onClick={() => setChecked(!checked)}
     >
-      Switch
+      <Switch.Bullet />
     </Switch>
   );
 }

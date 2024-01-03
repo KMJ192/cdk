@@ -62,7 +62,7 @@ const dataType: Array<DATA_TYPE> = [
 
 const params: Array<PARAMS> = [
   {
-    title: 'Props',
+    title: 'ButtonProps',
     defaultTag: 'button',
     element: [
       {
@@ -122,6 +122,11 @@ const params: Array<PARAMS> = [
         description: ['클릭효과 여부'],
       },
     ],
+  },
+  {
+    title: 'Button.LoadingSpinner Props',
+    defaultTag: 'div',
+    element: [],
   },
 ];
 const cssVar: Array<CSS_VARIABLES> = [];

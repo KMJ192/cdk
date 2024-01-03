@@ -56,16 +56,6 @@ const cssVar: Array<CSS_VARIABLES> = [
         type: CSS_VAR_TYPE.COLOR,
         description: ['색상2'],
       },
-      {
-        name: '--cdkit-size-spinner',
-        type: CSS_VAR_TYPE.SIZE,
-        description: ['크기'],
-      },
-      {
-        name: '--cdkit-size-border-width',
-        type: CSS_VAR_TYPE.SIZE,
-        description: ['굵기'],
-      },
     ],
   },
 ];
