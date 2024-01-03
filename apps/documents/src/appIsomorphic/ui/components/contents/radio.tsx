@@ -88,7 +88,6 @@ function App() {
   return (
     <Radio 
       checked={checked}
-      disabled={false}
       onClick={() => setChecked(!checked)}
     >
       <Radio.Mark />

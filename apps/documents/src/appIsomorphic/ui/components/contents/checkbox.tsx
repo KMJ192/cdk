@@ -90,10 +90,20 @@ const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode: Array<string> = [`<Checkbox><Checkbox.Mark /></Checkbox>`];
 
-const pgCode = `import { Checkbox } from '@cdkit/react-ui';
+const pgCode = `import { useState } from 'react';
+import { Checkbox } from '@cdkit/react-ui';
 
 function App() {
-  return <Checkbox><Checkbox.Mark /></Checkbox>;
+  const [checked, setChecked] = useState(false);
+
+  return (
+    <Checkbox
+      checked={checked}
+      onClick={() => setChecked(!checked)}
+    >
+      <Checkbox.Mark />
+    </Checkbox>
+  );
 }
 
 export default App;

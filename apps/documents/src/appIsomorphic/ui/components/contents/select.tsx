@@ -257,7 +257,7 @@ const defaultCode: Array<string> = [
   `</Select>`,
 ];
 
-const pgCode = `import { useRef } from 'react'; 
+const pgCode = `import { useRef, useState } from 'react'; 
 import { Select } from '@cdkit/react-ui';
 import { useClickAway } from '@cdkit/react-modules';
 

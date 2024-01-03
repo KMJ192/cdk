@@ -76,7 +76,7 @@ import { Spacing, Input, ProgressBar } from '@cdkit/react-ui';
 function App() {
   const [percent, setPercent] = useState(50);
   const onChange = (e) => {
-    setPercent(e.target.value);
+    setPercent(Number(e.target.value));
   }
 
   return (

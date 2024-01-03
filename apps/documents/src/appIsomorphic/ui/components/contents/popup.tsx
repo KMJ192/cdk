@@ -105,7 +105,7 @@ function App() {
   return (
     <>
       <Button onClick={() => setVisible(!visible)}>Control Popup</Button>
-      <Popup visible={visible} animation="fade">Popup</Popup>
+      <Popup style={{ padding: "16px" }} visible={visible} animation="fade">Popup</Popup>
     </>
   );
 }
