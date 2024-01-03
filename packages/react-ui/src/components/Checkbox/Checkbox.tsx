@@ -1,10 +1,9 @@
 import React from 'react';
 
-import Provider from './store/Provider';
-import MarkField from './MarkField';
-import Mark from './Mark';
+import Mark from './Mark/Mark';
 
 import type { OVER_RIDABLE_PROPS } from '@src/types/types';
+import Context from './store/Context';
 
 import classNames from 'classnames/bind';
 import style from '@css/components/Checkbox/style.module.scss';
@@ -36,28 +35,27 @@ function CB<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
   const ELEMENT = as || DEFAULT_ELEMENT;
 
   return (
-    <Provider
+    <Context.Provider
       value={{
         multiple,
-        disabled,
         checked,
+        disabled,
       }}
     >
       <ELEMENT
         {...props}
         ref={ref}
-        className={cx('checkbox', { disabled }, className)}
+        className={cx('checkbox', { checked }, { disabled }, className)}
       >
         {children}
       </ELEMENT>
-    </Provider>
+    </Context.Provider>
   );
 }
 
-const CheckBox = Object.assign(React.forwardRef(CB) as typeof CB, {
-  MarkField,
+const Checkbox = Object.assign(React.forwardRef(CB) as typeof CB, {
   Mark,
 });
 
 export type CheckboxProps = Props<typeof DEFAULT_ELEMENT>;
-export default CheckBox;
+export default Checkbox;

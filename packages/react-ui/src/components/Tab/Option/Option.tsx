@@ -3,7 +3,7 @@ import React from 'react';
 import type { OVER_RIDABLE_PROPS } from '@src/types/types';
 
 import classNames from 'classnames/bind';
-import style from '@css/components/Tab/Option/style.module.scss';
+import style from '@css/components/Tab/style.module.scss';
 const cx = classNames.bind(style);
 
 type BaseProps = {
@@ -27,5 +27,5 @@ function Option<T extends React.ElementType = typeof DEFAULT_ELEMENT>(
   );
 }
 
-export type OptionProps = Props<typeof DEFAULT_ELEMENT>;
+export type TabOptionProps = Props<typeof DEFAULT_ELEMENT>;
 export default React.forwardRef(Option) as typeof Option;
