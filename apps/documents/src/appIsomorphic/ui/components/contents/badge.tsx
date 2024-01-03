@@ -1,5 +1,4 @@
 import { Badge, Flex } from '@cdkit/react-ui';
-import { CSS_VAR_TYPE } from '@src/utils/utils';
 import type {
   CSS_VARIABLES,
   DATA_TYPE,
@@ -37,7 +36,7 @@ const dataType: Array<DATA_TYPE> = [];
 
 const params: Array<PARAMS> = [
   {
-    title: 'Props',
+    title: 'BadgeProps',
     defaultTag: 'span',
     element: [
       {
@@ -54,27 +53,39 @@ const params: Array<PARAMS> = [
         defaultValue: 'primary',
         description: ['변형 타입 설정'],
       },
+      {
+        name: 'display',
+        type: '"flex" | "grid"',
+        essential: false,
+        defaultValue: 'flex',
+        description: ['display 설정'],
+      },
+      {
+        name: 'flexDirection',
+        type: '"column" | "row" | "column-reverse" | "row-reverse"',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['flex-direction (display가 flex로 설정된 경우만)'],
+      },
+      {
+        name: 'centerVertical',
+        type: 'boolean',
+        essential: false,
+        defaultValue: 'true',
+        description: ['중앙정렬 - 수직'],
+      },
+      {
+        name: 'centerHorizontal',
+        type: 'boolean',
+        essential: false,
+        defaultValue: 'true',
+        description: ['중앙정렬 - 수평'],
+      },
     ],
   },
 ];
 
-const cssVar: Array<CSS_VARIABLES> = [
-  {
-    title: 'CSS Variables',
-    element: [
-      {
-        name: '--cdkit-color-badge-text',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상'],
-      },
-      {
-        name: '--cdkit-color-badge-bg',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상'],
-      },
-    ],
-  },
-];
+const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode: Array<string> = [
   '<Badge colorSchema="primary">Badge</Badge>',

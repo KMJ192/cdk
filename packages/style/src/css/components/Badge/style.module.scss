@@ -1,33 +1,41 @@
-@import './variable/color.module.scss';
+@import '../../styles/color/color.module.scss';
+@import '../../layout/display.scss';
 
-.badge {
+@mixin color-schema {
+  &.primary {
+    color: $light-text;
+    background-color: $light-primary200;
+  }
+  &.success {
+    color: $light-primary000;
+    background-color: $light-success;
+  }
+  &.info {
+    color: $light-text;
+    background-color: $light-info;
+  }
+  &.warning {
+    color: $light-text;
+    background-color: $light-warning;
+  }
+  &.danger {
+    color: $light-primary000;
+    background-color: $light-danger;
+  }
+}
+
+@mixin badge {
   display: inline-block;
   white-space: nowrap;
   padding: 0.5rem;
   border-radius: 1rem;
+  width: fit-content;
   min-height: 0.75rem;
-  &.custom {
-    color: $cdkit-color-badge-text;
-    background: $cdkit-color-badge-bg;
-  }
-  &.primary {
-    color: $light-text;
-    background: $light-primary200;
-  }
-  &.success {
-    color: $light-primary000;
-    background: $light-success;
-  }
-  &.info {
-    color: $light-text;
-    background: $light-info;
-  }
-  &.warning {
-    color: $light-text;
-    background: $light-warning;
-  }
-  &.danger {
-    color: $light-primary000;
-    background: $light-danger;
-  }
+}
+
+.badge {
+  @include badge;
+  @include display;
+  @include color-schema;
+  @include position-center;
 }

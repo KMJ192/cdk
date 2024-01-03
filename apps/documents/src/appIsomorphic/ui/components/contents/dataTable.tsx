@@ -149,7 +149,7 @@ const dataType: Array<DATA_TYPE> = [];
 
 const params: Array<PARAMS> = [
   {
-    title: 'DataTableContainer Props',
+    title: 'DataTableContainerProps',
     defaultTag: 'div',
     element: [
       {
@@ -162,7 +162,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'DataTable Props',
+    title: 'DataTableProps',
     defaultTag: 'table',
     element: [
       {
@@ -175,7 +175,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Caption Props',
+    title: 'CaptionProps',
     defaultTag: 'caption',
     element: [
       {
@@ -188,7 +188,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Thead Props',
+    title: 'TheadProps',
     defaultTag: 'thead',
     element: [
       {
@@ -201,7 +201,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Tbody Props',
+    title: 'TbodyProps',
     defaultTag: 'tbody',
     element: [
       {
@@ -214,7 +214,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Tfoot Props',
+    title: 'TfootProps',
     defaultTag: 'tfoot',
     element: [
       {
@@ -227,7 +227,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Th Props',
+    title: 'ThProps',
     defaultTag: 'th',
     element: [
       {
@@ -240,7 +240,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Tr Props',
+    title: 'TrProps',
     defaultTag: 'tr',
     element: [
       {
@@ -260,7 +260,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Td Props',
+    title: 'TdProps',
     defaultTag: 'td',
     element: [
       {
@@ -273,7 +273,7 @@ const params: Array<PARAMS> = [
     ],
   },
   {
-    title: 'Pagination Props',
+    title: 'DataTablePaginationProps',
     defaultTag: 'div',
     element: [
       {
@@ -317,78 +317,8 @@ const params: Array<PARAMS> = [
 
 const cssVar: Array<CSS_VARIABLES> = [
   {
-    title: 'CSS Variables',
+    title: 'Pagination CSS Variables',
     element: [
-      {
-        name: '--cdkit-color-data-table-bg',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상'],
-      },
-      {
-        name: '--cdkit-color-data-table-border',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상'],
-      },
-      {
-        name: '--cdkit-color-data-table-caption-text',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['캡션 글자 색상'],
-      },
-      {
-        name: '--cdkit-color-data-table-header-bg',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['Header 배경 색상'],
-      },
-      {
-        name: '--cdkit-color-data-table-header-text',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['Header 글자 색상'],
-      },
-      {
-        name: '--cdkit-color-data-table-footer-bg',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['Footer 배경 색상'],
-      },
-      {
-        name: '--cdkit-color-data-table-footer-text',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['Footer 글자 색상'],
-      },
-      {
-        name: '--cdkit-color-data-table-divide-line',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['Row 경계선 색상'],
-      },
-      {
-        name: '--cdkit-color-data-table-row-bg',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['Row 배경 색상'],
-      },
-      {
-        name: '--cdkit-color-data-table-row-bg-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['Row 배경 색상', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-color-data-table-row-bg-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['Row 배경 색상', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-data-table-row-text',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['Row 글자 색상'],
-      },
-      {
-        name: '--cdkit-color-data-table-row-text-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['Row 글자 색상', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-color-data-table-row-text-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['Row 글자 색상', '비활성화'],
-      },
       {
         name: '--cdkit-color-data-table-pagination-index-bg',
         type: CSS_VAR_TYPE.COLOR,

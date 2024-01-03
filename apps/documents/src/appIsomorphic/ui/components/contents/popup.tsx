@@ -1,5 +1,4 @@
 import { Popup } from '@cdkit/react-ui';
-import { CSS_VAR_TYPE } from '@src/utils/utils';
 import type {
   CSS_VARIABLES,
   DATA_TYPE,
@@ -8,20 +7,34 @@ import type {
   PARAMS,
 } from '@src/components/DocsContents/types';
 
+import style from './style.module.scss';
+
 const document: Array<DOCUMENT> = [
   {
     title: 'Example',
     subtitle: 'Popup 코드 예시입니다.',
-    view: <Popup visible>Popup</Popup>,
+    view: (
+      <Popup className={style.popup} visible>
+        Popup
+      </Popup>
+    ),
     code: ['<Popup visible>Popup</Popup>'],
   },
 ];
 
-const dataType: Array<DATA_TYPE> = [];
+const dataType: Array<DATA_TYPE> = [
+  {
+    name: 'PopupAnimation',
+    description: 'Popup이 출력될 때 보여지는 애니메이션을 정의합니다.',
+    code: [
+      `type PopupAnimation = "fade" | "down" | "up" | "left" | "right" | "none"`,
+    ],
+  },
+];
 
 const params: Array<PARAMS> = [
   {
-    title: 'Props',
+    title: 'PopupProps',
     defaultTag: 'div',
     element: [
       {
@@ -33,9 +46,9 @@ const params: Array<PARAMS> = [
       },
       {
         name: 'animation',
-        type: '"fade" | "none"',
+        type: 'PopupAnimation',
         essential: false,
-        defaultValue: 'fade',
+        defaultValue: 'none',
         description: ['출력 애니메이션'],
       },
       {
@@ -45,32 +58,39 @@ const params: Array<PARAMS> = [
         defaultValue: 'false',
         description: ['출력 여부'],
       },
+      {
+        name: 'display',
+        type: '"flex" | "grid"',
+        essential: false,
+        defaultValue: 'flex',
+        description: ['display 설정'],
+      },
+      {
+        name: 'flexDirection',
+        type: '"column" | "row" | "column-reverse" | "row-reverse"',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['flex-direction (display가 flex로 설정된 경우만)'],
+      },
+      {
+        name: 'centerVertical',
+        type: 'boolean',
+        essential: false,
+        defaultValue: 'true',
+        description: ['중앙정렬 - 수직'],
+      },
+      {
+        name: 'centerHorizontal',
+        type: 'boolean',
+        essential: false,
+        defaultValue: 'true',
+        description: ['중앙정렬 - 수평'],
+      },
     ],
   },
 ];
 
-const cssVar: Array<CSS_VARIABLES> = [
-  {
-    title: 'CSS Variables',
-    element: [
-      {
-        name: '--cdkit-color-popup-bg',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상'],
-      },
-      {
-        name: '--cdkit-color-popup-text',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상'],
-      },
-      {
-        name: '--cdkit-color-popup-box-shadow,',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['그림자 색상'],
-      },
-    ],
-  },
-];
+const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode: Array<string> = [
   `<Popup visible={true} animation="fade">Popup</Popup>`,
@@ -85,7 +105,7 @@ function App() {
   return (
     <>
       <Button onClick={() => setVisible(!visible)}>Control Popup</Button>
-      <Popup visible={visible} animation="fade">Popup</Popup>
+      <Popup style={{ padding: "16px" }} visible={visible} animation="fade">Popup</Popup>
     </>
   );
 }

@@ -1,0 +1,31 @@
+@import '../../../styles/color/color.module.scss';
+
+@mixin container {
+  position: relative;
+  width: 100%;
+}
+
+@mixin input-field {
+  .input-field {
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.75rem;
+    padding: 0.625rem 2rem 0.625rem 0.625rem;
+  }
+}
+
+@mixin icon {
+  .icon {
+    top: 50%;
+    transform: translateY(-55%) rotate(0deg);
+    &.open {
+      transform: translateY(-55%) rotate(-180deg);
+    }
+  }
+}
+
+.container {
+  @include container;
+  @include input-field;
+  @include icon;
+}

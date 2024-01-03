@@ -8,7 +8,6 @@ import { checkboxContents } from './checkbox';
 import { popupContents } from './popup';
 import { progressBarContents } from './progressBar';
 import { radioContents } from './radio';
-import { radioGroupContents } from './radioGroup';
 import { spinnerContents } from './spinner';
 import { switchContents } from './switch';
 import { selectContents } from './select';
@@ -63,7 +62,6 @@ const COMPONENT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
   popup: popupContents,
   'progress-bar': progressBarContents,
   radio: radioContents,
-  'radio-group': radioGroupContents,
   spinner: spinnerContents,
   switch: switchContents,
   select: selectContents,

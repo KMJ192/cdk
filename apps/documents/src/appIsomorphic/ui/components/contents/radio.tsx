@@ -1,5 +1,4 @@
 import { Flex, Radio } from '@cdkit/react-ui';
-import { CSS_VAR_TYPE } from '@src/utils/utils';
 import type {
   CSS_VARIABLES,
   DATA_TYPE,
@@ -16,21 +15,25 @@ const document: Array<DOCUMENT> = [
     subtitle: 'Radio 코드 예시입니다.',
     view: (
       <Flex className={style.radio}>
-        <Radio checked={false}>Unchecked</Radio>
-        <Radio checked>Checked</Radio>
+        <Radio>
+          <Radio.Mark />
+        </Radio>
+        <Radio checked>
+          <Radio.Mark />
+        </Radio>
         <Radio checked={false} disabled>
-          Unchecked Disabled
+          <Radio.Mark />
         </Radio>
         <Radio checked disabled>
-          Checked Disabled
+          <Radio.Mark />
         </Radio>
       </Flex>
     ),
     code: [
-      `<Radio checked={false}>Unchecked</Radio>`,
-      `<Radio checked>Checked</Radio>`,
-      `<Radio checked={false} disabled>Unchecked Disabled</Radio>`,
-      `<Radio checked disabled>Checked Disabled</Radio>`,
+      `<Radio><Radio.Mark /></Radio>`,
+      `<Radio checked><Radio.Mark /></Radio>`,
+      `<Radio checked={false} disabled><Radio.Mark /></Radio>`,
+      `<Radio checked disabled><Radio.Mark /></Radio>`,
     ],
   },
 ];
@@ -39,7 +42,7 @@ const dataType: Array<DATA_TYPE> = [];
 
 const params: Array<PARAMS> = [
   {
-    title: 'Props',
+    title: 'RadioProps',
     defaultTag: 'div',
     element: [
       {
@@ -65,115 +68,14 @@ const params: Array<PARAMS> = [
       },
     ],
   },
-];
-
-const cssVar: Array<CSS_VARIABLES> = [
   {
-    title: 'CSS Variables',
-    element: [
-      {
-        name: '--cdkit-color-radio-border,',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상'],
-      },
-      {
-        name: '--cdkit-color-radio-border-checked',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '선택됨'],
-      },
-      {
-        name: '--cdkit-color-radio-border-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-radio-border-checked-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '선택됨', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-radio-border-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-color-radio-border-checked-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '선택됨', '마우스 호버'],
-      },
-      {
-        name: '-cdkit-color-radio-bg',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경색'],
-      },
-      {
-        name: '--cdkit-color-radio-bg-checked',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경색', '선택됨'],
-      },
-      {
-        name: '--cdkit-color-radio-bg-checked-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경색', '선택됨', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-color-radio-bg-checked-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경색', '선택됨', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-radio-bg-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경색', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-radio-bg-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경색', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-color-radio-text',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상'],
-      },
-      {
-        name: '--cdkit-color-radio-text-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-radio-text-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-color-radio-pupil,',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['마크 색상'],
-      },
-      {
-        name: '--cdkit-color-radio-pupil-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['마크 색상', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-radio-pupil-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['마크 색상', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-size-radio',
-        type: CSS_VAR_TYPE.SIZE,
-        description: ['크기'],
-      },
-      {
-        name: '--cdkit-size-radio-pupil',
-        type: CSS_VAR_TYPE.SIZE,
-        description: ['마크 크기'],
-      },
-    ],
+    title: 'RadioMarkProps',
+    defaultTag: 'div',
+    element: [],
   },
 ];
+
+const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode: Array<string> = [`<Radio>Radio</Radio>`];
 
@@ -186,10 +88,9 @@ function App() {
   return (
     <Radio 
       checked={checked}
-      disabled={false}
       onClick={() => setChecked(!checked)}
     >
-      Radio
+      <Radio.Mark />
     </Radio>
   );
 }

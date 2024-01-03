@@ -1,5 +1,4 @@
 import { Button, Center, Flex } from '@cdkit/react-ui';
-import { CSS_VAR_TYPE } from '@src/utils/utils';
 
 import type {
   CSS_VARIABLES,
@@ -24,7 +23,10 @@ const document: Array<DOCUMENT> = [
         </Flex>
         <Flex className={style['button-variant']}>
           <Button disabled>disabled</Button>
-          <Button loading>loading</Button>
+          <Button disabled>
+            <Button.LoadingSpinner />
+            loading
+          </Button>
         </Flex>
         <Center horizontal={false} className={style['button-shape']}>
           <Button shape='rect'>Rect</Button>
@@ -38,7 +40,7 @@ const document: Array<DOCUMENT> = [
       `<Button variant='outlined'>Outlined</Button>`,
       `<Button variant='clear'>Clear</Button>`,
       `<Button disabled>disabled</Button>`,
-      `<Button loading>loading</Button>`,
+      `<Button disabled><Button.LoadingSpinner />loading</Button>`,
       `<Button shape='rect'>Rect</Button>`,
       `<Button shape='circle'>Circle</Button>`,
       `<Button shape='square'>Square</Button>`,
@@ -47,20 +49,20 @@ const document: Array<DOCUMENT> = [
 ];
 const dataType: Array<DATA_TYPE> = [
   {
-    name: 'Variant',
+    name: 'ButtonVariant',
     description: '변형 타입 설정',
-    code: [`type Variant = "primary" | "outlined" | "clear";`],
+    code: [`type ButtonVariant = "primary" | "outlined" | "clear";`],
   },
   {
-    name: 'Shape',
+    name: 'ButtonShape',
     description: '형태 타입 설정',
-    code: [`type Shape = "rect" | "circle" | "square";`],
+    code: [`type ButtonShape = "rect" | "circle" | "square";`],
   },
 ];
 
 const params: Array<PARAMS> = [
   {
-    title: 'Props',
+    title: 'ButtonProps',
     defaultTag: 'button',
     element: [
       {
@@ -85,130 +87,58 @@ const params: Array<PARAMS> = [
         description: ['형태 타입 설정'],
       },
       {
-        name: 'disabled',
+        name: 'display',
+        type: '"flex" | "grid"',
+        essential: false,
+        defaultValue: 'flex',
+        description: ['display 설정'],
+      },
+      {
+        name: 'flexDirection',
+        type: '"column" | "row" | "column-reverse" | "row-reverse"',
+        essential: false,
+        defaultValue: 'undefined',
+        description: ['flex-direction (display가 flex로 설정된 경우만)'],
+      },
+      {
+        name: 'centerVertical',
         type: 'boolean',
         essential: false,
-        defaultValue: 'false',
-        description: ['비활성화 여부'],
+        defaultValue: 'true',
+        description: ['중앙정렬 - 수직'],
       },
       {
-        name: 'loading',
+        name: 'centerHorizontal',
         type: 'boolean',
         essential: false,
-        defaultValue: 'false',
-        description: ['로딩 여부'],
+        defaultValue: 'true',
+        description: ['중앙정렬 - 수평'],
       },
       {
-        name: 'loadingElement',
-        type: 'React.ReactNode',
+        name: 'clickEffect',
+        type: 'boolean',
         essential: false,
-        defaultValue: 'undefined',
-        description: ['로딩 컴포넌트 주입'],
-      },
-      {
-        name: 'leftIcon',
-        type: 'React.ReactNode',
-        essential: false,
-        defaultValue: 'undefined',
-        description: ['좌측 아이콘'],
-      },
-      {
-        name: 'rightIcon',
-        type: 'React.ReactNode',
-        essential: false,
-        defaultValue: 'undefined',
-        description: ['우측 아이콘'],
+        defaultValue: 'true',
+        description: ['클릭효과 여부'],
       },
     ],
   },
-];
-const cssVar: Array<CSS_VARIABLES> = [
   {
-    title: 'CSS Variables',
-    element: [
-      {
-        name: '--cdkit-color-button-bg',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상'],
-      },
-      {
-        name: '--cdkit-color-button-bg-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상', '마우스 호버'],
-      },
-      {
-        name: '---cdkit-color-button-bg-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-button-bg-active',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상', '활성화'],
-      },
-      {
-        name: '--cdkit-color-button-bg-ripple',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['배경 색상', '클릭 애니메이션'],
-      },
-      {
-        name: '--cdkit-color-button-text',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상'],
-      },
-      {
-        name: '--cdkit-color-button-text-hover',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상', '마우스 호버'],
-      },
-      {
-        name: '--cdkit-color-button-text-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상', '비활성화'],
-      },
-      {
-        name: '--cdkit-color-button-text-active',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['글자 색상', '활성화'],
-      },
-      {
-        name: '--cdkit-color-button-box-shadow',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['그림자 색상'],
-      },
-      {
-        name: '--cdkit-color-button-outline',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상'],
-      },
-      {
-        name: '--cdkit-color-button-outline-disabled',
-        type: CSS_VAR_TYPE.COLOR,
-        description: ['경계선 색상', '비활성화'],
-      },
-    ],
+    title: 'Button.LoadingSpinner Props',
+    defaultTag: 'div',
+    element: [],
   },
 ];
+const cssVar: Array<CSS_VARIABLES> = [];
 
 const defaultCode: Array<string> = [
-  `<Button variant='primary' shape='rect' loading={false}>Button</Button>`,
+  `<Button variant='primary' shape='rect'>Button</Button>`,
 ];
 
 const pgCode = `import { Button } from '@cdkit/react-ui';
 
 function App() {
-  return (
-    <>
-      <Button variant='primary'>Primary</Button>
-      <Button variant='outlined'>Outlined</Button>
-      <Button variant='clear'>Clear</Button>
-      <Button disabled>disabled</Button>
-      <Button loading>loading</Button>
-      <Button shape='rect'>Rect</Button>
-      <Button shape='circle'>Circle</Button>
-      <Button shape='square'>Square</Button>
-    </>
-  );
+  return <Button variant='primary'>Primary</Button>;
 }
 
 export default App;
