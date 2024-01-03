@@ -33,7 +33,7 @@ function ModulePage() {
         <CodeGuide header='use yarn' code={['yarn add @cdkit/react-modules']} />
         <Spacing direction='vertical' spacing={2} unit='rem' />
         <Link href={URL.useTrie}>
-          <Button className={cx('goto')}>
+          <Button className={cx('custom', 'goto-button')}>
             <Text typo='s1'>문서 보러 가기</Text>
           </Button>
         </Link>

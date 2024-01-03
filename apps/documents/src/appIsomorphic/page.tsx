@@ -31,7 +31,7 @@ function IndexPage() {
           <CodeGuide header='use yarn' code={['yarn add @cdkit/react-ui']} />
           <Spacing direction='vertical' spacing={36} />
           <Link href={URL.ui}>
-            <Button className={cx('goto-button')}>
+            <Button className={cx('custom', 'goto-button')}>
               <Text typo='s1'>UI 보러 가기</Text>
             </Button>
           </Link>
@@ -48,7 +48,7 @@ function IndexPage() {
           />
           <Spacing direction='vertical' spacing={36} />
           <Link href={URL.modules}>
-            <Button className={cx('goto-button')}>
+            <Button className={cx('custom', 'goto-button')}>
               <Text typo='s1'>Module 보러 가기</Text>
             </Button>
           </Link>

@@ -4,8 +4,18 @@
 }
 .use-guide {
   width: fit-content;
-  .goto {
+  & > a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .custom.goto-button {
     padding: 1rem;
     width: 100%;
+    background: var(--button-bg);
+    color: var(--button-text);
+    &:hover {
+      background: var(--button-bg-hover) !important;
+      color: var(--button-text-hover) !important;
+    }
   }
 }
