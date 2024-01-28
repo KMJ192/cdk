@@ -4,13 +4,13 @@ export function sleep(ms: number) {
   });
 }
 
-export function debounce<T = any>(
-  callback: (...params: Array<T>) => void,
+export function debounce(
+  callback: (...params: Array<any>) => void,
   delay: number,
 ) {
   let timerId: null | ReturnType<typeof setTimeout> = null;
 
-  return (...params: Array<T>) => {
+  return (...params: Array<any>) => {
     if (timerId !== null) clearTimeout(timerId);
 
     timerId = setTimeout(() => {
@@ -19,13 +19,13 @@ export function debounce<T = any>(
   };
 }
 
-export function throttle<T = any>(
-  callback: (...params: Array<T>) => void,
+export function throttle(
+  callback: (...params: Array<any>) => void,
   delay: number,
 ) {
   let inThrottle: boolean | null = null;
 
-  return (...params: Array<T>) => {
+  return (...params: Array<any>) => {
     if (!inThrottle) {
       callback(...params);
       inThrottle = true;
