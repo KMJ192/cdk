@@ -27,6 +27,7 @@ const URL: { [key: string]: string } = {
   select: '/ui/components/select',
   tab: '/ui/components/tab',
   textarea: '/ui/components/textarea',
+  pieChart: '/ui/components/pie-chart',
   // Modules
   modules: '/modules',
   hooks: '/modules/hooks',

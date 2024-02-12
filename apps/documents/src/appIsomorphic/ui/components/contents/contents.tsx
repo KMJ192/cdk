@@ -15,6 +15,7 @@ import { tabContents } from './tab';
 import { dataTableContents } from './dataTable';
 import { textareaContents } from './textarea';
 import { cardContents } from './card';
+import { pieChartContents } from './pieChart';
 import type { PAGE_CONTENTS } from '@src/components/DocsContents/types';
 
 const TAB_OPTIONS = [
@@ -68,6 +69,7 @@ const COMPONENT_CONTENTS: { [key: string]: PAGE_CONTENTS } = {
   tab: tabContents,
   'data-table': dataTableContents,
   textarea: textareaContents,
+  'pie-chart': pieChartContents,
 };
 
 export { COMPONENT_CONTENTS, TAB_OPTIONS };

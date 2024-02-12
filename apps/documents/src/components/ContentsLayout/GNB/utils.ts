@@ -97,6 +97,10 @@ const uiComponentGroup: Array<NavGroup> = [
     url: URL.textarea,
     contents: 'Textarea',
   },
+  {
+    url: URL.pieChart,
+    contents: 'PieChart',
+  },
 ];
 
 const hooksGroup: Array<NavGroup> = [

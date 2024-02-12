@@ -21,9 +21,10 @@ import {
   initShow,
 } from './utils';
 
+import MainLogo from '@src/components/ContentsLayout/MainLogo/MainLogo';
+
 import classNames from 'classnames/bind';
 import style from './style.module.scss';
-import MainLogo from '@src/components/ContentsLayout/MainLogo/MainLogo';
 const cx = classNames.bind(style);
 
 type Props = {

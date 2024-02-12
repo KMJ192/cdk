@@ -24,3 +24,4 @@
 - Switch
 - Tab
 - Textarea
+- PieChart

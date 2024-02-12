@@ -46,6 +46,7 @@
     "prettier/prettier": 0,
     "prefer-const": 1,
     "no-plusplus": 0,
+    "no-continue": 0,
 
     "react/jsx-props-no-spreading": 0,
     "react/forbid-prop-types": 0,
