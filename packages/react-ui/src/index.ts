@@ -93,5 +93,6 @@ export {
   type Typo,
   type FontWeight,
 } from './components/Text';
-
 export { Textarea, type TextareaProps } from './components/Textarea';
+
+export { PieChart, type PieChartProps } from './chart/PieChart';
